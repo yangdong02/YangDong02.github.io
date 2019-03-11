@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题看似毫无关联啊，我当时分别听说这几个知识的时候也是一头雾水。可是这几天偶然了解到有关p进数（p-adic）的一套理论，顿时感觉如同醍醐灌顶。下面我会介绍我目前了解到的内容以及一些思考，主要是科普">
+  <meta name="description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题似乎毫不相关，我当时分别听说这几个知识的时候也没有发现它们之间的联系。可是这几天偶然了解到有关p进数（p-adic）的一套理论，我顿时感觉如同醍醐灌顶：换一种角度看问题，它们之间的联系居然如此简">
 <meta name="keywords" content="p-adic,数论,牛顿迭代法,数学分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="p进数 (p-adic) 、牛顿迭代与Hensel引理">
 <meta property="og:url" content="http://yoursite.com/2019/03/10/p进数-p-adic-与Hensel引理/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
-<meta property="og:description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题看似毫无关联啊，我当时分别听说这几个知识的时候也是一头雾水。可是这几天偶然了解到有关p进数（p-adic）的一套理论，顿时感觉如同醍醐灌顶。下面我会介绍我目前了解到的内容以及一些思考，主要是科普">
+<meta property="og:description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题似乎毫不相关，我当时分别听说这几个知识的时候也没有发现它们之间的联系。可是这几天偶然了解到有关p进数（p-adic）的一套理论，我顿时感觉如同醍醐灌顶：换一种角度看问题，它们之间的联系居然如此简">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-10T15:59:43.820Z">
+<meta property="og:updated_time" content="2019-03-11T13:56:21.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="p进数 (p-adic) 、牛顿迭代与Hensel引理">
-<meta name="twitter:description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题看似毫无关联啊，我当时分别听说这几个知识的时候也是一头雾水。可是这几天偶然了解到有关p进数（p-adic）的一套理论，顿时感觉如同醍醐灌顶。下面我会介绍我目前了解到的内容以及一些思考，主要是科普">
+<meta name="twitter:description" content="你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？  上面的几个问题似乎毫不相关，我当时分别听说这几个知识的时候也没有发现它们之间的联系。可是这几天偶然了解到有关p进数（p-adic）的一套理论，我顿时感觉如同醍醐灌顶：换一种角度看问题，它们之间的联系居然如此简">
 
 
 
@@ -418,12 +418,24 @@
                 
               
 
-              <time title="创建时间：2019-03-10 08:54:49 / 修改时间：23:59:43" itemprop="dateCreated datePublished" datetime="2019-03-10T08:54:49+08:00">2019-03-10</time>
+              <time title="创建时间：2019-03-10 08:54:49" itemprop="dateCreated datePublished" datetime="2019-03-10T08:54:49+08:00">2019-03-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-11 21:56:21" itemprop="dateModified" datetime="2019-03-11T21:56:21+08:00">2019-03-11</time>
               
             
           </span>
@@ -485,9 +497,10 @@
         <blockquote>
 <p>你敢相信 $\sum\limits^{\infty}_{i=0}2^i = -1$ 吗？数论中一个长相奇怪的定理到底有什么直观意义？牛顿迭代法作为常用的数值方法，和p进数又会有什么联系？</p>
 </blockquote>
-<p>上面的几个问题看似毫无关联啊，我当时分别听说这几个知识的时候也是一头雾水。可是这几天偶然了解到有关p进数（p-adic）的一套理论，顿时感觉如同醍醐灌顶。下面我会介绍我目前了解到的内容以及一些思考，主要是科普向吧。这一块内容有很多涉及代数数论甚至泛函分析的相关内容，我没有太深入的了解，可能会出不少锅，也希望大家能给我进行一些补充吧。</p>
+<p>上面的几个问题似乎毫不相关，我当时分别听说这几个知识的时候也没有发现它们之间的联系。可是这几天偶然了解到有关p进数（p-adic）的一套理论，我顿时感觉如同醍醐灌顶：换一种角度看问题，它们之间的联系居然如此简单明了！下面我就来介绍一下我认识的这几个知识的联系吧。</p>
+<p>这一块内容有很多涉及代数数论甚至泛函分析的相关内容，我都没有太深入的了解，可能会出不少问题，也希望大家能给我进行一些补充吧。</p>
 <a id="more"></a>
-<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>（Too long; didn’t read）</p>
+<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>（Too long; Don’t read）</p>
 <p>（这是简述，<del>看完简述剩下的就可以不看了</del>）</p>
 <p>简而言之，这篇文章数论中一个形式古怪的提高模数次数的定理（Hensel定理，2.1中有定义描述与证明）说起，目的是阐明它的直观意义，即说明与牛顿迭代法的相似性：</p>
 <ul>
@@ -496,7 +509,7 @@
 <li><p>另一方面，从更深层次的意义来说，它解决的问题是在p进度量下用有理数逼近多项式的零点的过程。</p>
 </li>
 </ul>
-<p>第一点在2.2会有解释，而第二点则更为关键。本质上说，牛顿迭代法那样在绝对值度量下用有理数估计多项式零点，用的是是从数位高的地方向数位低的地方逼近的方法，即类似$1,1.4,1.41,1.414,\cdots$ 的过程。可是Hensel定理是从恰恰相反的方向逼近的，即从数位低的地方向数位高的地方递进的，如在7-adic下逼近 $\sqrt{2}$，则逼近的数列是这样的： $\{3, (13)_7, (213)_7,\cdots\}$ 。</p>
+<p>第一点在2.2会有解释，而第二点则更为关键。本质上说，牛顿迭代法那样在绝对值度量下用有理数估计多项式零点，用的是是从数位高的地方向数位低的地方逼近的方法，即类似$1,1.4,1.41,1.414,\cdots$ 的过程。可是Hensel定理是从恰恰相反的方向逼近的，即从数位低的地方向数位高的地方递进的，如在7-adic下逼近 $\sqrt{2}$，则逼近的数列是这样的： $\{3, (13)_7, (213)_7,\cdots\}​$ 。</p>
 <p>这么做靠谱吗？怎么感觉都没有任何收敛的感觉呢，简直玄学！可是你为什么说这个数列不收敛？你会说，因为相邻两项之间的距离，即差的绝对值，越来越大了呗。但是你说的这个距离为什么就是差的绝对值？如果我巧妙定义另一套距离，说不定我就可以说这个数列是逐步收敛的了。这就引出了一套有趣的数学理论，即p进度量和p进数 。</p>
 <ul>
 <li><p>首先，我们定义了有理数集上一种独特的范数和距离</p>
@@ -577,7 +590,7 @@
 <li>都说p进数集是被实数集所包含的，这是为什么？哪些实数不能被p进估计？</li>
 </ol>
 <h2 id="相关推荐"><a href="#相关推荐" class="headerlink" title="相关推荐"></a>相关推荐</h2><p>推荐的视频资料：</p>
-<p><a href="https://www.bilibili.com/video/av3509556" target="_blank" rel="noopener">3blue1brown的视频</a> 很清晰易懂，非常有启发性。不愧是3blue1brown，视频效果非常棒。</p>
+<p><a href="https://www.bilibili.com/video/av3509556" target="_blank" rel="noopener">3blue1brown的视频</a> （这个在开头已经推荐过了）很清晰易懂，非常有启发性。</p>
 <p><a href="https://www.youtube.com/watch?v=gsg1x6mxVIA" target="_blank" rel="noopener">Hensel引理与p-adic（youtube）</a> 这个视频专业性更强一些，和本文的内容更是息息相关。这个视频的uploader，<a href="https://www.youtube.com/channel/UCErLELnXehsJ7ycW4OJgfQQ" target="_blank" rel="noopener">Harpreet Bedi</a> 是个专业数学知识的科普作者，他上传的视频往往是有关深刻的数学知识的。</p>
 
       

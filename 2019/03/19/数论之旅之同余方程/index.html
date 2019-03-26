@@ -96,22 +96,22 @@
 
 
 
-  <meta name="description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介。 在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终">
+  <meta name="description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
 <meta name="keywords" content="数论,二次剩余,n次剩余,数论之旅系列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论之旅1：同余方程">
 <meta property="og:url" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
-<meta property="og:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介。 在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终">
+<meta property="og:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/gauss.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c2.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c3.png">
-<meta property="og:updated_time" content="2019-03-22T12:55:27.596Z">
+<meta property="og:updated_time" content="2019-03-23T11:37:03.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论之旅1：同余方程">
-<meta name="twitter:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介。 在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终">
+<meta name="twitter:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/gauss.png">
 
 
@@ -440,7 +440,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-22 20:55:27" itemprop="dateModified" datetime="2019-03-22T20:55:27+08:00">2019-03-22</time>
+                <time title="修改时间：2019-03-23 19:37:03" itemprop="dateModified" datetime="2019-03-23T19:37:03+08:00">2019-03-23</time>
               
             
           </span>
@@ -500,8 +500,8 @@
 
       
         <p>最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。</p>
-<p>这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍<strong>二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号</strong>等，以及高次同余方程简介。</p>
-<p>在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终代表奇素数，而大写的 $P$ 则不一定。</p>
+<p>这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍<strong>二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号</strong>等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。</p>
+<p>在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终代表奇素数，而大写的 $P​$ 则不一定。</p>
 <a id="more"></a>
 <h1 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h1><h2 id="知识与定理"><a href="#知识与定理" class="headerlink" title="知识与定理"></a>知识与定理</h2><p>首先我们最初是想要解决二次同余方程 $ax^2+bx+c\equiv 0\pmod p$ 。我们经过配方等操作之后，可以发现这种方程化简之后唯一不平凡的形式就是 $x^2\equiv d \pmod p$ 这个样子。这个形式看似简单，不就是模意义下开根号么，可是里面藏着不少玄机。我们先给出一些定义：</p>
 <p>模素数的二次剩余、二次非剩余的定义：</p>
@@ -514,7 +514,7 @@
 <h3 id="欧拉判别法"><a href="#欧拉判别法" class="headerlink" title="欧拉判别法"></a>欧拉判别法</h3><blockquote>
 <p>设素数 $p&gt;2, p\nmid d$ ，那么，$d$ 是模 $p$ 的二次剩余的充分必要条件是：<br>$$<br>d^{(p-1)/2} \equiv 1 \pmod p<br>$$<br>$d$ 是模 $p$ 的二次非剩余的充分必要条件是：<br>$$<br>d^{(p-1)/2} \equiv -1 \pmod p<br>$$</p>
 </blockquote>
-<p>这个定理是一个比较重要的定理，我们可以轻易在 $O(\log p)$ 的时间内计算出一个数是不是二次剩余，而在大部分ACM竞赛中对于二次剩余也只需要了解这么多。这个地方我暂时不给出证明，在 $n​$ 次剩余中，我将给出一种统一的证明方式。</p>
+<p>这个定理是一个比较重要的定理，我们可以轻易在 $O(\log p)$ 的时间内计算出一个数是不是二次剩余，而在大部分ACM竞赛中对于二次剩余也只需要了解这么多。这个地方我暂时不给出证明，以后提到的原根之后，我们将给出一种统一的证明方式，这种证法同时能证明之后提到的 $n$ 次剩余的结论。</p>
 <p>由欧拉判别法，根据其只有-1，1这两种取值特点，结合乘方的性质，我们可以很轻易地发现下面的性质：</p>
 <ul>
 <li>二次剩余 $\times$ 二次剩余 = 二次剩余</li>
@@ -523,7 +523,7 @@
 </ul>
 <p>模 $p​$ 意义下，这种二次剩余的关系满足一种积性性质！那么，我们就引入一种一种完全积性函数来表示二次剩余吧，由此勒让德符号应运而生。</p>
 <h3 id="勒让德符号"><a href="#勒让德符号" class="headerlink" title="勒让德符号"></a>勒让德符号</h3><blockquote>
-<p>定义整变量 $d$ 的函数<br>$$<br>\left(\frac{d}{p}\right) =<br>\begin{cases}<br>1 &amp; \text{d是模p的二次剩余} \\<br>-1 &amp; \text{d是模p的二次非剩余}\\<br>0 &amp; p\mid d<br>\end{cases}<br>$$<br>我们把 $\left(\frac{d}{p}\right)$ 称为模 $p$ 的勒让德符号。</p>
+<p>定义整变量 $d$ 的函数（ $p$ 是素数）<br>$$<br>\left(\frac{d}{p}\right) =<br>\begin{cases}<br>1 &amp; \text{d是模p的二次剩余} \\<br>-1 &amp; \text{d是模p的二次非剩余}\\<br>0 &amp; p\mid d<br>\end{cases}<br>$$<br>我们把 $\left(\frac{d}{p}\right)​$ 称为模 $p​$ 的勒让德符号。</p>
 </blockquote>
 <p>勒让德符号满足下面的性质:</p>
 <ul>
@@ -532,31 +532,47 @@
 <li>$\left(\frac{dc}{p}\right) = \left(\frac{d}{p}\right) \left(\frac{c}{p}\right)$</li>
 </ul>
 <p>有了第一、第三点，我们称勒让德符号是模 $p$ 的Dirichlet特征，勒让德符号因此具有良好的性质；而有了第二点，我们可以方便地使用快速幂来计算勒让德符号。</p>
-<p>二次剩余这么就完全解决了吗？从理论上讲，还有很多非常优美的性质没有挖掘呢！下面我们就引出初等数论最重要的成果之一：高斯的二次互反律。首先我们证明高斯引理：</p>
+<p>二次剩余这么就完全解决了吗？从理论上讲，还有很多非常优美的性质没有挖掘呢！下面我们就引出初等数论最重要的成果之一：高斯的二次互反律。首先我们介绍高斯引理：</p>
 <h3 id="高斯引理"><a href="#高斯引理" class="headerlink" title="高斯引理"></a>高斯引理</h3><blockquote>
 <p>设 $p \nmid d$；再设 $1\leq j \leq (p-1)/2$，令<br>$$<br>t_i \equiv jd \pmod p,\text{  } 0 &lt; t_j &lt; p<br>$$<br>以 $n$ 表示这 $(p-1)/2$ 个 $t_i$ 中大于 $p/2$ 的数的个数，那么：<br>$$<br>\left(\frac{d}{p}\right) = (-1)^n<br>$$<br>事实上，当 $\gcd(d,2p)=1$ 时，我们还有 $n$ 的精确表达式：<br>$$<br>n = \sum_{i=1}^{(p-1)/2} \left[\frac{jd}{p}\right]<br>$$</p>
 </blockquote>
-<p>有了高斯引理，我们就可以解决一部分勒让德符号计算的问题了：</p>
+<p>这个定理还是蛮有用的，有了高斯引理，我们就可以解决一部分勒让德符号计算的问题了：（读者可以自己验证）</p>
 <ul>
 <li>$\left( \frac{1}{p} \right) \equiv 1$ 这个根据定义显然；</li>
 <li>$\left( \frac{-1}{p} \right) \equiv (-1)^{\frac{p-1}{2}}$  根据定义显然，$4k+1$ 型素数-1是二次剩余；</li>
 <li>$\left( \frac{2}{p} \right) \equiv (-1)^{\frac{p^2-1}{8}}$ 用高斯引理易得。这说明对于 $8k\pm 1$ 型素数 $2$ 是二次剩余；</li>
 </ul>
-<p>高斯引理的证明是挺精妙的，我们只证明前一半部分。我们考虑 $t_i$ 的乘积，一方面：<br>$$<br>\prod_{i=1}^{(p-1)/2} t_i = d^{(p-1)/2} \prod_{i=1}^{(p-1)/2} i<br>$$<br>另一方面，把 $t_i$ 中所有大于 $(p-1)/2$ 的数 $r$ 换成 $p - r$ ，即可使这些 $t_i$ 形成 $1,2,\cdots,(p-1)/2$ 的一个排列，这个过程中一共有 $n$ 个数被调换，因此乘积中会出现 $(-1)^n$ 的因子。由此：<br>$$<br>\prod_{i=1}^{(p-1)/2} t_i = (-1)^n \prod_{i=1}^{(p-1)/2} i<br>$$<br>综合上面两个式子，即可得到这个定理。</p>
-<p>如果稍微进行一些分析，就可以得到 $n$ 的表达形式了，这里不再展开。可是我们能够注意到， $n$ 的形式不是类欧几里得算法的形式么？我们自然要考虑它的几何意义。如下图，这个值就是阴影三角形 $\triangle OCB$ 内部格点的数目。为什么说是内部呢？很好证明，这个三角形斜边上不会出现格点。</p>
+<p>那么如何证明呢？高斯引理的证明是挺精妙的，我们只证明前一半部分。我们考虑 $t_i$ 的乘积，一方面：<br>$$<br>\prod_{i=1}^{(p-1)/2} t_i = d^{(p-1)/2} \prod_{i=1}^{(p-1)/2} i<br>$$<br>另一方面，把 $t_i$ 中所有大于 $(p-1)/2$ 的数 $r$ 换成 $p - r$ ，即可使这些 $t_i$ 形成 $1,2,\cdots,(p-1)/2$ 的一个排列，这个过程中一共有 $n$ 个数被调换，因此乘积中会出现 $(-1)^n$ 的因子。由此：<br>$$<br>\prod_{i=1}^{(p-1)/2} t_i = (-1)^n \prod_{i=1}^{(p-1)/2} i<br>$$<br>综合上面两个式子，即可得到这个定理。</p>
+<p>如果稍微进行一些分析，就可以得到 $n​$ 的表达形式了，这里不再展开。可是我们能够注意到， $n​$ 的形式不是类欧几里得算法的形式么？我们自然要考虑它的几何意义。如下图，这个值就是阴影三角形 $\triangle OCB​$ 内部格点的数目。为什么说是内部呢？很好证明，这个三角形斜边上不会出现格点。</p>
 <p><img src="gauss.png" alt="Gauss引理的几何意义"></p>
-<h3 id="二次互反律"><a href="#二次互反律" class="headerlink" title="二次互反律"></a>二次互反律</h3><p>在上面的图片里面，我们不禁要问还有没有别的几何意义。我们观察 $\triangle OCB$ ，这个三角形就是 $\left(\frac{p}{d}\right)$ 啊！（注意我们之前约定过 $d$ 是奇数）。那么这两个三角形的格点数目之和正好就是整个矩形的格点数目 $\frac{p-1}{2} \cdot \frac{d-1}{2}​$ ！由此我们就证明了二次互反律：</p>
+<h3 id="二次互反律"><a href="#二次互反律" class="headerlink" title="二次互反律"></a>二次互反律</h3><p>在上面的图片里面，我们不禁要问还有没有别的几何意义。我们观察 $\triangle OCB​$ ，这个三角形就是 $\left(\frac{p}{d}\right)​$ 啊！（注意我们之前约定过 $d​$ 是奇数）。那么这两个三角形的格点数目之和正好就是整个矩形的格点数目 $\frac{p-1}{2} \cdot \frac{d-1}{2}​$ ！由此我们就证明了二次互反律：</p>
 <blockquote>
-<p>设 $p,q$ 为奇素数，$p\neq q$ ，则有：<br>$$<br>\left(\frac qp\right) \cdot \left( \frac pq \right)  = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}}<br>$$</p>
+<p>设 $p,q​$ 为奇素数，$p\neq q​$ ，则有：<br>$$<br>\left(\frac qp\right) \cdot \left( \frac pq \right)  = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}}<br>$$</p>
 </blockquote>
-<p>二次互反律的理论价值和实用价值都很高，可以证明很多命题。就拿计算勒让德符号来说，有了二次互反律，我们可以设计一种类似欧几里得求最大公因数的算法。当勒让德符号上面的数是 $1,2$  时，直接给出答案；否则根据互反律交换上下两个数。可是这里有个问题：二次互反律要求 $p,q$ 必须是奇素数！这样才能保证勒让德符号有意义！因此使用互反律时，必须将数分解质因数，当数比较大的时候这个开销是花不起的。那么我们能否拓展勒让德符号的定义呢？答案是可以的。</p>
+<p>二次互反律的理论价值和实用价值都很高，可以证明很多命题，下面举几个《初等数论》上的例题吧，读者可以想一想怎么解决，之后可能会更新解答。</p>
+<ul>
+<li>证明有无穷多个 $8k+1​$ 型质数</li>
+<li>求以 $11​$ 为其二次剩余的所有奇素数 $p​$</li>
+<li>证明：若$\left(\frac dp\right) = -1​$ ，则 $p​$ 必然不能表示为 $x^2-dy^2​$  的形式。</li>
+</ul>
+<p>我们再说一说二次互反律的另一个重要价值——计算勒让德符号。有了二次互反律，我们可以设计一种类欧几里得算法！回想我们是如何使用欧几里得算法求最大公约数的：</p>
+<ul>
+<li>我们知道 $\gcd(a,0)=a​$ 这一种平凡情况</li>
+<li>否则，利用 $\gcd(a,b) = \gcd(b,a\%b)$ ，我们可以将问题规模缩小一半，从而让问题可以化为平凡情况</li>
+</ul>
+<p>对于勒让德符号的计算，我们不也可以这样吗？我们有这么几个条件：</p>
+<ul>
+<li>当勒让德符号上面的数 $d=1,2 \text{ or } -1​$  时，可以直接给出答案；</li>
+<li>否则，根据互反律，我们可以交换上下两个数，$O(1)$ 计算那个多出来的 $(-1)^{\frac {p-1}{2} \cdot \frac{q-1}2}$ 因子，然后用Legendre符号的周期性进行取模，使得问题规模缩小一半。</li>
+</ul>
+<p>这不是挺完美的吗？别高兴得太早！别忘记，勒让德符号要求符号下面的数 $p$ 可要是质数！正因为这一点，互反律成立需要 $p,q​$ 是奇素数才可以！这样才能保证勒让德符号有意义！这可麻烦了，这样的话，就是计算个勒让德符号，还要必须将数分解质因数！分解质因数可不是个简单的事情，当数比较大的时候这个开销是花不起的。那么我们怎么办呢？我们可以拓展勒让德符号的定义，我们来定义雅克比符号：</p>
 <h3 id="雅克比符号"><a href="#雅克比符号" class="headerlink" title="雅克比符号"></a>雅克比符号</h3><blockquote>
-<p>设奇数 $P&gt;1$，$P=p_1p_2\cdots p_s$ ，则定义雅克比符号为：<br>$$<br>\left( \frac dP \right) = \prod_{i-1}^{s} \left(\frac d{p_i}\right)<br>$$<br>其中乘积项中的符号是勒让德符号。</p>
+<p>设奇数 $P&gt;1​$，$P=p_1p_2\cdots p_s​$ ，则定义雅克比符号为：<br>$$<br>\left( \frac dP \right) = \prod_{i-1}^{s} \left(\frac d{p_i}\right)<br>$$<br>其中乘积项中的符号是勒让德符号。</p>
 </blockquote>
 <p>可以验证，雅克比符号满足勒让德符号的一切性质，并且满足互反律，因此可以辅助计算勒让德符号。</p>
-<p>可是有一点必须强调：雅克比符号 $\left( \frac dP \right)=1$ 绝不保证 $x^2\equiv d \pmod P$ 一定有解！例如：$\left(\frac 2 {3599}\right) = 1$ ，可是 $x^2\equiv 2 \pmod {3599}$ 无解！ </p>
-<p>其实雅可比符号还有拓展，叫做Kronecker符号，这里不再详细说明了。</p>
-<p>下面是一个雅克比符号的模板。使用二次互反律计算，复杂度 $O(\log \min \{a,n\})$ 。Accepted on <a href="https://cn.vjudge.net/problem/HDU-3589" target="_blank" rel="noopener">HDU3589</a></p>
+<p>可是有一点必须强调：雅克比符号 $\left( \frac dP \right)=1​$ 绝不保证 $x^2\equiv d \pmod P​$ 一定有解！例如：$\left(\frac 2 {3599}\right) = 1​$ ，可是 $x^2\equiv 2 \pmod {3599}​$ 无解！ </p>
+<p>其实雅可比符号还有拓展，叫做Kronecker符号，甚至还可以拓展到有理数范围，叫做Hilbert符号。这里给出维基百科的链接吧 <a href="https://en.wikipedia.org/wiki/Legendre_symbol" target="_blank" rel="noopener">Legendre</a>，此处不再详细说明了。（<del>其实是因为我也不会</del>）</p>
+<p>下面是一个雅克比符号的模板。使用二次互反律计算，复杂度 $O(\log \min \{a,n\})​$ 。Accepted on <a href="https://cn.vjudge.net/problem/HDU-3589" target="_blank" rel="noopener">HDU3589</a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Jacobi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    a %= n;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="number">0</span> || (a%<span class="number">2</span>==<span class="number">0</span> &amp;&amp; n%<span class="number">2</span>==<span class="number">0</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="number">2</span>) <span class="keyword">return</span> (((n&amp;<span class="number">7</span>) == <span class="number">1</span>) || ((n&amp;<span class="number">7</span>) == <span class="number">7</span>)) ? <span class="number">1</span> : <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>((a &amp; <span class="number">1</span>) == <span class="number">0</span>) <span class="keyword">return</span> Jacobi(<span class="number">2</span>, n) * Jacobi(a / <span class="number">2</span>, n);</span><br><span class="line">    <span class="keyword">if</span>(n % <span class="number">2</span> == <span class="number">0</span>) <span class="keyword">return</span> Jacobi(a, <span class="number">2</span>) * Jacobi(a, n / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">int</span> sgn = ((a - <span class="number">1</span>) / <span class="number">2</span> * (n - <span class="number">1</span>) / <span class="number">2</span>) &amp; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> Jacobi(n, a) * (sgn ? <span class="number">-1</span> : <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Cipolla算法"><a href="#Cipolla算法" class="headerlink" title="Cipolla算法"></a>Cipolla算法</h2><p>上面主要是在讲如何判断二次剩余存不存在的问题，可是如果知道存在了，到底应当怎样构造呢？Cipolla算法即可解决这个问题。这个算法感觉数学背景还是蛮深厚的，是一个挺有趣的算法。</p>
 <p>推荐博客 <a href="https://blog.csdn.net/a_crazy_czy/article/details/51959546" target="_blank" rel="noopener">czy</a> ，下面内容是从他的博客上抄的。</p>
@@ -566,12 +582,6 @@
 <p>模板题： <a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1132" target="_blank" rel="noopener">Timus 1132</a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Type int</span></span><br><span class="line"><span class="keyword">namespace</span> ModOp &#123;</span><br><span class="line">    Type MOD;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> Type <span class="title">mo</span><span class="params">(Type x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x &gt;= MOD) x -= MOD;</span><br><span class="line">        <span class="keyword">if</span>(x &lt; <span class="number">0</span>) x += MOD;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">MF</span> &#123;</span></span><br><span class="line">        Type v;</span><br><span class="line">        MF(Type x = <span class="number">0</span>): v(mo(x)) &#123; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">operator</span> <span class="title">Type</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> v; &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> + (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> mo(v + f.v); &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> - (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> mo(v - f.v); &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> * (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> <span class="number">1L</span>L * v * f.v % MOD; &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> / (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v / f.v; &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> - () <span class="keyword">const</span> &#123; <span class="keyword">return</span> MOD - v; &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> &gt;&gt; (<span class="keyword">int</span> idx) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &gt;&gt; idx; &#125;</span><br><span class="line">        MF <span class="keyword">operator</span> &lt;&lt; (<span class="keyword">int</span> idx) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &lt;&lt; idx; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v == f.v; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> != (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v != f.v; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> &gt; (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &gt; f.v; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &lt; f.v; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> &gt;= (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &gt;= f.v; &#125;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;= (<span class="keyword">const</span> MF&amp; f) <span class="keyword">const</span> &#123; <span class="keyword">return</span> v &lt;= f.v; &#125;</span><br><span class="line">        <span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span> &lt;&lt; (ostream&amp; out, MF f) &#123; <span class="keyword">return</span> out &lt;&lt; f.v; &#125;</span><br><span class="line">        <span class="keyword">friend</span> istream&amp; <span class="keyword">operator</span> &gt;&gt; (istream&amp; in, MF f) &#123; <span class="keyword">return</span> in &gt;&gt; f.v; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">scan</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;v) != <span class="number">-1</span>; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123; <span class="built_in">printf</span>(<span class="string">"%d"</span>, v); &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> Type</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="function">T <span class="title">qpow</span><span class="params">(T x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    T ret = T(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(; y; y &gt;&gt;= <span class="number">1</span>, x = x * x)</span><br><span class="line">        <span class="keyword">if</span>(y &amp; <span class="number">1</span>) ret = ret * x;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">using</span> ModOp::MF;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> qres &#123;</span><br><span class="line">    MF a, n;</span><br><span class="line">    <span class="keyword">int</span> p;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">F</span> &#123;</span></span><br><span class="line">        MF x, y; <span class="comment">// x+yw</span></span><br><span class="line">        F(MF _a = <span class="number">0</span>, MF _b = <span class="number">0</span>): x(_a), y(_b) &#123; &#125;</span><br><span class="line">        F <span class="keyword">operator</span> + (F f2) <span class="keyword">const</span> &#123; <span class="keyword">return</span> F(x + f2.x, y + f2.y); &#125;</span><br><span class="line">        F <span class="keyword">operator</span> * (F f2) <span class="keyword">const</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> F(x*f2.x + y*f2.y*(a*a-n), x*f2.y+y*f2.x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function">MF <span class="title">Legendre</span><span class="params">(MF d)</span> </span>&#123; <span class="keyword">return</span> qpow(d, (p<span class="number">-1</span>)/<span class="number">2</span>); &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Cipolla</span><span class="params">(<span class="keyword">int</span> qn, <span class="keyword">int</span> qp)</span> </span>&#123; <span class="comment">// p is a prime, gcd(n, p) = 1</span></span><br><span class="line">        qn %= qp;</span><br><span class="line">        <span class="keyword">if</span>(qp == <span class="number">2</span> &amp;&amp; qn == <span class="number">1</span>) &#123; <span class="built_in">puts</span>(<span class="string">"1"</span>); <span class="keyword">return</span>; &#125;</span><br><span class="line">        ModOp::MOD = p = qp; n = qn;</span><br><span class="line">        <span class="keyword">if</span>(Legendre(n) != MF(<span class="number">1</span>)) &#123; <span class="built_in">puts</span>(<span class="string">"No root"</span>); <span class="keyword">return</span>; &#125;</span><br><span class="line">        a = rng() % p;</span><br><span class="line">        <span class="keyword">while</span>(Legendre(a * a - n) != MF(<span class="number">-1</span>)) a = rng() % p;</span><br><span class="line"></span><br><span class="line">        F w(a, 1), res = qpow(w, (p + 1) / 2);</span><br><span class="line">        MF ans = res.x, ans2 = -ans;</span><br><span class="line">        <span class="keyword">if</span>(ans &gt; ans2) swap(ans, ans2);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">" "</span> &lt;&lt; ans2 &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>题解允许我先咕一下QAQ</p>
-<h3 id="二次互反律的应用"><a href="#二次互反律的应用" class="headerlink" title="二次互反律的应用"></a>二次互反律的应用</h3><p>下面举几个《初等数论》上的例题吧：</p>
-<ul>
-<li>证明有无穷多个 $8k+1$ 型质数</li>
-<li>求以 $11$ 为其二次剩余的所有奇素数 $p$</li>
-<li>证明：若$\left(\frac dp\right) = -1$ ，则 $p$ 必然不能表示为 $x^2-dy^2$  的形式。</li>
-</ul>
 <h3 id="CF1091G-New-Year-and-the-Factorisation-Collaboration"><a href="#CF1091G-New-Year-and-the-Factorisation-Collaboration" class="headerlink" title="[CF1091G] New Year and the Factorisation Collaboration"></a>[CF1091G] New Year and the Factorisation Collaboration</h3><p> 蛮有意思的CF题，在Goodbye 2018里出的。</p>
 <h3 id="BZOJ1406-AHOI2007-密码箱"><a href="#BZOJ1406-AHOI2007-密码箱" class="headerlink" title="BZOJ1406 [AHOI2007]密码箱"></a>BZOJ1406 [AHOI2007]密码箱</h3><p>题意：求下面同余方程的所有解：$(n\leq 2\cdot 10^9)$<br>$$<br>x^2\equiv 1 \pmod n<br>$$<br>解法：</p>
 <p>对于方程 $x^2\equiv 1 \pmod{p^\alpha}​$ ，只需要进行分类讨论，然后Hensel引理升幂。对于任意模数的情况，只需要再用CRT合并。</p>
@@ -594,7 +604,7 @@
 <blockquote>
 <p>若 $n\nmid p-1$ ，令 $k=\gcd(n,p-1)$ 则 $x^n\equiv a \pmod p (p\nmid a)$ 的充要条件是：$x^k\equiv a \pmod p $ 有解，且解数相同。即有解的充分必要条件是：<br>$$<br>a^{(p-1)/k} \equiv 1 \pmod p<br>$$</p>
 </blockquote>
-<p>这样我们就找到了欧拉判别法的推广！我们也可以快速解决判断 $n$ 次剩余的问题了！可是还有没有类似勒让德符号的定义了呢，有没有互反律之类的东西了呢？在自然数范围内是没有了，如果使用代数数论的观点来看，应该还是有的，可是超出了我们的讨论范围。</p>
+<p>这样我们就找到了欧拉判别法的推广！我们也可以快速解决判断 $n​$ 次剩余的问题了！可是还有没有类似勒让德符号的定义了呢，有没有互反律之类的东西了呢？在自然数范围内是没有了，如果使用代数数论的观点来看，应该还是有的，可是超出了我们的讨论范围。</p>
 
       
     </div>
@@ -646,6 +656,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/26/AtCoder-Grand-Contest-032-比赛总结/" rel="prev" title="AtCoder Grand Contest 032 比赛总结">
+                AtCoder Grand Contest 032 比赛总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -719,7 +733,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -847,7 +861,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">47</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -916,7 +940,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二次剩余"><span class="nav-number">1.</span> <span class="nav-text">二次剩余</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识与定理"><span class="nav-number">1.1.</span> <span class="nav-text">知识与定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉判别法"><span class="nav-number">1.1.1.</span> <span class="nav-text">欧拉判别法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#勒让德符号"><span class="nav-number">1.1.2.</span> <span class="nav-text">勒让德符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯引理"><span class="nav-number">1.1.3.</span> <span class="nav-text">高斯引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二次互反律"><span class="nav-number">1.1.4.</span> <span class="nav-text">二次互反律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#雅克比符号"><span class="nav-number">1.1.5.</span> <span class="nav-text">雅克比符号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cipolla算法"><span class="nav-number">1.2.</span> <span class="nav-text">Cipolla算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">1.3.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二次互反律的应用"><span class="nav-number">1.3.1.</span> <span class="nav-text">二次互反律的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1091G-New-Year-and-the-Factorisation-Collaboration"><span class="nav-number">1.3.2.</span> <span class="nav-text">[CF1091G] New Year and the Factorisation Collaboration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BZOJ1406-AHOI2007-密码箱"><span class="nav-number">1.3.3.</span> <span class="nav-text">BZOJ1406 [AHOI2007]密码箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SCOI2018-Numazu的蜜柑"><span class="nav-number">1.3.4.</span> <span class="nav-text">[SCOI2018] Numazu的蜜柑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模素数的高次同余方程"><span class="nav-number">2.</span> <span class="nav-text">模素数的高次同余方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模意义下的因式定理"><span class="nav-number">2.1.</span> <span class="nav-text">模意义下的因式定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-次剩余"><span class="nav-number">2.2.</span> <span class="nav-text">$n$ 次剩余</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二次剩余"><span class="nav-number">1.</span> <span class="nav-text">二次剩余</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识与定理"><span class="nav-number">1.1.</span> <span class="nav-text">知识与定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉判别法"><span class="nav-number">1.1.1.</span> <span class="nav-text">欧拉判别法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#勒让德符号"><span class="nav-number">1.1.2.</span> <span class="nav-text">勒让德符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯引理"><span class="nav-number">1.1.3.</span> <span class="nav-text">高斯引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二次互反律"><span class="nav-number">1.1.4.</span> <span class="nav-text">二次互反律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#雅克比符号"><span class="nav-number">1.1.5.</span> <span class="nav-text">雅克比符号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cipolla算法"><span class="nav-number">1.2.</span> <span class="nav-text">Cipolla算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">1.3.</span> <span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1091G-New-Year-and-the-Factorisation-Collaboration"><span class="nav-number">1.3.1.</span> <span class="nav-text">[CF1091G] New Year and the Factorisation Collaboration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BZOJ1406-AHOI2007-密码箱"><span class="nav-number">1.3.2.</span> <span class="nav-text">BZOJ1406 [AHOI2007]密码箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SCOI2018-Numazu的蜜柑"><span class="nav-number">1.3.3.</span> <span class="nav-text">[SCOI2018] Numazu的蜜柑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模素数的高次同余方程"><span class="nav-number">2.</span> <span class="nav-text">模素数的高次同余方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模意义下的因式定理"><span class="nav-number">2.1.</span> <span class="nav-text">模意义下的因式定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-次剩余"><span class="nav-number">2.2.</span> <span class="nav-text">$n$ 次剩余</span></a></li></ol></li></ol></div>
             
 
           </div>

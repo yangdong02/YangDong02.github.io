@@ -1887,7 +1887,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffa00;
+  background: #75ff57;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3183,4 +3183,14 @@ ul.breadcrumb li+li:last-child {
   #footer a {
     color: #eee;
   }
+}
+.hider_title {
+  font-family: "KaiTi";
+  cursor: pointer;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
 }

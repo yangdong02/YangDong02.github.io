@@ -49,8 +49,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Opentrains</tag>
         <tag>状压dp</tag>
+        <tag>Opentrains</tag>
         <tag>最小圆覆盖</tag>
         <tag>结论</tag>
         <tag>背包</tag>
@@ -196,8 +196,8 @@
       <tags>
         <tag>二分</tag>
         <tag>构造</tag>
-        <tag>Opentrains</tag>
         <tag>状压dp</tag>
+        <tag>Opentrains</tag>
         <tag>暴力</tag>
         <tag>背包问题</tag>
         <tag>最短路</tag>

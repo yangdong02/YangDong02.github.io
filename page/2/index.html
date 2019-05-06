@@ -371,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/AtCoder-Grand-Contest-032-比赛总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/数论之旅之同余方程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangDavid">
@@ -391,7 +391,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/26/AtCoder-Grand-Contest-032-比赛总结/" class="post-title-link" itemprop="url">AtCoder Grand Contest 032 比赛总结</a>
+                <a href="/2019/03/19/数论之旅之同余方程/" class="post-title-link" itemprop="url">数论之旅1：同余方程</a>
               
             
           </h1>
@@ -417,7 +417,7 @@
                 
               
 
-              <time title="创建时间：2019-03-26 09:09:33" itemprop="dateCreated datePublished" datetime="2019-03-26T09:09:33+08:00">2019-03-26</time>
+              <time title="创建时间：2019-03-19 19:13:14" itemprop="dateCreated datePublished" datetime="2019-03-19T19:13:14+08:00">2019-03-19</time>
             
 
             
@@ -434,7 +434,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-06 16:48:50" itemprop="dateModified" datetime="2019-05-06T16:48:50+08:00">2019-05-06</time>
+                <time title="修改时间：2019-05-06 17:36:42" itemprop="dateModified" datetime="2019-05-06T17:36:42+08:00">2019-05-06</time>
               
             
           </span>
@@ -451,14 +451,22 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/比赛/" itemprop="url" rel="index"><span itemprop="name">比赛</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/" itemprop="url" rel="index"><span itemprop="name">数学</span></a></span>
 
                 
                 
               
             </span>
           
-
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-check-circle"></i>
+            博文状态：<font color="7D26CD">已完成</font>
+          
+		  
+		  
+		  
           
             
             
@@ -487,110 +495,14 @@
 
       
         
-          <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><h2 id="Status"><a href="#Status" class="headerlink" title="Status"></a>Status</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">Status</th>
-<th style="text-align:center">A</th>
-<th style="text-align:center">B</th>
-<th style="text-align:center">C</th>
-<th style="text-align:center">D</th>
-<th style="text-align:center">E</th>
-<th style="text-align:center">F</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Contest</td>
-<td style="text-align:center">00:13</td>
-<td style="text-align:center">00:57</td>
-<td style="text-align:center"><font color="red">(2)</font></td>
-<td style="text-align:center">——</td>
-<td style="text-align:center">——</td>
-<td style="text-align:center">——</td>
-</tr>
-<tr>
-<td style="text-align:left">Upsolve</td>
-<td style="text-align:center"><font color="green"><strong>OK</strong></font></td>
-<td style="text-align:center"><font color="green"><strong>OK</strong></font></td>
-<td style="text-align:center">AC</td>
-<td style="text-align:center">AC</td>
-<td style="text-align:center">AC</td>
-<td style="text-align:center">AC</td>
-</tr>
-<tr>
-<td style="text-align:left">Attempt</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">*2</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">*</td>
-<td style="text-align:center">*</td>
-</tr>
-<tr>
-<td style="text-align:left">AC count</td>
-<td style="text-align:center">1222</td>
-<td style="text-align:center">894</td>
-<td style="text-align:center">197</td>
-<td style="text-align:center">111</td>
-<td style="text-align:center">21</td>
-<td style="text-align:center">4</td>
-</tr>
-<tr>
-<td style="text-align:left">Tag</td>
-<td style="text-align:center">贪心</td>
-<td style="text-align:center">构造</td>
-<td style="text-align:center">图论</td>
-<td style="text-align:center">DP</td>
-<td style="text-align:center">二分</td>
-<td style="text-align:center">概率</td>
-</tr>
-<tr>
-<td style="text-align:left">Coding</td>
-<td style="text-align:center"><font color="green">Easy</font></td>
-<td style="text-align:center"><font color="green">Easy</font></td>
-<td style="text-align:center"><font color="blue">Mid-</font></td>
-<td style="text-align:center"><font color="green">Easy</font></td>
-<td style="text-align:center"><font color="blue">Mid-</font></td>
-<td style="text-align:center"><font color="green">Easy</font></td>
-</tr>
-<tr>
-<td style="text-align:left">Thinking</td>
-<td style="text-align:center"><font color="green">Easy</font></td>
-<td style="text-align:center"><font color="blue">Mid-</font></td>
-<td style="text-align:center"><font color="blue">Mid</font></td>
-<td style="text-align:center"><font color="blue"><b>Mid+</b></font></td>
-<td style="text-align:center"><font color="blue"><b>Mid+</b></font></td>
-<td style="text-align:center"><font color="red"><b>Hard</b></font></td>
-</tr>
-<tr>
-<td style="text-align:left">Stars</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">★</td>
-<td style="text-align:center">★</td>
-<td style="text-align:center">★★</td>
-<td style="text-align:center">★★</td>
-<td style="text-align:center">★★★★</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Rank 413 /  1645</li>
-<li>Upsolved <code>6/6</code>，题目已经全部补完。</li>
-<li>Performance 1849，打炸了啊</li>
-<li>Rating 1188 (+368), <font color="green"><b>Pupil</b></font></li>
-<li>C题有挺多小情况的，没在场上写出来，挺可惜的。</li>
-<li>D题是一步很有趣的模型转化</li>
-<li>F题是概率期望的超级好题。</li>
-</ul>
-<p>这次比赛AtCoder的官方题解是真的良心！我会在博文末尾附上官方题解的PDF的，可以对照阅读。</p>
-<p>P.S. 以后题解Overview的表格里面会附带推荐程度、代码难度</p>
-<p>[UPD 2019.4.21] 补掉了F题，题解将会单独写一篇博客。</p>
-<p><strong>DONE</strong></p>
+          <p>最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。</p>
+<p>这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍<strong>二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号</strong>等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。</p>
+<p>在开始之前约定一下我的记号吧。未经说明的任何字母都代表自然数，小写字母 $p$ 始终代表奇素数，而大写的 $P$ 则不一定。</p>
+<p><strong>Blog Status: DONE</strong></p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/03/26/AtCoder-Grand-Contest-032-比赛总结/#more" rel="contents">
+              <a class="btn" href="/2019/03/19/数论之旅之同余方程/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -737,7 +649,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -976,7 +896,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -1160,7 +1088,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -1440,7 +1376,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -1620,7 +1564,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -1882,7 +1834,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -2125,7 +2085,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -2400,7 +2368,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             
@@ -2658,7 +2634,15 @@
               
             </span>
           
-
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fas fa-wrench"></i>
+            博文状态：<font color="7D26CD">未完成</font>
+          
+		  
           
             
             

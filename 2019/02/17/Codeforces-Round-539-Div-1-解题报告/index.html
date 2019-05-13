@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="山月半轮的博客">
 <meta property="og:description" content="Overview   Status A B C D E F     Contest 00:05 00:44 —— —— —— ——   Upsolve OK OK  AC     Attempt + +  +     Difficulty 1600 1800 2800 2600 2700 3200    这一场比赛打的是Virtual，按照原始排名的话是Rank 269 out of 551。打得">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-17T03:23:47.414Z">
+<meta property="og:updated_time" content="2019-05-07T08:27:02.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces Round 539 (Div. 1) 解题报告">
 <meta name="twitter:description" content="Overview   Status A B C D E F     Contest 00:05 00:44 —— —— —— ——   Upsolve OK OK  AC     Attempt + +  +     Difficulty 1600 1800 2800 2600 2700 3200    这一场比赛打的是Virtual，按照原始排名的话是Rank 269 out of 551。打得">
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-17 11:23:47" itemprop="dateModified" datetime="2019-03-17T11:23:47+08:00">2019-03-17</time>
+                <time title="修改时间：2019-05-07 16:27:02" itemprop="dateModified" datetime="2019-05-07T16:27:02+08:00">2019-05-07</time>
               
             
           </span>
@@ -584,7 +584,7 @@
 <li><p>之后就到了这道题的重头戏了。我们现在需要考虑的问题就是把剩下的 $n-2-p$ 个节点组成 $p+2$棵有根树（这$p+2$棵树是有序的），然后依次把这些有根树插入到路径上，一共有多少种方案。实际上，把链上的点加进来，这就相当于问$n$个点， $p+2$ 个连通块的有根森林一共有多少种。记这个问题的答案是$f(n,p+2)$（注意有根森林的说法，一种定义是$v$个点，$1,\cdots,k$号顶点分别属于不同连通块的无向无环图）。这个问题是不是和Cayley定理研究的问题有点类似？事实上用一个dp可以 $O(n^2)$ 预处理， $O(1)$ 解决这个问题，但是对这道题显然是不行的。这就要请出我们的大杀器了：<a href="https://en.wikipedia.org/wiki/Cayley&#39;s_formula#Generalizations" target="_blank" rel="noopener">拓展Cayley定理</a>：</p>
 </li>
 </ul>
-<p>$$f(n,k)=k\cdot n^{n-k}$$</p>
+<p>$$f(n,k)=k\cdot n^{n-k-1}$$</p>
 <p>由此，问题就解决了，我们可以在$O((n+m)\log n)$的复杂度完成这道题目。</p>
 <p>附：$O(n^2)$的递推公式，这是通过枚举与1号点相邻的点的度数实现的，可以用来验证结论：</p>
 <p>$$f(n,s)=\sum\limits_{j=0}^{n-s} C_{n-s}^{j} f(n-1,s+j-1)$$</p>
@@ -714,7 +714,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -888,7 +888,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">70</span>
+                      
+                    
+                    <span class="site-state-item-count">71</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

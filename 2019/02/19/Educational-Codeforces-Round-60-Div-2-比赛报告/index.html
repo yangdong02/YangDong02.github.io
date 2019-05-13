@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="山月半轮的博客">
 <meta property="og:description" content="Overview   Status A B C D E F G     Contest 00:03 00:08 00:45 01:12 WA(-4) —— ——   Upsolve OK OK OK OK AC AC AC   Attempt + + +1 + +4 + +   Difficulty 1100 1000 1800 2000 2200 2600 2500    比赛链接 打教育场被教">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T10:09:18.345Z">
+<meta property="og:updated_time" content="2019-05-06T10:12:40.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Educational Codeforces Round 60 (Div 2) 比赛报告">
 <meta name="twitter:description" content="Overview   Status A B C D E F G     Contest 00:03 00:08 00:45 01:12 WA(-4) —— ——   Upsolve OK OK OK OK AC AC AC   Attempt + + +1 + +4 + +   Difficulty 1100 1000 1800 2000 2200 2600 2500    比赛链接 打教育场被教">
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-06 18:09:18" itemprop="dateModified" datetime="2019-05-06T18:09:18+08:00">2019-05-06</time>
+                <time title="修改时间：2019-05-06 18:12:40" itemprop="dateModified" datetime="2019-05-06T18:12:40+08:00">2019-05-06</time>
               
             
           </span>
@@ -563,7 +563,6 @@
 <p>打教育场被教育系列。。。Rank 144 out of 5373，Rating Change：<font color="DarkSlateBlue"><strong>1970</strong></font> -&gt; <font color="DarkSlateBlue"><strong>2025</strong></font>。这一场从C开始都不是那么签到了，开始把CDE都看了，自闭了一会想出了C题二分的简单做法，打表得出D题的结论之后马上证明了，写个矩阵快速幂AC了。但是到了E题之后，被题意坑了，那个the interactor is not adaptive我理解为不会卡随机化，结果想了个假的随机算法，没有分析成功率都交上去。。。赛后发现只要理解为26进制数就可以得到确定性算法，感觉亏的不行。</p>
 <p>G题赛后补了，感觉收获还蛮多的。听cyy讲了一个区间笛卡尔树的想题新思路，又听cyy讲了一个主席树做法，以及离线排序后多次修改的树状数组的做法，后来又想到一个单调栈的做法，感觉这道题还是蛮有启发性的。</p>
 <p>赛时错误提交的分析：C题WA，原因是 long long· 的INF开小了。E题WA，RE，原因是算法假了。</p>
-<p><strong>DONE</strong></p>
  <a id="more"></a>
 <h1 id="Problem-AB-签到"><a href="#Problem-AB-签到" class="headerlink" title="Problem AB 签到"></a>Problem AB 签到</h1><p>A题代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, n) for(int i = 1; i &lt;= n; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100200</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn], mx = <span class="number">-1</span>, n, ans = <span class="number">-1</span>, p[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    rep(i, n) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]), mx = max(mx, a[i]);</span><br><span class="line">    rep(i, n) a[i] = a[i]==mx;</span><br><span class="line">    a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    rep(i, n) <span class="keyword">if</span>(a[i]) &#123;</span><br><span class="line">        p[i] = p[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">        ans = max(ans, p[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -736,7 +735,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -910,7 +909,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">70</span>
+                      
+                    
+                    <span class="site-state-item-count">71</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

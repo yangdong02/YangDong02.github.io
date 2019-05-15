@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JSCPC 2018 训练实录]]></title>
+    <url>%2F2019%2F05%2F16%2FJSCPC-2018-%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[2018江苏大学生程序设计竞赛（JSCPC）Overview Status A B C D E F G H I J K Contest 0:13 1:45 2:58 1:01 1:17 4:10 0:45 Attempt +1 + + +1 + + + AC count 122 58 27 95 86 30 120 Tag 模拟 二分 莫队 排序 贪心 思维 容斥 Coding 508 518 2620 ? ? 947 1409 ? ? 817 648 Thinking Easy Easy+ Mid ? ? Easy Easy ? ? Mid Easy Stars ★ Template Red blue green OK * ? $\mathcal{O}$ (0) ★ 注：$\mathcal O$ 表示口头通过。 Solved during contest: 7/11 Upsolved: 7/11 Orally upsolved: 7/11 Rank: 8/156 Contest Materials比赛链接 Tutorials题目难度： Very Easy: A, FEasy: B, G, KMedium Easy: C, J Prob A. 签到 Solved at 00:13 (+1) 模拟题意即可。不要看错题意。由于前三道题目是一个系列，这里把定义的 $h$ 值概念摘抄如下： The h-index of an author is the largest h where he has at least h papers with citations not less than h. 点击显示/隐藏代码 123456789101112131415161718192021#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 444444;int a[maxn], n;ll mn[maxn];int main() &#123; while(~scanf("%d", &amp;n)) &#123; for(int i = 0; i &lt;= n; ++i) scanf("%d", &amp;a[i]); for(int i = n; i ; --i) mn[i] = (a[i] + mn[i+1]); for(int i = n; i &gt;= 0; --i) if(i &lt;= mn[i]) &#123; printf("%d\n", i); break; &#125; &#125; return 0;&#125; Prob B. 奇怪的二分 Solved at 01:45 (+) 首先可以看到最大的 $h$ 满足二分性质：小于这个数的所有 $h$ 都可行，大于的都不可行。 考虑二分，考虑如何验证一个 $h$ 是否合法。我们先放上 $h$ 个论文，每篇论文只工作一小时，作为满足要求的 h 篇。然后如果剩下的时间只放在这 $h$ 篇上，这时至少需要的时间是：$$\lceil \frac{h-1-a}{a}\rceil + \lceil \frac{h-2-a}{a}\rceil + \lceil \frac{h-3-a}{a}\rceil + \cdots + \lceil \frac{1-a}{a}\rceil$$但是我们还可以增加一些水论文，即增加一篇工作 $1$ 的论文，然后引用上面的 h 篇。可以发现加过一篇水论文之后，至少需要的时间刚好减去了上式的第一项，即变为了：$$\lceil \frac{h-2-a}{a}\rceil + \lceil \frac{h-3-a}{a}\rceil + \cdots + \lceil \frac{1-a}{a}\rceil$$每增加一篇水论文都会使求和减少一项，而每一项求和只要不小于 0，就至少为 1，因此使用水论文永远是划算的。我们可以发现，检查 h 时，我们应当使用 $\min(0,h-a)$ 份水论文。 对于一个 h，需要的时间至少为 $h + \min(0,h-a)$ 。由此二分即可。 点击显示/隐藏代码 1234567891011121314151617181920212223242526#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;ll n, a;bool judge(ll h) &#123; return h + max(h - a, 0LL) &lt;= n;&#125;int main() &#123; while(cin &gt;&gt; n &gt;&gt; a) &#123; ll l = 0, r = n; while(l &lt; r) &#123; ll mid = (l + r) &gt;&gt; 1; if(l == r - 1) mid = r; if(judge(mid)) l = mid; else r = mid - 1; &#125; printf("%lld\n", l); &#125; return 0;&#125; Prob C. 莫队 Solved at 02:58 by YangDavid, thinking whr (+) Description给出数组 $a$ ，有 $q$ 个询问，求区间 $a[l,r]$ 的 $h$ 值。 数据范围：$n,q \leq 10^5$ Solution 1（莫队算法，904 ms / 2000 ms） 回顾求 $h$ 的过程，我们将论文引用次数装进一个计数数组，然后在这个计数数组中从后往前扫，扫到 i 位置时，比较后缀和 $\sum_{j=i}^n a_j$，与当前下标 i ，如果后缀和大的话，我们就找到了答案。 一个比较重要的性质是一个数组加入或删除一个元素之后，其 h 值最多变化 1。由此，根据上面的求 h 过程，我们可以直接 $O(1)$ 地插入删除元素，由此采用莫队算法即可做到 $O(n\sqrt n)$ 的复杂度。 Code 1点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(register int i = 1; i &lt;= n; ++i)using namespace std;typedef long long ll;template&lt;typename T&gt; void read(T &amp;x)&#123; x = 0; int f = 1; char ch = getchar(); while(!isdigit(ch) ) &#123; if(ch == '-') f = -1; ch = getchar();&#125; while( isdigit(ch) ) &#123;x = x * 10 + ch - 48; ch = getchar();&#125; x *= f;&#125;template&lt;typename T, typename... Args&gt; void read(T&amp; x, Args&amp;... args)&#123; read(x), read(args...); &#125;template&lt;typename T&gt; void write(T x) &#123; if(x &lt; 0) putchar('-'), write(-x); if(x &gt; 9) write(x / 10); putchar(x % 10 + '0');&#125;const int maxn = 302000, maxB = 500;int a[maxn], n, m, pos[maxn], t = 0, lenb;int ans[maxn], cur_ans = 0;struct Query &#123; int l, r, id; &#125; q[maxn];inline bool cmp1(const Query &amp;q1, const Query &amp;q2) &#123;return q1.l &lt; q2.l; &#125;inline bool cmp2(const Query &amp;q1, const Query &amp;q2) &#123; return pos[q1.l] &lt; pos[q2.l] || (pos[q1.l] == pos[q2.l] &amp;&amp; q1.r &lt; q2.r);&#125;int vcnt[maxn], rsum = 0;int DealFirst(int l, int r) &#123;// printf("&gt; Deal First [%d, %d]: \n", l, r); for(int i = l; i &lt;= r; ++i) vcnt[a[i]]++; for(int res = n; res &gt;= 0; --res) &#123; rsum += vcnt[res]; if(rsum &gt;= res) return res; &#125; assert(false);&#125;void Ins(int x) &#123; vcnt[x]++; if(x &gt;= cur_ans) rsum++; if(rsum - vcnt[cur_ans] &gt;= cur_ans + 1) &#123; rsum -= vcnt[cur_ans]; cur_ans++; &#125;&#125;void Del(int x) &#123; vcnt[x]--; if(x &gt;= cur_ans) rsum--; if(rsum &lt; cur_ans) &#123; cur_ans--; rsum += vcnt[cur_ans]; &#125;&#125;void solve() &#123; memset(vcnt, 0, sizeof(int) * (n + 10)); cur_ans = rsum = 0; rep(i, n) read(a[i]); rep(i, m) &#123; read(q[i].l, q[i].r); q[i].id = i; &#125; sort(q + 1, q + m + 1, cmp1); t = sqrt(m + 0.5), lenb = m / t; for(int i = 1; i &lt;= m; ++i) pos[i] = (i - 1) / lenb + 1; sort(q + 1, q + m + 1, cmp2); cur_ans = DealFirst(q[1].l, q[1].r); ans[q[1].id] = cur_ans; int cur_l = q[1].l, cur_r = q[1].r; for(int qn = 2; qn &lt;= m; ++qn) &#123; int nl = q[qn].l, nr = q[qn].r;// printf("&gt; Deal [%d, %d]: \n", nl, nr); if(cur_r &lt; nr) for(int i = cur_r + 1; i &lt;= nr; ++i) Ins(a[i]); if(cur_r &gt; nr) for(int i = cur_r; i &gt; nr; --i) Del(a[i]); if(cur_l &gt; nl) for(int i = cur_l - 1; i &gt;= nl; --i) Ins(a[i]); if(cur_l &lt; nl) for(int i = cur_l; i &lt; nl; ++i) Del(a[i]); ans[q[qn].id] = cur_ans; cur_l = nl, cur_r = nr; &#125; rep(i, m) write(ans[i]), putchar('\n');&#125;int main() &#123; while(~scanf("%d%d", &amp;n, &amp;m)) solve(); return 0;&#125; Prob D.留坑。 Prob E.留坑。 Prob F. 排序 Solved at 01:01 (+1) 直接排序即可，但是可能炸 long long，需要用 __int128。思博题。 点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef __int128 ll;const int maxn = 33333;int n;#define gc() getchar()template&lt;typename T&gt; void read(T &amp;x)&#123; x = 0; int f = 1; char ch = gc(); while(!isdigit(ch) ) &#123; if(ch == '-') f = -1; ch = gc();&#125; while( isdigit(ch) ) &#123;x = x * 10 + ch - 48; ch = gc();&#125; x *= f;&#125;struct item &#123; ll a, b, c; int id; bool operator &lt; (const item&amp; r) const &#123; ll lhs = (a + b) * (r.a + r.b + r.c); ll rhs = (r.a + r.b) * (a + b + c); if(lhs != rhs) return lhs &lt; rhs; else return id &lt; r.id; &#125; void qread() &#123; read(a), read(b), read(c); &#125;&#125; a[maxn];int main() &#123; while(~scanf("%d", &amp;n)) &#123; rep(i, n) a[i].qread(), a[i].id = i; sort(a + 1, a + n + 1); rep(i, n) printf("%d%c", a[i].id, " \n"[i == n]); &#125; return 0;&#125; Prob G. 模拟 首先，判断 c 的个数是否相同，然后判断 c 分割开的各个只由 a,b 组成的部分是否等价。 其次，如何判断两个只由 a,b 组成的部分是否等价？ab 可以交换为 ba，因此可以直接将两个部分排好序，变为若干个 a 加若干个 b 的形式。然后由于 aa, bb 可以直接消去，按照奇偶性， a, b 的奇偶相同则等价。 点击显示/隐藏代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 11111;string s, t;vector&lt;pii&gt; ss, tt;int main() &#123; while(cin &gt;&gt; s &gt;&gt; t) &#123; ss.clear(), tt.clear(); int a = 0, b = 0; for(auto g : s) &#123; if(g == 'c') &#123; ss.emplace_back(a&amp;1, b&amp;1); a = b = 0; &#125; else if(g == 'a') a++; else if(g == 'b') b++; &#125; ss.emplace_back(a&amp;1, b&amp;1); a = b = 0; for(auto g : t) &#123; if(g == 'c') &#123; tt.emplace_back(a&amp;1, b&amp;1); a = b = 0; &#125; else if(g == 'a') a++; else if(g == 'b') b++; &#125; tt.emplace_back(a&amp;1, b&amp;1); a = b = 0; if(ss.size() != tt.size()) &#123; puts("No"); continue; &#125; int sz = ss.size(), ok = true; for(int i = 0; i &lt; sz; ++i) &#123; if(ss[i].first != tt[i].first || ss[i].second != tt[i].second) &#123; puts("No"); goto tag; &#125; &#125; puts("Yes"); tag:; &#125; return 0;&#125; Prob H.留坑。 Prob I.留坑。 Prob J. 思维题明天再写。 点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 122222;const int MOD = 1000000007;int muln(int x, int y) &#123; return 1LL* x * y % MOD; &#125;int p2[maxn], n;string s;int main() &#123; p2[0] = 1; for(int i = 1; i &lt;= 102000; ++i) p2[i] = muln(p2[i-1], 2); while(cin &gt;&gt; n &gt;&gt; s) &#123; reverse(s.begin(), s.end()); while(int(s.length()) &lt; n) s += '0'; reverse(s.begin(), s.end()); int zero = 0, ans = 1; for(int i = 0; i &lt; n; ++i) &#123; if(s[i] == '0') zero++; else &#123; ans = muln(ans, muln(p2[zero]-1, p2[n-i-1])); &#125; &#125; printf("%d\n", ans % MOD); &#125; return 0;&#125; Prob K. 容斥毒瘤分类讨论容斥题，whr 写的，我没仔细看。 点击显示/隐藏代码 123456789101112131415161718192021222324#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;ll a,b,c,d;ll ans;int main() &#123; while(cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d) &#123; ans=0; ll tmp1=d/2018-(c-1)/2018; ans+=tmp1*(b-a+1); ll tmp2=d/1009-(c-1)/1009; ans+=(tmp2-tmp1)*(b/2-(a-1)/2); ll tmp3=b/2018-(a-1)/2018; ans+=tmp3*(d-c+1); ll tmp4=b/1009-(a-1)/1009; ans+=(tmp4-tmp3)*(d/2-(c-1)/2); //cout&lt;&lt;tmp1&lt;&lt;" "&lt;&lt;tmp2&lt;&lt;" "&lt;&lt;tmp3&lt;&lt;" "&lt;&lt;tmp4; cout&lt;&lt;ans-tmp1*tmp4-tmp2*tmp3+tmp1*tmp3&lt;&lt;endl; &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>比赛</category>
+      </categories>
+      <tags>
+        <tag>莫队</tag>
+        <tag>思维题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Codeforces Round 559 (Div. 1) 比赛记录]]></title>
     <url>%2F2019%2F05%2F13%2FCodeforces-Round-559-Div-1-%E6%AF%94%E8%B5%9B%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[Codeforces Round 559 (Div. 1)Overview Status A B C D E F Contest 00:21 (2) 01:38 Upsolve OK OK Attempt + * +1 AC count 415 204 258 77 2 1 Tag 贪心 构造 拓扑排序 Coding 1577 489 2763 ? ? ? Thinking Easy Mid- Easy+ ? ? ? Stars ★ ★ 又一次打 Div. 1，题目质量还不错。前期一直在写 C 题的线段树，结果 B 题构造题却没时间做了。猜了好几个结论，总算猜到正确的了，但是没来得及提交。还是有点遗憾的，微微掉了 5 分 rating ，不过也无妨，毕竟还是要在比赛中不断成长的。 Solved during contest: 2/6 Upsolved: 3/6 Orally upsolved: 3/6 Rank: 246/425 Rating: 2052 (-5) Contest Materials比赛编号：1158 比赛链接 官方题解连接 TutorialsProb A. 贪心模拟题意贪心即可。需要特判一些情况。 点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;#define gc() getchar()template&lt;typename T&gt; void read(T &amp;x)&#123; x = 0; int f = 1; char ch = gc(); while(!isdigit(ch) ) &#123; if(ch == '-') f = -1; ch = gc();&#125; while( isdigit(ch) ) &#123;x = x * 10 + ch - 48; ch = gc();&#125; x *= f;&#125;template&lt;typename T, typename... Args&gt; void read(T&amp; x, Args&amp;... args)&#123; read(x), read(args...); &#125;template&lt;typename T&gt; void write(T x) &#123; if(x &lt; 0) putchar('-'), write(-x); if(x &gt; 9) write(x / 10); putchar(x % 10 + '0');&#125;const int maxn = 555555;ll b[maxn], g[maxn], n, m, ming = 0x3f3f3f3f, maxb = 0;int main() &#123; read(n, m); rep(i, n) read(b[i]), maxb = max(maxb, b[i]); rep(i, m) read(g[i]), ming = min(ming, g[i]); if(maxb &gt; ming) &#123; puts("-1"); return 0; &#125; multiset&lt; int, greater&lt;int&gt; &gt; boys; ll ans = 0, rem = m - 1; for(int i = 1; i &lt;= n; ++i) ans += 1LL * b[i] * m, boys.insert(b[i]); if(m == 1) &#123; if(maxb == g[1]) printf("%lld\n", ans); else puts("-1"); return 0; &#125; else if(n == 1) &#123; if(ming == b[1]) printf("%lld\n", ans); else puts("-1"); return 0; &#125; for(int i = 1; i &lt;= m; ++i) if(g[i] &gt; maxb) &#123; if(boys.empty()) &#123; puts("-1"); return 0; &#125; ans += (g[i] - *boys.begin()); if(--rem == 0) &#123; boys.erase(boys.begin()), rem = m - 1; &#125; &#125; printf("%lld\n", ans); return 0;&#125; Prob B. 构造Description定义一个字符串 $s$ 的子串 $t$ 是好的，当且仅当这个子串仅仅在 $s$ 中出现了一次。 给定 $n,k$ ，要你构造出一个长度为 $n$ 的 01 串，使得好子串中长度最短的长度为 $k$。 数据范围：$n,k\leq 100000$，$n-k$ 是偶数。 Solution（目前还不清楚证明）令 $d=\frac {n-k}2$ ，当长度没达到 $n$ 的时候，不断尝试放入 $d$ 个 1，之后放入 1 个 0即可。具体实现参见下面代码。 证明留坑。 Code12345678910111213141516171819#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;int n , k;int main() &#123; cin &gt;&gt; n &gt;&gt; k; int dif = (n - k) / 2, t = 0; while(t &lt; n) &#123; for(int i = 0; i &lt; dif &amp;&amp; t &lt; n; ++i) &#123; putchar('1'), t++; &#125; if(t &lt; n) putchar('0'), t++; &#125; putchar('\n'); return 0;&#125; Prob C. 线段树优化建图+拓扑排序 或 思维+DFSDescription对于一个 $n$ 个数的排列 $p$，我们定义它在 $i$ 位置的 $next$ 值为 $[i+1,n]$ 范围内第一个大于 $p_i$ 的数，如果不存在，则为 $n+1$ 。如 {3,1,2,4} 的 next 值为 {4,2,4,5} 。 现在给你了一个残缺的 next 值数组，即有些位置的 next 值是不确定的。你需要根据 next 数组构造出任何一个满足条件的排列，或者报告没有可能的 next 数组。 数据范围 $n\leq 5\cdot 10^5$ Solution考虑建出大小关系图，让小数向大数连边。首先，显然 $i\to nxt(i)$ 之间一定是有边的。然后，可以发现 $\forall x\in [i+1,nxt(i)-1]$ ，i 没有与 x 连边，必然说明 $x&lt;i$ 。事实上连完这些边也足够了，跑一下拓扑排序即可得到最后结果。上面连边的过程用线段树优化建图即可完成。我场上的解法稍微观察了一些其他性质，发现每个位置最多连两条边，然后是用了个支持区间覆盖的线段树实现的。这类解法时间复杂度 $O(n\log n)$ ，十分显然。 线段树解法代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;#define gc() getchar()template&lt;typename T&gt; void read(T &amp;x)&#123; x = 0; int f = 1; char ch = gc(); while(!isdigit(ch) ) &#123; if(ch == '-') f = -1; ch = gc();&#125; while( isdigit(ch) ) &#123;x = x * 10 + ch - 48; ch = gc();&#125; x *= f;&#125;template&lt;typename T, typename... Args&gt; void read(T&amp; x, Args&amp;... args)&#123; read(x), read(args...); &#125;template&lt;typename T&gt; void write(T x) &#123; if(x &lt; 0) putchar('-'), write(-x); if(x &gt; 9) write(x / 10); putchar(x % 10 + '0');&#125;const int maxn = 555555;int n, a[maxn], nxt[maxn], fa[maxn];vector&lt;int&gt; G[maxn];#define lson (o &lt;&lt; 1)#define rson (o &lt;&lt; 1 | 1)int node[maxn * 4];void pushdown(int o) &#123; if(node[o] != 0) &#123; node[lson] = node[o]; node[rson] = node[o]; node[o] = 0; &#125;&#125;void modify(int o, int l, int r, int ql, int qr, int v) &#123; if(ql &gt; qr) return; if(ql &lt;= l &amp;&amp; r &lt;= qr) &#123; node[o] = v; return; &#125; pushdown(o); int mid = (l + r) &gt;&gt; 1; if(ql &lt;= mid) modify(lson, l, mid, ql, qr, v); if(qr &gt; mid) modify(rson, mid + 1, r, ql, qr, v);&#125;void recover(int o, int l, int r, int *arr) &#123; if(l == r) &#123; arr[l] = node[o]; return; &#125; int mid = (l + r) &gt;&gt; 1; pushdown(o); recover(lson, l, mid, arr); recover(rson, mid + 1, r, arr);&#125;void solve() &#123; read(n); rep(i, n) read(a[i]), G[i].clear(); vector&lt;int&gt; indeg(n + 10, 0); G[n + 1].clear(); memset(nxt, -1, sizeof (int) * (n + 15)); modify(1, 1, n, 1, n, -1); set&lt;int&gt; bar; for(int i = 1; i &lt;= n; ++i) if(a[i] != -1) &#123; nxt[i] = a[i]; while(!bar.empty() &amp;&amp; i &gt;= *bar.begin()) bar.erase(bar.begin()); if(!bar.empty() &amp;&amp; a[i] &gt; *bar.begin()) &#123; puts("-1"); return; &#125; else &#123; modify(1, 1, n, i + 1, a[i] - 1, i); bar.insert(a[i]); &#125; &#125; recover(1, 1, n, fa); rep(i, n) &#123; if(nxt[i] != -1 &amp;&amp; nxt[i] != n + 1) G[i].push_back(nxt[i]), indeg[nxt[i]]++; if(fa[i] != -1 &amp;&amp; fa[i] != n + 1) G[i].push_back(fa[i]), indeg[fa[i]]++; &#125; queue&lt;int&gt; q; vector&lt;int&gt; ans(n + 10, 0); int cur = 0; rep(i, n) if(indeg[i] == 0) q.push(i); while(!q.empty()) &#123; int tp = q.front(); q.pop(); ans[tp] = ++cur; for(auto g : G[tp]) &#123; if(--indeg[g] == 0 &amp;&amp; g != n + 1) q.push(g); &#125; &#125; rep(i, n) printf("%d%c", ans[i], " \n"[i == n]);&#125;int main() &#123; int T; scanf("%d", &amp;T); while(T--) solve(); return 0;&#125; 另一类做法留坑。 Prob D.Prob E.Prob F.]]></content>
@@ -78,9 +90,9 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Opentrains</tag>
         <tag>状压dp</tag>
         <tag>最小圆覆盖</tag>
+        <tag>Opentrains</tag>
         <tag>结论</tag>
         <tag>背包</tag>
         <tag>线段树优化建图</tag>
@@ -120,9 +132,9 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
         <tag>构造</tag>
         <tag>Codeforces</tag>
+        <tag>贪心</tag>
         <tag>快速沃尔什变换（FWT）</tag>
       </tags>
   </entry>
@@ -209,8 +221,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>p-adic</tag>
         <tag>数论</tag>
+        <tag>p-adic</tag>
         <tag>牛顿迭代法</tag>
         <tag>数学分析</tag>
       </tags>
@@ -223,10 +235,10 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>二分</tag>
         <tag>构造</tag>
-        <tag>Opentrains</tag>
+        <tag>二分</tag>
         <tag>状压dp</tag>
+        <tag>Opentrains</tag>
         <tag>暴力</tag>
         <tag>背包问题</tag>
         <tag>最短路</tag>
@@ -253,8 +265,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Opentrains</tag>
         <tag>二次剩余</tag>
+        <tag>Opentrains</tag>
         <tag>暴力</tag>
         <tag>概率算法</tag>
         <tag>非完美算法</tag>
@@ -285,9 +297,9 @@
       <tags>
         <tag>构造</tag>
         <tag>线段树</tag>
+        <tag>思维题</tag>
         <tag>Opentrains</tag>
         <tag>交互题</tag>
-        <tag>思维题</tag>
         <tag>树dp</tag>
         <tag>Stern-Brocot树</tag>
         <tag>Pick定理</tag>
@@ -317,8 +329,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>二分</tag>
         <tag>Codeforces</tag>
+        <tag>二分</tag>
         <tag>矩阵</tag>
         <tag>打表</tag>
         <tag>笛卡尔树</tag>

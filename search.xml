@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Gym 102192 训练报告]]></title>
+    <url>%2F2019%2F05%2F26%2FGym-102192-%E8%AE%AD%E7%BB%83%E6%8A%A5%E5%91%8A%2F</url>
+    <content type="text"><![CDATA[2018 Chinese Multi-University Training, Nanjing U ContestOverview Status A B C D E F G H I J K L Contest 1:25 (7) 2:16 0:17 4:55 2:35 4:56 Attempt +1 *7 +1 + + + + AC count 308 55 2 270 811 2 12 1 20 329 18 39 Tag 容斥 几何 构造 模拟 SAM LIS 贪心 Coding Easy ? ? Easy 1239 ? ? ? Mid Mid ? 1586 Thinking Easy+ ? ? Mid- Easy ? ? ? ? ? ? Easy+ Stars ★ ★★ 注：$\mathcal O$ 表示口头通过。 真·第一次正式训练，感觉合作得还蛮愉快的。不过最后半个小时有点没有按照正式比赛要求，三人三机了。以后还是一定要避免这种问题，协商好上机时间，严格三人单机。 Solved during contest: 6/12 Upsolved: 7/12 Orally upsolved: 7/12 Rank: 25/824 Contest MaterialsContest Link Replay开场我从中间看了 E，发现是个签到的模拟题，就开始写，17 分钟过了 E。 cyy 说 J 是思博题，于是上机写，我和 wzk 看了 A ，中途 wzk 提出 C 题的很难写的一种做法。又看了下 D，没什么思路，决定集中精力想 A 。 wzk 反应过来是一道容斥原理裸题，经过验证是正确的。于是让 cyy 下机小黄鸭，wzk 写 A ，但是交上去 WA 了。我提醒了一个可能爆 int 的地方，改了之后就 AC 了。 wzk 想要写 C，可是场上没什么人过；cyy 继续下机小黄鸭。我和 wzk 讨论起了 D 。对于都是偶数的情况，首先我提出了 $\max(h,w)$ 的显然构造，wzk 迅速提出了一种更优的 $\max (h,w) + \lfloor \frac{\min(h,w)}{2}\rfloor$ 的构造，我稍微魔改了一下，得到了稍微更优秀一些的 $\max (h,w) + \lceil\frac{\min(h,w)}{2}\rceil$ 的构造。我们一致认为已经足够优秀，于是写了一下这种做法，可是交上去还是 WA 了。wzk 马上反应出在最上面添加形如 (((( 一行，最下面添加形如 )))) 的一行更加优秀，答案变成了 $h+w-4$ 。这次的构造已经非常优秀了，于是魔改之后，我们过了 D。cyy J 题总算也调完了，交上去一发过了 J。这时排名大概 60 左右，感觉还不怎么行。 下面又进入了一段机位空出来的时间，没有新的题可以做了。wzk 打算写 C 题，场上 B 题过了一大片，可是没想好怎么做。和 cyy 大致讨论了一些情况，可是谁都没有底去写。 wzk 说 C 题快调试完了，就没去管。我给 cyy 说了字符串题 I 题，cyy 提出了 SAM 建出后缀树树链剖分，再加一个线段树维护答案的不可写做法。 cyy 将其简化为了广义 SAM + 虚树 + 线段树合并 + 线段树的 同样不可写的 做法， cyy 开始构思代码。我发现榜上 L 题通过人数增长很快，费了好大力气读懂了题目，发现可能直接贪心就完事了。和 cyy 讨论了一下，发现和校赛 B 有点类似，可能直接用一个 map 维护就可以了。可是需要支持一个类似平衡树 split 的一个毒瘤操作，感觉有点坨屎。后来我发现直接暴力删除，复杂度就是对的，构思了下代码，觉得很可写。这时已经 4:20 ，wzk 的 C 题莫名奇妙地 RE 了。这时分歧出现了，我要写 L 题，cyy 想写 I 题，wzk 想调试 C 题。由于时间不多，只好三人三机了一会儿。最后 4:55 左右，我和 cyy 同时写完了。我一发过了样例，稍微小黄鸭一下改了一个很傻的错误，心里很没底就交了。 cyy 稍微靠前 1 分钟的时候交了。这时 cf 返回了两个 AC，过掉了I和L两道题 。于是最终排名看起来还行。 比赛过程出现的锅： A 题有个地方忘记开 long long J 题没有想好就开始写，浪费不少机时 B 题思博题，没有人想去写，结果最后就没有过 中期一直卡在 C 题上，花费了不少机时，最后 IL 两道题都比较有思路，只得三人三机了一会儿。正式比赛还-是要避免这种问题。 Tutorials已知的题目难度顺序： Very Easy：E Easy: A, D, J Mid Easy: L Mid Hard: I Prob A. 容斥 Solved by nocriz at 01:25 (+1) Description给定 $n,m,k$ 求多项式：$$(1+x+x^2+\cdots+x^{n-1})^m$$的 $k$ 次方项的值。 数据范围：多组询问，$T\leq 400 ,n,m,k\leq 10^5, \sum n, \sum m,\sum k \leq 2\cdot 10^6$ Solution考虑组合意义，$m$ 个 $[0,n-1]$ 之间的数要凑出 k 的方案数。假如没有 $n-1$ 的限制多简单啊，直接答案就是组合数 $\binom{k+m-1}{m-1}$。可是如果有限制，我们就可以考虑容斥原理。考虑至少有 $i$ 个数超过限制的方案数，那么首先把这 i 个数选出来之后，就是要凑出 $k-in$ 的方案数了。所以至少有 i 个数的答案为：$$f(i) = \binom{m}{i} \cdot \binom{k-in+m-1}{m-1}$$最终总的答案为：$$ans = \sum_{i=0}^{\lfloor \frac ik \rfloor} f(i) \cdot (-1)^i$$ Code点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;iostream&gt;using namespace std;int mod = 998244353;int add(int a,int b)&#123; return (a+b)&gt;=mod?a+b-mod:a+b;&#125;int sub(int a,int b)&#123; return (a-b)&lt;0?a-b+mod:a-b;&#125;int sq(int x)&#123;return 1ll*x*x%mod;&#125;int mul(int a,int b)&#123;return 1ll*a*b%mod;&#125;int pow(int a,int b)&#123;return b==0?1:((b&amp;1)?mul(a,sq(pow(a,b/2))):(sq(pow(a,b/2))));&#125;const int N = 200010;int fac[N],invfac[N];int C(int n,int m)&#123;return mul(fac[n],mul(invfac[m],invfac[n-m]));&#125;int main()&#123; fac[0] = 1; for(int i=1;i&lt;N;i++)&#123; fac[i] = mul(fac[i-1],i); &#125; invfac[N-1] = pow(fac[N-1],mod-2); for(int i=N-2;i&gt;=0;i--)&#123; invfac[i] = mul(invfac[i+1],i+1); &#125; //cout&lt;&lt;C(6,4)&lt;&lt;endl; int T; cin&gt;&gt;T; while(T--)&#123; int n,m,k; cin&gt;&gt;n&gt;&gt;m&gt;&gt;k; int ans = 0; if(1ll*(n-1)*m&lt;k)&#123; cout&lt;&lt;0&lt;&lt;endl; continue; &#125; for(int i=0;i*n&lt;=k;i++)&#123; if(i&amp;1)&#123; ans = sub(ans,mul(C(k-i*n+m-1,m-1),C(m,i))); &#125;else&#123; ans = add(ans,mul(C(k-i*n+m-1,m-1),C(m,i))); &#125; &#125; cout&lt;&lt;ans&lt;&lt;endl; &#125; return 0;&#125; Prob B.Prob C.Prob D. 构造好题 Solved by nocriz at 02:16 (+1) Description称一个括号矩阵的行是好的，当且仅当这一行从左往右读得到的括号序列是匹配的；称一个列是好的，当且仅当这一列从上往下读是匹配的。现在你需要构造一个 $h\times w$ 的括号矩阵，使得好的行的数目+好的列的数目最大。 Solution当行或者列有至少一个是奇数时，问题都变得很平凡。 当行或者列都是偶数时，特判掉一些小情况，然后对于大情况考虑下面的构造： 123456((((((()(()()())()()()()(()()())()()()()())))))) 即：第一行、最后一行、第一列、最后一列如上图那样，其他行没两行循环一次这样构造。可以看到只有第一行、最后一行、第一列、最后一列没有匹配，答案是 $h+w-4$ 。应当可以证明对于大情况，这种构造是最优的。 Code点击显示/隐藏代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include &lt;iostream&gt;#include &lt;cstring&gt;using namespace std;char ans[220][220] = &#123;0&#125;;int n,m,swped = 0;void mp(int i,int j,char c)&#123; if(swped)swap(i,j); ans[i][j] = c;&#125;int main()&#123; int T; cin&gt;&gt;T; while(T--)&#123; swped = 0; memset(ans,0,sizeof(ans)); cin&gt;&gt;n&gt;&gt;m; //cerr&lt;&lt;"Case :"&lt;&lt;n&lt;&lt;' '&lt;&lt;m&lt;&lt;endl; if(m%2 == 1 || (n%2 == 0 &amp;&amp; n&lt;m))&#123; swped = 1; swap(n,m); &#125; //cerr&lt;&lt;n&lt;&lt;' '&lt;&lt;m&lt;&lt;endl; for(int i=0;i&lt;n;i++)&#123; if(i&amp;1)&#123; for(int j=0;j&lt;m;j++)&#123; if(j&amp;1) mp(i,j,')'); else mp(i,j,'('); &#125; &#125;else&#123; mp(i,0,'('); for(int j=0;j&lt;m-2;j++)&#123; if(j&amp;1) mp(i,j+1,')'); else mp(i,j+1,'('); &#125; mp(i,m-1,')'); &#125; &#125; if(m&gt;6 &amp;&amp; n%2 == 0)&#123; for(int i=0;i&lt;m;i++)mp(0,i,'('); for(int i=0;i&lt;m;i++)mp(n-1,i,')'); &#125; if(swped)&#123; for(int i=0;i&lt;m;i++)cout&lt;&lt;ans[i]&lt;&lt;endl; &#125;else&#123; for(int i=0;i&lt;n;i++)cout&lt;&lt;ans[i]&lt;&lt;endl; &#125; &#125; return 0;&#125; Prob E. 模拟 Solved by YangDavid at 00:17 (+) 模拟题意即可。 点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556/* * Author : YangDavid * Created Time : 2019年05月26日 星期日 21时32分31秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;int n;char a[10][10], op[10];void Clock(char&amp; a, char&amp; b, char &amp;d, char &amp;e) &#123; swap(a, d); swap(d, e); swap(e, b); &#125;void rc(char &amp;a, char &amp;b, char &amp;d,char &amp;e) &#123; swap(b, e); swap(d, e); swap(d, a);&#125;void solve() &#123; scanf("%d", &amp;n); rep(i, 3) scanf("%s", a[i] + 1); rep(i, n) &#123; scanf("%s", op); if(op[0] == '1') &#123; if(op[1] == 'C') &#123; Clock(a[1][1], a[1][2], a[2][1], a[2][2]); &#125; else rc(a[1][1], a[1][2], a[2][1], a[2][2]); &#125; else if(op[0] == '2') &#123; if(op[1] == 'C') &#123; Clock(a[1][2], a[1][3], a[2][2], a[2][3]); &#125; else rc(a[1][2], a[1][3], a[2][2], a[2][3]); &#125; else if(op[0] == '3') &#123; if(op[1] == 'C') &#123; Clock(a[2][1], a[2][2], a[3][1], a[3][2]); &#125; else rc(a[2][1], a[2][2], a[3][1], a[3][2]); &#125; else if(op[0] == '4') &#123; if(op[1] == 'C') &#123; Clock(a[2][2], a[2][3], a[3][2], a[3][3]); &#125; else rc(a[2][2],a[2][3], a[3][2], a[3][3]); &#125; &#125; rep(i, 3) printf("%s\n", a[i] + 1);&#125;int main() &#123; int T; scanf("%d", &amp;T); while(T--) &#123; solve(); &#125; return 0;&#125; Prob F.Prob G.Prob H.Prob I. SAM + 虚树 + 线段树合并 + 线段树 Solved by hdmmblz at 04:55 (+) DescriptionCYYNB SolutionCYYNB Code点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cstring&gt;#include&lt;iostream&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;vector&gt;using namespace std;typedef long long ll;const int mod=1e9+7;struct suffix_automaton&#123; string s; int son[1000005][26],pre[1000005],step[1000005],last,total,rt[1000005]; void push_back(int v) &#123; step[++total]=v; &#125; void init() &#123; total=last=0; memset(son,0,sizeof(son)); memset(pre,0,sizeof(pre)); memset(step,0,sizeof(step)); pre[0]=-1; &#125; void extend(int ch)&#123; push_back(step[last]+1); int p=last,np=total,q,nq; rt[np]++; for(;!son[p][ch]&amp;&amp;p!=-1;p=pre[p])son[p][ch]=np; if(p==-1)pre[np]=0; else &#123; q=son[p][ch]; if(step[q]!=step[p]+1) &#123; push_back(step[p]+1); nq=total; memcpy(son[nq],son[q],sizeof(son[q])); pre[nq]=pre[q]; pre[q]=pre[np]=nq; rt[nq]=rt[q]; for(;son[p][ch]==q;p=pre[p])son[p][ch]=nq; &#125; else pre[np]=q; &#125; last=np; &#125;&#125;suf;ll quickpow(ll x,ll n)&#123; if(n==0)return 1; ll res=quickpow(x*x%mod,n/2); if(n%2)res=res*x%mod; return res;&#125; int n,m,p,mxlen; string str[1000005];ll ans[1000005],h[1000005],val[1000005];int vis[1000005];ll fac[1000005],inv[1000005],pw;int main()&#123; int i,j; suf.init(); scanf("%d",&amp;n); for(i=0;i&lt;n;i++)cin&gt;&gt;str[i],mxlen=max(mxlen,(int)str[i].size()); for(i=0;i&lt;n;i++)scanf("%lld",&amp;h[i]); pw=1; for(i=1;i&lt;=mxlen;i++) &#123; pw=pw*26%mod; fac[i]=(fac[i-1]+pw)%mod; inv[i]=quickpow(fac[i],mod-2); &#125; for(i=0;i&lt;n;i++) &#123; suf.last=0; for(j=0;j&lt;str[i].size();j++) &#123; int np=suf.son[suf.last][str[i][j]-'a']; if(np==0||suf.step[np]!=j+1) suf.extend(str[i][j]-'a'); else suf.last=np; &#125; &#125; for(i=0;i&lt;n;i++) &#123; p=0; for(j=0;j&lt;str[i].size();j++) &#123; p=suf.son[p][str[i][j]-'a']; int prep=p; while(prep!=-1) &#123; if(vis[prep]==i+1) break; vis[prep]=i+1; if(!val[prep]) val[prep]=h[i]; else val[prep]=val[prep]*h[i]%mod; prep=suf.pre[prep]; &#125; &#125; &#125; for(i=suf.total;i&gt;=1;i--) &#123; (ans[suf.step[suf.pre[i]]+1]+=val[i])%mod; (ans[suf.step[i]+1]-=val[i])%mod; &#125; for(i=1;i&lt;=mxlen;i++)ans[i]=(ans[i]+ans[i-1]+mod)%mod; for(i=1;i&lt;=mxlen;i++)ans[i]=(ans[i]+ans[i-1]+mod)%mod; scanf("%d",&amp;m); while(m--) &#123; int len; scanf("%d",&amp;len); len=min(len,mxlen); printf("%lld\n",ans[len]*inv[len]%mod); &#125; return 0;&#125; Prob J. LIS Solved by hdmmblz at 02:35 (+) DescriptionCYYNB SolutionCYYNB Code点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;stack&gt;using namespace std;const long long int mod = 1e9 + 7;int n,q,i,Q,s1[200005],T,m,s2[200005],sq,ans[200005],val[200005],stk[200005],bag,a[200005];struct node&#123; int pos,num,id;&#125;query[200005];bool cmp(node a, node b)&#123; return a.pos&gt;b.pos;&#125;int fin(int *gg, int l, int r, int x)&#123; int mid; if (gg[r]&lt;=x)return r; while (l &lt; r) &#123; mid=(l+r+1)&gt;&gt;1; if (gg[mid] &lt;= x)l=mid; else r=mid-1; &#125; return l;&#125;int main()&#123; scanf("%d",&amp;T); while (T--) &#123; scanf("%d%d",&amp;n,&amp;q); memset(ans,0,sizeof(ans)); memset(s1,0,sizeof(s1)); memset(s1,0,sizeof(s2)); memset(s1,0,sizeof(val)); memset(s1,0,sizeof(stk)); memset(s1,0,sizeof(a)); bag=n; sq=0; int last=-1; for(i=1;i&lt;=n;i++) &#123; scanf("%d",&amp;a[i]); if (last&lt;a[i]) &#123; s1[++sq]=i;s2[sq]=a[i];last=a[i]; &#125; val[i]=sq; &#125; for(i=1;i&lt;=q;i++) &#123; scanf("%d%d",&amp;query[i].pos,&amp;query[i].num); query[i].id=i; &#125; s2[0]=-1e9;s1[0]=0;s1[sq+1]=s2[sq+1]=1e9; sort(query+1,query+1+q,cmp); for (i=n,Q=1;i&gt;=1;) &#123; if (query[Q].pos == i) &#123; int &amp;res = ans[query[Q].id]; res=0; int left; if (s1[sq]&lt;query[Q].pos) &#123; left= sq; &#125; else left=fin(s1,0,sq,i); if(s1[left]==i)left--; res=left; if (s2[left]&lt;query[Q].num)res++; else &#123; query[Q].num=s2[left]; &#125; if (stk[bag]&gt;query[Q].num) &#123; res+=n-bag+1; &#125; else &#123; if(stk[n]&gt;query[Q].num) &#123; int pps=fin(stk,bag,n,query[Q].num); res+=n-pps; &#125; &#125; Q++; &#125; else &#123; if(stk[bag]&gt;a[i]) &#123; stk[--bag]=a[i--]; continue; &#125; int pos=fin(stk,bag,n,a[i]); stk[pos]=a[i--];bag=pos; &#125; &#125; for (i=1;i&lt;=q;i++)printf("%d\n",ans[i]); &#125; return 0;&#125; Prob K.Prob L. 贪心 Solved by YangDavid at 04:56 (+) Description待更。 Solution待更。 Code点击显示/隐藏代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273/* * Author : YangDavid * Created Time : 2019年05月26日 星期日 17时55分19秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;#define int llconst int maxn = 333333;int k, c[maxn], d[maxn], m[maxn], p[maxn], e[maxn], R[maxn], E[maxn], n;int pref[maxn];map&lt;int, int&gt; mp;void solve() &#123; mp.clear(); int _tot = 0; scanf("%lld", &amp;n); rep(i, n) scanf("%lld%lld%lld%lld", &amp;c[i], &amp;d[i], &amp;m[i], &amp;p[i]); for(int i = 1; i &lt; n; ++i) scanf("%lld%lld%lld", &amp;e[i], &amp;R[i], &amp;E[i]); for(int i = 1; i &lt;= n; ++i) &#123; _tot = min(_tot, e[i - 1]); _tot += p[i]; _tot -= d[i]; if(_tot &lt; 0) &#123; puts("-1"); return ; &#125; &#125; int best = 0x3f3f3f3f; for(int i = 1; i &lt;= n; ++i) &#123; c[i] = min(c[i], best + R[i-1]); best = c[i]; &#125; pref[1] = E[1]; for(int i = 2; i &lt;= n; ++i) pref[i] = pref[i - 1] + E[i]; ll ans = 0; _tot = 0; for(int i = 1; i &lt;= n; ++i) &#123; int np = m[i] + c[i] - pref[i - 1], del = d[i]; mp[np] += p[i], _tot += p[i]; while(del) &#123; auto it = mp.begin(); int elim = min(it-&gt;second, del); del -= elim, it-&gt;second -= elim; _tot -= elim; ans += 1LL * elim * (it-&gt;first + pref[i - 1]); if(it-&gt;second == 0) mp.erase(it); &#125; del = max(0LL, _tot - e[i]); while(del) &#123; auto it = mp.rbegin(); int elim = min(it-&gt;second, del); del -= elim, it-&gt;second -= elim; _tot -= elim; if(it -&gt; second == 0) mp.erase(it-&gt;first); &#125; &#125; printf("%lld\n", ans);&#125;signed main() &#123; int T; scanf("%lld", &amp;T); while(T--) solve(); return 0;&#125;]]></content>
+      <categories>
+        <category>比赛</category>
+      </categories>
+      <tags>
+        <tag>构造</tag>
+        <tag>容斥原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[点分治学习笔记]]></title>
+    <url>%2F2019%2F05%2F23%2F%E7%82%B9%E5%88%86%E6%B2%BB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[2019年ACM-ICPC全国邀请赛（陕西）游记]]></title>
     <url>%2F2019%2F05%2F19%2F2019%E5%B9%B4ACM-ICPC%E5%85%A8%E5%9B%BD%E9%82%80%E8%AF%B7%E8%B5%9B%EF%BC%88%E9%99%95%E8%A5%BF%EF%BC%89%E6%B8%B8%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[2019年ACM-ICPC全国邀请赛（陕西）Overview Status A B C D E F G H I J K L M Contest 0:03 2:44 3:17 1:46 1:35 Upsolve OK OK OK OK OK Attempt + + +1 + + AC count 363 3 275 153 12 1 0 10 2 41 0 347 220 Tag Coding ? ? ? ? ? ? ? ? ? ? ? ? ? Thinking ? ? ? ? ? ? ? ? ? ? ? ? ? Stars 注：$\mathcal O$ 表示口头通过。 第一次参加线下真正意义上的 ICPC，拿了个位次中等的银奖。还是太菜了啊，比赛经验不够丰富，比赛战略不是很对，后期一直在卡题造成了后两个小时的全面划水，一道真正有价值、有技术含量的题目都没有做出来。 Solved during contest: 5/13 Upsolved: 5/13 Orally upsolved: 5/13 Rank: 79/362 Contest MaterialsNothing yet Replay 开始签掉了 A 题，但是马上我就把 M 题读错了，以为是路程之和，然后写了个特别麻烦的二分，结果过不了样例，发现事实上是路程的最大值，就是个极其思博的二分，60行搞定，总算 1A 了。L 题 sl 和 whr 找到了正确结论但是没有证明，可是我觉得不太靠谱没让他们交，结果过掉 M 之后 L 胡乱交了一下也过掉了。这两出合计浪费了近60分钟的宝贵前期时间，奠定了爆炸了基础。 之后 C 题发现是思博题，然后 D 题一看也是个弱智背包，但可能会略卡常数，就先写 C 了。结果 C 题死活过不去样例，正当焦急之时才看到 Clarification 把样例改了，提交上去 1A 了。这中间又浪费了 10 分钟时间。D 题写得还蛮快，后面又发现可以 bitset 优化，大概总共只写了20分钟的样子，进行了仔细的检查，却没有发现 bitset 开小了，荣获一个 WA 。好在 5 分钟左右反应了过来，改掉了，AC了。 之后就是无比自闭的后期。我一下口胡了当时场上过得最多的 J 题，就是个点分治裸题。可是尴尬的是我们三个没有一个人会写点分治。最后打算试着写一写，把剩下的时间都押在这道题上，于是就凉了，写得一塌糊涂，最后放弃治疗。 感觉问题最大的出在后期，我只看了 J 题这一道题，别的题目都没有进行深入的思考，这么做是极不明智的。其实当时还有 H 题是个蛮简单的题目，可是就是没有看到。后期的战术还是很关键的。 经验教训： 前期一定要又快又稳，必须把题目读清楚，最好手算样例。 后期千万不要三个人都卡在同一道题目上面，还是要分好工。 交代码前、过不了样例时仔细看 Clarification。 继续保持交题之前检查代码的习惯，争取所有题目都一遍过。（这一次比赛我们总共就提交了 6 次代码，5 个AC） Tutorials解题/补题顺序： Prob A. 签到排序之后从小到大能选就选，贪心即可。 Prob B.Prob C. 签到假的几何题，总共就两种情况，分类讨论即可。 Prob D. DP显然的 dp 是可以通过的。因为每个 $c_i$ 都是 100 的倍数！这道题感觉就是出题人在逗你玩。并且这种 DP 是可行性 DP，可以用 bitset 加速。 复杂度 $O(T \cdot \frac{n \cdot c}{100} \frac{n}{w})$ ，甚至不到 $10^7$ Prob E.Prob F.Prob G.Prob H.Prob I.Prob J.Prob K.Prob L. 分类讨论按照 4 的余数分类讨论即可。 Prob M. 二分 二分思博题。]]></content>
@@ -113,8 +130,8 @@
       </categories>
       <tags>
         <tag>状压dp</tag>
-        <tag>Opentrains</tag>
         <tag>最小圆覆盖</tag>
+        <tag>Opentrains</tag>
         <tag>结论</tag>
         <tag>背包</tag>
         <tag>线段树优化建图</tag>
@@ -140,8 +157,8 @@
       </categories>
       <tags>
         <tag>构造</tag>
-        <tag>哈密尔顿路径</tag>
         <tag>trie</tag>
+        <tag>哈密尔顿路径</tag>
         <tag>Google Code Jam</tag>
         <tag>中国剩余定理</tag>
       </tags>
@@ -155,8 +172,8 @@
       </categories>
       <tags>
         <tag>贪心</tag>
-        <tag>构造</tag>
         <tag>Codeforces</tag>
+        <tag>构造</tag>
         <tag>快速沃尔什变换（FWT）</tag>
       </tags>
   </entry>
@@ -184,8 +201,8 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>思维</tag>
         <tag>dp</tag>
+        <tag>思维</tag>
         <tag>概率</tag>
       </tags>
   </entry>
@@ -198,12 +215,12 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>思维</tag>
-        <tag>dp</tag>
         <tag>欧拉回路</tag>
+        <tag>dp</tag>
         <tag>二分</tag>
         <tag>贪心</tag>
         <tag>概率与期望</tag>
+        <tag>思维</tag>
       </tags>
   </entry>
   <entry>
@@ -287,8 +304,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Opentrains</tag>
         <tag>二次剩余</tag>
+        <tag>Opentrains</tag>
         <tag>暴力</tag>
         <tag>概率算法</tag>
         <tag>非完美算法</tag>
@@ -302,8 +319,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>构造</tag>
         <tag>Codeforces</tag>
+        <tag>构造</tag>
         <tag>后缀树</tag>
         <tag>trie</tag>
         <tag>博弈</tag>
@@ -319,9 +336,9 @@
       <tags>
         <tag>构造</tag>
         <tag>线段树</tag>
-        <tag>Opentrains</tag>
-        <tag>类欧几里得</tag>
         <tag>思维题</tag>
+        <tag>类欧几里得</tag>
+        <tag>Opentrains</tag>
         <tag>交互题</tag>
         <tag>树dp</tag>
         <tag>Stern-Brocot树</tag>

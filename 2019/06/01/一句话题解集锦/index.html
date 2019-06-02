@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="山月半轮的博客">
 <meta property="og:description" content="这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-31T17:12:09.801Z">
+<meta property="og:updated_time" content="2019-06-02T16:50:57.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一句话题解集锦">
 <meta name="twitter:description" content="这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。">
@@ -422,12 +422,24 @@
                 
               
 
-              <time title="创建时间：2019-06-01 00:58:04 / 修改时间：01:12:09" itemprop="dateCreated datePublished" datetime="2019-06-01T00:58:04+08:00">2019-06-01</time>
+              <time title="创建时间：2019-06-01 00:58:04" itemprop="dateCreated datePublished" datetime="2019-06-01T00:58:04+08:00">2019-06-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-03 00:50:57" itemprop="dateModified" datetime="2019-06-03T00:50:57+08:00">2019-06-03</time>
               
             
           </span>
@@ -500,6 +512,10 @@
 <p><a href="https://codeforces.com/contest/1168/problem/A" target="_blank" rel="noopener">CF1168A</a>: 二分思博题。  </p>
 <p><a href="https://codeforces.com/contest/1168/problem/B" target="_blank" rel="noopener">CF1168B</a>: 很有趣的暴力，复杂度证明用到这么一个结论：长度大于 9 的 01 串必定存在 $1\leq x,k \leq n$ 使得 $s_x=s_{x+k} = s_{s+2k}$   </p>
 <p><a href="https://codeforces.com/contest/1168/problem/C" target="_blank" rel="noopener">CF1168C</a>: 按位考虑，在每一种数位如果转移一次不行，那么多次也不行。因此每个位置维护一个 $go_i$ 表示转移到的第一个第 $i$ 位是 1 的数的位置，$O(n\log^2 n)$ 即可预处理。询问时随便找到目标数 y 的一个数位，看原数这个数位要转移到的位置是否小于等于 y 即可。</p>
+<h2 id="2019-06-01"><a href="#2019-06-01" class="headerlink" title="2019.06.01"></a>2019.06.01</h2><p><a href="https://atcoder.jp/contests/m-solutions2019" target="_blank" rel="noopener">AtCoder M-SOLUTIONS Programming Contest</a></p>
+<p>AB: 思博题</p>
+<p>C： 答案是这么一个式子：<br>$$<br>\frac{1}{1-c} \sum_{k=N}^{2N-1} \binom{k-1}{N-1} (A’^N B’^{k-N} + A’^{k-N}B’^{N})<br>$$<br>D: dfs一遍，每次回溯时给这个点标上当时最小的标号即可。</p>
+<p>E：很 tricky 的一道题，除以 $d^k$ 之后变成：<br>$$<br>(\frac xd) \cdot (\frac xd+1) \cdot (\frac xd+2) \cdots \cdot (\frac xd+n-1)<br>$$<br>然后注意到模数是 $10^6+3$ ，因此 $\frac xd$ 这个分数可以表示为模意义整数，之后就是个前缀积水题了。</p>
 
       
     </div>
@@ -539,6 +555,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/02/2019年ACM-ICPC陕西省赛游记/" rel="prev" title="2019年ACM-ICPC陕西省赛游记">
+                2019年ACM-ICPC陕西省赛游记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -612,7 +632,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -635,7 +655,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -935,7 +957,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-5"><span class="nav-number">1.</span> <span class="nav-text">2019.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-05-31"><span class="nav-number">1.1.</span> <span class="nav-text">2019.05.31</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-5"><span class="nav-number">1.</span> <span class="nav-text">2019.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-05-31"><span class="nav-number">1.1.</span> <span class="nav-text">2019.05.31</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-06-01"><span class="nav-number">1.2.</span> <span class="nav-text">2019.06.01</span></a></li></ol></li></ol></div>
             
 
           </div>

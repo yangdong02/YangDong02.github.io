@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Codeforces Round #564 (Div. 1) 自闭记]]></title>
+    <url>%2F2019%2F06%2F08%2FCodeforces-Round-564-Div-1-%E8%87%AA%E9%97%AD%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[Codeforces Round 564 (Div. 1)Overview Status A B C1 C2 D E F Contest 01:08 01:34 Attempt +1 + * * * AC count 462 461 213 70 22 0 0 Tag 模拟 简单数学 期望 期望 构造 Coding 2031 1094 1959 1959 1079 ? ? Thinking Easy Easy+ Mid- Mid- Mid ? ? Stars ★ ★ 注：$\mathcal O$ 表示口头通过。 Solved during contest: 2/6 Upsolved: 4/6 Orally upsolved: 4/6 Rank: 396/553 Rating: (-8) 又是一个中国场，又是一个 Div. 1，又是一个被签到题吊打系列。。。题目质量还不错，可是不知道为什么，每次打 Div. 1 老是签到签不稳，这根本不行啊。然后 C 题都想对了，但是没时间写了。 Contest MaterialsContest ID: 1172 Contest Link Problemset Link Editorial Link (en) Editorial Link(zh) TutorialsProb A. 麻烦的签到题Description共有 $2n$ 张牌，其中有 $n$ 张是 0 ，另外 n 张分别是 $1,2, \ldots, n$ 。牌桌上有一个某 $n$ 张牌组成的队列，你手中则拿着剩下的 $n$ 张牌。你每次操作都是将手中的一张牌加入队列末尾，并且把队列头的牌加入手牌中。问至少需要几次可以使得队列中的牌从队列头到队列尾恰好为 $1,2,\ldots,n$ 。 Solution很令人讨厌的签到题，费了我一个小时时间，还 RE 了一次。我写的是贪心+大模拟，每一时刻都检查能否顺着把序列排列出来，如果可以，立即果断行动。否则，如果手中有0就打出0 ，没有 0 就打出最大的牌。可以证明次数不超过 $2n$ ，因此模拟即可。注意特判这种情况： 12350 0 0 0 05 1 2 3 4 Code点击显示/隐藏代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 20时31分52秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222;int my[maxn], n, pile[maxn], start = -1, zero, tim, match;set&lt;int, greater&lt;int&gt; &gt; st;deque&lt;int&gt; q;void ins(int x) &#123; if(x == 0) zero++; else st.insert(x);&#125;int main() &#123; scanf("%d", &amp;n); rep(i, n) scanf("%d", &amp;my[i]); rep(i, n) scanf("%d", &amp;pile[i]); bool ok = true; againqaq:; st.clear(); while(!q.empty()) q.pop_back(); rep(i, n) q.push_back(pile[i]); zero = 0; rep(i, n) &#123; if(pile[i] == 1) &#123; for(int j= i + 1; j &lt;= n; ++j) if(pile[j] != j - i + 1) ok = false; if(ok) &#123; match = n - i + 1; break; &#125; else tim = max(tim, -pile[i] + i + 1); &#125; if(pile[i]) tim = max(tim, -pile[i] + i + 1); &#125; rep(i, n) &#123; if(my[i] == 0) zero++; else st.insert(my[i]); &#125; int now = 0, ans = 0; if(now &lt; tim) match = 0; while(now &lt; tim) &#123; if(zero) &#123; zero--; q.push_back(0); ins(q.front()); q.pop_front(); &#125; else &#123; int po = *st.begin(); st.erase(po); q.push_back(po); tim = max(tim, now + n - po + 1); &#125; now++, ans++; &#125; while(match &lt; n) &#123; if(!st.count(match + 1)) &#123; ok = false; now = ans = match = 0; goto againqaq; &#125; st.erase(match + 1); q.push_back(match + 1); ins(q.front()); q.pop_front(); match++, now++, ans++; &#125; printf("%d\n", ans); return 0;&#125; Prob B. 简单数学水题。 点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 21时26分05秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222, MOD = 998244353;inline int muln(int x, int y) &#123; return 1LL * x * y % MOD;&#125;int mo(int x) &#123; if(x &gt;= MOD) x -= MOD; if(x &lt; 0) x += MOD; return x;&#125;vector&lt;int&gt; G[maxn];int n, xp, yp, sz[maxn], ans, fac[maxn], sons[maxn];void dfs(int v, int fa) &#123; sz[v] = 1; for(auto g : G[v]) if(g != fa) &#123; sons[v]++; dfs(g, v); sz[v] += sz[g]; ans = muln(ans, fac[sons[g] + 1]); &#125; if(v == 1) ans = muln(ans, fac[sons[v]]); //ans = muln(ans, fac[sons]);&#125;int main() &#123; fac[0] = 1; for(int i = 1; i&lt;= 200010; ++i) fac[i] = muln(fac[i - 1], i); scanf("%d", &amp;n), ans = n; for(int i = 1;i &lt; n; ++i) &#123; scanf("%d%d", &amp;xp, &amp;yp); G[xp].push_back(yp); G[yp].push_back(xp); &#125; dfs(1, -1); printf("%d\n", ans); return 0;&#125; Prob C. 概率结论一猜就中。暴力 dp 即可 $O(m^2)$ 。 点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 21时59分19秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222, maxm = 3333, MOD = 998244353;int muln(int x, int y ) &#123; return 1LL * x * y % MOD; &#125;int qpow(int x, int y) &#123; int ret = 1; for(; y; y &gt;&gt;= 1, x = muln(x, x)) if(y &amp; 1) ret = muln(ret, x); return ret;&#125;int inverse(int x) &#123; return qpow(x, MOD - 2); &#125;int a[maxn], w[maxn], n, m, like, diss, tot, dp[maxm][maxm], _inv[maxm * 5];int ans[maxn];inline int inv(int x) &#123; return _inv[x - tot + m]; &#125;inline void upd(int &amp;x, int y) &#123; x += y; if(x &gt;= MOD) x -= MOD;&#125;int mo(int x) &#123; if(x &gt;= MOD) return x - MOD; if(x &lt; 0) return x + MOD; return x;&#125;int main() &#123; scanf("%d%d", &amp;n, &amp;m); rep(i, n) scanf("%d", &amp;a[i]); rep(i, n) scanf("%d", &amp;w[i]); rep(i, n) a[i] ? (like += w[i]) : (diss += w[i]); tot = like + diss; for(int i = max(0, tot-m); i &lt;= tot+m; ++i) _inv[i - tot + m] = inverse(i); dp[0][0] = 1; for(int i = 0; i &lt; m; ++i) &#123; for(int add = 0; add &lt;= i; ++add) &#123; int sub = i - add, nlike = like+add, ndiss = diss-sub; int ntot = nlike + ndiss, ntot_inv = inv(ntot); upd(dp[i + 1][add], muln(dp[i][add], muln(ndiss, ntot_inv))); upd(dp[i + 1][add + 1], muln(dp[i][add], muln(nlike, ntot_inv))); &#125; &#125; int exp_add = 0, exp_sub = 0; for(int add = 0; add &lt;= m; ++add) &#123; upd(exp_add, muln(dp[m][add], add)); upd(exp_sub, muln(dp[m][add], m-add)); &#125; exp_add = muln(exp_add, inverse(like)); exp_sub = muln(exp_sub, inverse(diss)); for(int i = 1;i &lt;= n; ++i) &#123; if(a[i]) printf("%d\n", mo(w[i] + muln(w[i], exp_add))); else printf("%d\n", mo(w[i] - muln(w[i], exp_sub))); &#125; return 0;&#125; Prob D. 构造Description在一个 $n\times n$ 的网格里放传送门，指定从第 $i$ 行进从第 $r_i$ 行出，从第 $i$ 列进从第 $c_i$列出，r, c 都是排列，求构造放置传送们的一种方案。 Solution考虑数学归纳法，只需要解决到第一行的和到第一列的。 如果恰好第一行要到达第一行，第一列要到达第一列，那么就不用管，直接看下一行下一列； 否则记第 r 行将要到达第一行，第 c 列将要到达第一列，那么我就在 (r, 1) 和 (1, c) 这两个地方放传送门，并且将第 r 行的目标从第一行改为第一行的目标，把第 c 列的目标改为第一列的目标即可（这个过程本质是链表的删除操作）。由此归纳即可。 Code点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344/* * Author : YangDavid * Created Time : 2019年06月11日 星期二 22时43分05秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef pair&lt;pii, pii&gt; ppp;typedef long long ll;const int maxn = 1111;int go_r[maxn], go_c[maxn], n, which_r[maxn], which_c[maxn];int main() &#123; scanf("%d", &amp;n); rep(i, n) &#123; scanf("%d", &amp;go_r[i]); which_r[go_r[i]] = i; &#125; rep(i, n) &#123; scanf("%d", &amp;go_c[i]); which_c[go_c[i]] = i; &#125; vector&lt;ppp&gt; ans; for(int i = 1; i &lt;= n; ++i) &#123; if(which_r[i] == i &amp;&amp; which_c[i] == i) continue; int r = which_r[i], c = which_c[i]; ans.push_back(&#123;&#123;which_r[i], i&#125;, &#123;i, which_c[i]&#125;&#125;); which_r[go_r[i]] = r; which_c[go_c[i]] = c; go_r[r] = go_r[i]; go_c[c] = go_c[i]; &#125; int sz = ans.size(); printf("%d\n", sz); for(auto g : ans) printf("%d %d %d %d\n", g.first.first, g.first.second, g.second.first, g.second.second); return 0;&#125; Prob E.Prob F.]]></content>
+      <categories>
+        <category>比赛</category>
+      </categories>
+      <tags>
+        <tag>Codeforces</tag>
+        <tag>构造</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年ACM-ICPC陕西省赛游记]]></title>
     <url>%2F2019%2F06%2F02%2F2019%E5%B9%B4ACM-ICPC%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B%E6%B8%B8%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[游记夺冠了！作为和 nocriz，hdmmblz 一起组队打的第一场比赛，这也算是一个开门红吧，这次的解题策略与团队合作等诸多方面都做得还不错，出的锅也不算特别多。不过这也仅仅是一个省赛，仅仅是一个起点，以后的路还长，以后的目标需要远大！我们有了方向，有了动力，更有了顶天立地的决心。 不过这次去除两个高中打星队我们才夺的冠，那两个队一个 11 题，一个 10 题，还是被高中省队爷吊打了啊，感觉还是要提高啊。（被“丁教练”教育了qaq） 准备上午 06:40 就早早地起床，集合，前往 XDU。路上水掉了 wzk 讲的一个张好风出的构造题，感觉海星。 到了 XDU ，拿好衣服之后打了一个极为自闭的热身赛。首先是发现电脑的 Ubuntu 双系统里面居然没有 vim，没有各种常见编辑器，打算换用 gedit 之后，发现居然没有网络，无法查看题面。一阵忙乱之中我们又改用 windows + Dev-cpp，结果发现电脑又没有 python，g++也没有加入 PATH 环境变量里。这时开始看热身赛的题目，wzk 几分钟秒掉了 A ，我提出了 B 题最短路+欧拉回路的做法，然而没有人熟悉欧拉回路怎么写！！！稍微讨论回忆了一下，构思好代码之后 wzk 开始写。cyy 和我思博了，一直对着 C 题自闭。最后 B 没写出来， C 也没做出来。结果 wzk 赛后直接一眼秒掉了 C。总的来看，热身赛什么环境也没来得及测，题目也只 A 了一道，感觉主要就是用来 rp++ 了。 下图是我们比赛的机位： 正赛参加完豪华（简单）的露天开幕式之后马上就要正赛了，感觉心里还蛮没底的。稍微调整了下状态，比赛开始了（喂，比赛没开始为什么大家都开始启封试题册了啊！）。wzk 悄悄以惊人的手速 10 分钟 1A 了三道签到题EFL 并拿到了 E 题的一血，简直太强了，这三道题我场上甚至根本没看。 之后开始多线程， wzk 看 C 写 C，结果 wa 了；这大概经过了 20 分钟，与此同时我和 cyy 互相交换了 H，I，J 三道题的题意。I 题稍微讨论了一下就会了，wzk 打印了 C 题代码，cyy 给 wzk 讲了 I ，wzk 开始写。我发现 H 是擅长的构造，我又发现这题和华东师大校赛的 C 题极为相似，于是决定仔细想 H，过了一会儿就会做了，给 cyy 讲了做法，cyy 觉得很正确，于是我仔细构思了下代码，觉得很好写。wzk 写好 I了，可是 wa 了，找出了好几个细节错误。打印代码后，我上机写 H。cyy 和 wzk 一起小黄鸭，发现了所有错误，改了之后提交，总算通过了 I 题，并拿到了一血。过了一会儿，我写完了 H ，测了测样例，手测几组数据，觉得稳得很，于是提交，1A了 H 题，并且还拿到了这道题一血。这时我们的士气很高涨，排在 rank 1，I，H 题仅仅有我们队通过，第二名仅仅才 4 道题，拿了两个一血，时间也才仅仅过去 74 分钟。 继续多线程，wzk 发现交大“免费赠送AC帽”队拿到了 B 题的一血，于是跟了下榜，发现是思博题，于是开始写。cyy 提出几种 J 做法，感觉找到了靠谱做法了，于是又屯下一题。wzk A掉了 B 题，cyy 开始给 wzk 讲 J 题，我把没看的题目都看了一遍，主要在想 D 题。wzk 开写 B 了，cyy 提出 K 题解法，但是我有点怀疑正确性。wzk J 题神秘地 TLE 了，在我强烈要求下不辞辛劳把 cin 改为了 fread+getchar ，又手动开了 O3，Ofast，然后就神奇通过了 J 题。wzk 确认了 cyy K 题解法的正确性，cyy 上机写 K 题，用了 20 多分钟也写好过掉了 K 题 。 与此同时，我一直在试图对 D 题进入大型分类讨论。我分了一维三种情况以及二位的六种情况，都将思路整理到之上了。wzk 建议看一看 C ，这时我们才意识到 WA 了很久扔在那里的题目。wzk 打算写 A 题试一试，我和 cyy 想了 C 的一些假做法，最后得到的结论 wzk 说就是当时 wa 的代码的思路。我发现有个小情况忘记考虑了，加上去之后大家不太相信正确性，可是我觉得很稳，结果交上去就 AC 了C题。 这时已经封榜了，我们手上有DAG三道题，有 40 分钟的时间。D题所有情况已经讨论完成了，A 题wzk写好了，但是交上去铁定会 TLE。wzk 试图优化 A ，可是没什么头绪。 D 题代码量巨大，细节繁琐，我硬着头皮上去写，cyy 在旁别即时检查。结果最后 2 分钟终于写完了代码，可是没时间调试了，直接交上去 WA 了，本地测了下也过不了样例，没有办法了，被高中生吊打了。 比较幸运的是，正式选手中我们还是拿到了 rank 1，拿到了冠军奖杯。（免费赠送AC帽队第四，他们差点就也 9 题了，真为他们可惜 qwq） 总的来看： Solved during contest: 9/12 Upsolved: 9/12 Orally upsolved: 9/12 Rank: 1/105 (Official), 3/111 (Full rank) 出现的问题集锦： （热身赛）没有人会熟练实现欧拉回路 大数据读入时仍使用 cin C 题 wzk 开始想的是正解，结果因为小情况 wa 而误以为算法假了 最后一个小时还是划了，D 讨论得还是不全面，主要是没有信心，写代码的时候中途我掉线了。 A 题写好后以为会 TLE 就没有提交，但实际上复杂度是正确的。 做得比较好的地方集锦： 基本做到了多线程 让 wzk 去签到 快速做出了构造题 cyy 力排众议，写了 K 题看似无脑的做法通过了 每次提交前的检查还算仔细 附录Practice Link Score Board：]]></content>
@@ -14,7 +26,7 @@
   <entry>
     <title><![CDATA[一句话题解集锦]]></title>
     <url>%2F2019%2F06%2F01%2F%E4%B8%80%E5%8F%A5%E8%AF%9D%E9%A2%98%E8%A7%A3%E9%9B%86%E9%94%A6%2F</url>
-    <content type="text"><![CDATA[这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。 2019.52019.05.31 (Virtual participation of Codeforces Round 562, solved 3/5, rank 118/454) CF1168A: 二分思博题。 CF1168B: 很有趣的暴力，复杂度证明用到这么一个结论：长度大于 9 的 01 串必定存在 $1\leq x,k \leq n$ 使得 $s_x=s_{x+k} = s_{s+2k}$ CF1168C: 按位考虑，在每一种数位如果转移一次不行，那么多次也不行。因此每个位置维护一个 $go_i$ 表示转移到的第一个第 $i$ 位是 1 的数的位置，$O(n\log^2 n)$ 即可预处理。询问时随便找到目标数 y 的一个数位，看原数这个数位要转移到的位置是否小于等于 y 即可。 2019.06.01AtCoder M-SOLUTIONS Programming Contest AB: 思博题 C： 答案是这么一个式子：$$\frac{1}{1-c} \sum_{k=N}^{2N-1} \binom{k-1}{N-1} (A’^N B’^{k-N} + A’^{k-N}B’^{N})$$D: dfs一遍，每次回溯时给这个点标上当时最小的标号即可。 E：很 tricky 的一道题，除以 $d^k$ 之后变成：$$(\frac xd) \cdot (\frac xd+1) \cdot (\frac xd+2) \cdots \cdot (\frac xd+n-1)$$然后注意到模数是 $10^6+3$ ，因此 $\frac xd$ 这个分数可以表示为模意义整数，之后就是个前缀积水题了。]]></content>
+    <content type="text"><![CDATA[这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。 2019.52019.05.31 (Virtual participation of Codeforces Round 562, solved 3/5, rank 118/454) CF1168A: 二分思博题。 CF1168B: 很有趣的暴力，复杂度证明用到这么一个结论：长度大于 9 的 01 串必定存在 $1\leq x,k \leq n$ 使得 $s_x=s_{x+k} = s_{s+2k}$ CF1168C: 按位考虑，在每一种数位如果转移一次不行，那么多次也不行。因此每个位置维护一个 $go_i$ 表示转移到的第一个第 $i$ 位是 1 的数的位置，$O(n\log^2 n)$ 即可预处理。询问时随便找到目标数 y 的一个数位，看原数这个数位要转移到的位置是否小于等于 y 即可。 2019.06.01AtCoder M-SOLUTIONS Programming Contest AB: 思博题 C： 答案是这么一个式子：$$\frac{1}{1-c} \sum_{k=N}^{2N-1} \binom{k-1}{N-1} (A’^N B’^{k-N} + A’^{k-N}B’^{N})$$D: dfs一遍，每次回溯时给这个点标上当时最小的标号即可。 E：很 tricky 的一道题，除以 $d^k$ 之后变成：$$(\frac xd) \cdot (\frac xd+1) \cdot (\frac xd+2) \cdots \cdot (\frac xd+n-1)$$然后注意到模数是 $10^6+3$ ，因此 $\frac xd$ 这个分数可以表示为模意义整数，之后就是个前缀积水题了。 2019.06.11补掉了 CF1172D 构造题。 口胡了 BZOJ1046 ，打算有时间开一个最长上升子序列的专题 Blog。 目前已有的题目： Comet OJ #0 E Problem setter: tangjz，牛逼题。 HDU 6824 上次省赛训练时碰到的题目，和 Comet OJ 的那道题很相似。 Codeforces 1097E Hello 2019 的题目，早就该补了，但是一直咕咕咕。]]></content>
       <categories>
         <category>题解</category>
       </categories>
@@ -190,8 +202,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Codeforces</tag>
         <tag>贪心</tag>
+        <tag>Codeforces</tag>
         <tag>构造</tag>
         <tag>快速沃尔什变换（FWT）</tag>
       </tags>
@@ -236,9 +248,9 @@
         <tag>AtCoder</tag>
         <tag>思维</tag>
         <tag>dp</tag>
-        <tag>贪心</tag>
         <tag>欧拉回路</tag>
         <tag>二分</tag>
+        <tag>贪心</tag>
         <tag>概率与期望</tag>
       </tags>
   </entry>
@@ -293,14 +305,14 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>构造</tag>
         <tag>二分</tag>
+        <tag>构造</tag>
         <tag>状压dp</tag>
         <tag>Opentrains</tag>
+        <tag>暴力</tag>
         <tag>背包问题</tag>
         <tag>最短路</tag>
         <tag>bitset</tag>
-        <tag>暴力</tag>
         <tag>折半搜索</tag>
       </tags>
   </entry>
@@ -355,8 +367,8 @@
       <tags>
         <tag>构造</tag>
         <tag>线段树</tag>
-        <tag>思维题</tag>
         <tag>类欧几里得</tag>
+        <tag>思维题</tag>
         <tag>Opentrains</tag>
         <tag>交互题</tag>
         <tag>树dp</tag>
@@ -387,8 +399,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Codeforces</tag>
         <tag>二分</tag>
+        <tag>Codeforces</tag>
         <tag>矩阵</tag>
         <tag>打表</tag>
         <tag>笛卡尔树</tag>

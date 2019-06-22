@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[暑期ACM训练记录]]></title>
+    <url>%2F2019%2F06%2F20%2F%E6%9A%91%E6%9C%9FACM%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[Everything that kills me makes me feel alive.Everything that drowns me makes me wanna fly. Personal Training（注：Virtual Participation 的比赛可以在”一句话题解集锦“中找到题解，正式赛会有博客题解链接。） 2019.06.20 vp Codeforces Global Round 3 con:4/8 sol:6/8 rk:559/53202019.06.22 vp Codeforces Round #569 (Div. 1) con:3/5 sol:3/5 rk:89/511]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Codeforces Round #564 (Div. 1) 自闭记]]></title>
     <url>%2F2019%2F06%2F08%2FCodeforces-Round-564-Div-1-%E8%87%AA%E9%97%AD%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[Codeforces Round 564 (Div. 1)Overview Status A B C1 C2 D E F Contest 01:08 01:34 Attempt +1 + * * * AC count 462 461 213 70 22 0 0 Tag 模拟 简单数学 期望 期望 构造 Coding 2031 1094 1959 1959 1079 ? ? Thinking Easy Easy+ Mid- Mid- Mid ? ? Stars ★ ★ 注：$\mathcal O$ 表示口头通过。 Solved during contest: 2/6 Upsolved: 4/6 Orally upsolved: 4/6 Rank: 396/553 Rating: (-8) 又是一个中国场，又是一个 Div. 1，又是一个被签到题吊打系列。。。题目质量还不错，可是不知道为什么，每次打 Div. 1 老是签到签不稳，这根本不行啊。然后 C 题都想对了，但是没时间写了。 Contest MaterialsContest ID: 1172 Contest Link Problemset Link Editorial Link (en) Editorial Link(zh) TutorialsProb A. 麻烦的签到题Description共有 $2n$ 张牌，其中有 $n$ 张是 0 ，另外 n 张分别是 $1,2, \ldots, n$ 。牌桌上有一个某 $n$ 张牌组成的队列，你手中则拿着剩下的 $n$ 张牌。你每次操作都是将手中的一张牌加入队列末尾，并且把队列头的牌加入手牌中。问至少需要几次可以使得队列中的牌从队列头到队列尾恰好为 $1,2,\ldots,n$ 。 Solution很令人讨厌的签到题，费了我一个小时时间，还 RE 了一次。我写的是贪心+大模拟，每一时刻都检查能否顺着把序列排列出来，如果可以，立即果断行动。否则，如果手中有0就打出0 ，没有 0 就打出最大的牌。可以证明次数不超过 $2n$ ，因此模拟即可。注意特判这种情况： 12350 0 0 0 05 1 2 3 4 Code点击显示/隐藏代码 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 20时31分52秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222;int my[maxn], n, pile[maxn], start = -1, zero, tim, match;set&lt;int, greater&lt;int&gt; &gt; st;deque&lt;int&gt; q;void ins(int x) &#123; if(x == 0) zero++; else st.insert(x);&#125;int main() &#123; scanf("%d", &amp;n); rep(i, n) scanf("%d", &amp;my[i]); rep(i, n) scanf("%d", &amp;pile[i]); bool ok = true; againqaq:; st.clear(); while(!q.empty()) q.pop_back(); rep(i, n) q.push_back(pile[i]); zero = 0; rep(i, n) &#123; if(pile[i] == 1) &#123; for(int j= i + 1; j &lt;= n; ++j) if(pile[j] != j - i + 1) ok = false; if(ok) &#123; match = n - i + 1; break; &#125; else tim = max(tim, -pile[i] + i + 1); &#125; if(pile[i]) tim = max(tim, -pile[i] + i + 1); &#125; rep(i, n) &#123; if(my[i] == 0) zero++; else st.insert(my[i]); &#125; int now = 0, ans = 0; if(now &lt; tim) match = 0; while(now &lt; tim) &#123; if(zero) &#123; zero--; q.push_back(0); ins(q.front()); q.pop_front(); &#125; else &#123; int po = *st.begin(); st.erase(po); q.push_back(po); tim = max(tim, now + n - po + 1); &#125; now++, ans++; &#125; while(match &lt; n) &#123; if(!st.count(match + 1)) &#123; ok = false; now = ans = match = 0; goto againqaq; &#125; st.erase(match + 1); q.push_back(match + 1); ins(q.front()); q.pop_front(); match++, now++, ans++; &#125; printf("%d\n", ans); return 0;&#125; Prob B. 简单数学水题。 点击显示/隐藏代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 21时26分05秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222, MOD = 998244353;inline int muln(int x, int y) &#123; return 1LL * x * y % MOD;&#125;int mo(int x) &#123; if(x &gt;= MOD) x -= MOD; if(x &lt; 0) x += MOD; return x;&#125;vector&lt;int&gt; G[maxn];int n, xp, yp, sz[maxn], ans, fac[maxn], sons[maxn];void dfs(int v, int fa) &#123; sz[v] = 1; for(auto g : G[v]) if(g != fa) &#123; sons[v]++; dfs(g, v); sz[v] += sz[g]; ans = muln(ans, fac[sons[g] + 1]); &#125; if(v == 1) ans = muln(ans, fac[sons[v]]); //ans = muln(ans, fac[sons]);&#125;int main() &#123; fac[0] = 1; for(int i = 1; i&lt;= 200010; ++i) fac[i] = muln(fac[i - 1], i); scanf("%d", &amp;n), ans = n; for(int i = 1;i &lt; n; ++i) &#123; scanf("%d%d", &amp;xp, &amp;yp); G[xp].push_back(yp); G[yp].push_back(xp); &#125; dfs(1, -1); printf("%d\n", ans); return 0;&#125; Prob C. 概率结论一猜就中。暴力 dp 即可 $O(m^2)$ 。 点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768/* * Author : YangDavid * Created Time : 2019年06月07日 星期五 21时59分19秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef long long ll;const int maxn = 222222, maxm = 3333, MOD = 998244353;int muln(int x, int y ) &#123; return 1LL * x * y % MOD; &#125;int qpow(int x, int y) &#123; int ret = 1; for(; y; y &gt;&gt;= 1, x = muln(x, x)) if(y &amp; 1) ret = muln(ret, x); return ret;&#125;int inverse(int x) &#123; return qpow(x, MOD - 2); &#125;int a[maxn], w[maxn], n, m, like, diss, tot, dp[maxm][maxm], _inv[maxm * 5];int ans[maxn];inline int inv(int x) &#123; return _inv[x - tot + m]; &#125;inline void upd(int &amp;x, int y) &#123; x += y; if(x &gt;= MOD) x -= MOD;&#125;int mo(int x) &#123; if(x &gt;= MOD) return x - MOD; if(x &lt; 0) return x + MOD; return x;&#125;int main() &#123; scanf("%d%d", &amp;n, &amp;m); rep(i, n) scanf("%d", &amp;a[i]); rep(i, n) scanf("%d", &amp;w[i]); rep(i, n) a[i] ? (like += w[i]) : (diss += w[i]); tot = like + diss; for(int i = max(0, tot-m); i &lt;= tot+m; ++i) _inv[i - tot + m] = inverse(i); dp[0][0] = 1; for(int i = 0; i &lt; m; ++i) &#123; for(int add = 0; add &lt;= i; ++add) &#123; int sub = i - add, nlike = like+add, ndiss = diss-sub; int ntot = nlike + ndiss, ntot_inv = inv(ntot); upd(dp[i + 1][add], muln(dp[i][add], muln(ndiss, ntot_inv))); upd(dp[i + 1][add + 1], muln(dp[i][add], muln(nlike, ntot_inv))); &#125; &#125; int exp_add = 0, exp_sub = 0; for(int add = 0; add &lt;= m; ++add) &#123; upd(exp_add, muln(dp[m][add], add)); upd(exp_sub, muln(dp[m][add], m-add)); &#125; exp_add = muln(exp_add, inverse(like)); exp_sub = muln(exp_sub, inverse(diss)); for(int i = 1;i &lt;= n; ++i) &#123; if(a[i]) printf("%d\n", mo(w[i] + muln(w[i], exp_add))); else printf("%d\n", mo(w[i] - muln(w[i], exp_sub))); &#125; return 0;&#125; Prob D. 构造Description在一个 $n\times n$ 的网格里放传送门，指定从第 $i$ 行进从第 $r_i$ 行出，从第 $i$ 列进从第 $c_i$列出，r, c 都是排列，求构造放置传送们的一种方案。 Solution考虑数学归纳法，只需要解决到第一行的和到第一列的。 如果恰好第一行要到达第一行，第一列要到达第一列，那么就不用管，直接看下一行下一列； 否则记第 r 行将要到达第一行，第 c 列将要到达第一列，那么我就在 (r, 1) 和 (1, c) 这两个地方放传送门，并且将第 r 行的目标从第一行改为第一行的目标，把第 c 列的目标改为第一列的目标即可（这个过程本质是链表的删除操作）。由此归纳即可。 Code点击显示/隐藏代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344/* * Author : YangDavid * Created Time : 2019年06月11日 星期二 22时43分05秒 */#include&lt;bits/stdc++.h&gt;#define rep(i, n) for(int i = 1; i &lt;= n; ++i)using namespace std;typedef pair&lt;int, int&gt; pii;typedef pair&lt;pii, pii&gt; ppp;typedef long long ll;const int maxn = 1111;int go_r[maxn], go_c[maxn], n, which_r[maxn], which_c[maxn];int main() &#123; scanf("%d", &amp;n); rep(i, n) &#123; scanf("%d", &amp;go_r[i]); which_r[go_r[i]] = i; &#125; rep(i, n) &#123; scanf("%d", &amp;go_c[i]); which_c[go_c[i]] = i; &#125; vector&lt;ppp&gt; ans; for(int i = 1; i &lt;= n; ++i) &#123; if(which_r[i] == i &amp;&amp; which_c[i] == i) continue; int r = which_r[i], c = which_c[i]; ans.push_back(&#123;&#123;which_r[i], i&#125;, &#123;i, which_c[i]&#125;&#125;); which_r[go_r[i]] = r; which_c[go_c[i]] = c; go_r[r] = go_r[i]; go_c[c] = go_c[i]; &#125; int sz = ans.size(); printf("%d\n", sz); for(auto g : ans) printf("%d %d %d %d\n", g.first.first, g.first.second, g.second.first, g.second.second); return 0;&#125; Prob E.Prob F.]]></content>
@@ -8,8 +13,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Codeforces</tag>
         <tag>构造</tag>
+        <tag>Codeforces</tag>
       </tags>
   </entry>
   <entry>
@@ -26,7 +31,7 @@
   <entry>
     <title><![CDATA[一句话题解集锦]]></title>
     <url>%2F2019%2F06%2F01%2F%E4%B8%80%E5%8F%A5%E8%AF%9D%E9%A2%98%E8%A7%A3%E9%9B%86%E9%94%A6%2F</url>
-    <content type="text"><![CDATA[这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。 2019.52019.05.31 (Virtual participation of Codeforces Round 562, solved 3/5, rank 118/454) CF1168A: 二分思博题。 CF1168B: 很有趣的暴力，复杂度证明用到这么一个结论：长度大于 9 的 01 串必定存在 $1\leq x,k \leq n$ 使得 $s_x=s_{x+k} = s_{s+2k}$ CF1168C: 按位考虑，在每一种数位如果转移一次不行，那么多次也不行。因此每个位置维护一个 $go_i$ 表示转移到的第一个第 $i$ 位是 1 的数的位置，$O(n\log^2 n)$ 即可预处理。询问时随便找到目标数 y 的一个数位，看原数这个数位要转移到的位置是否小于等于 y 即可。 2019.06.01AtCoder M-SOLUTIONS Programming Contest AB: 思博题 C： 答案是这么一个式子：$$\frac{1}{1-c} \sum_{k=N}^{2N-1} \binom{k-1}{N-1} (A’^N B’^{k-N} + A’^{k-N}B’^{N})$$D: dfs一遍，每次回溯时给这个点标上当时最小的标号即可。 E：很 tricky 的一道题，除以 $d^k$ 之后变成：$$(\frac xd) \cdot (\frac xd+1) \cdot (\frac xd+2) \cdots \cdot (\frac xd+n-1)$$然后注意到模数是 $10^6+3$ ，因此 $\frac xd$ 这个分数可以表示为模意义整数，之后就是个前缀积水题了。 2019.06.11补掉了 CF1172D 构造题。 口胡了 BZOJ1046 ，打算有时间开一个最长上升子序列的专题 Blog。 目前已有的题目： Comet OJ #0 E Problem setter: tangjz，牛逼题。 HDU 6824 上次省赛训练时碰到的题目，和 Comet OJ 的那道题很相似。 Codeforces 1097E Hello 2019 的题目，早就该补了，但是一直咕咕咕。]]></content>
+    <content type="text"><![CDATA[这篇博客主要用来记录平时偶然做到的比较有趣的杂题的简略题解。 2019.52019.05.31 (Virtual participation of Codeforces Round 562, solved 3/5, rank 118/454) CF1168A: 二分思博题。 CF1168B: 很有趣的暴力，复杂度证明用到这么一个结论：长度大于 9 的 01 串必定存在 $1\leq x,k \leq n$ 使得 $s_x=s_{x+k} = s_{s+2k}$ CF1168C: 按位考虑，在每一种数位如果转移一次不行，那么多次也不行。因此每个位置维护一个 $go_i$ 表示转移到的第一个第 $i$ 位是 1 的数的位置，$O(n\log^2 n)$ 即可预处理。询问时随便找到目标数 y 的一个数位，看原数这个数位要转移到的位置是否小于等于 y 即可。 2019.06.01AtCoder M-SOLUTIONS Programming Contest AB: 思博题 C： 答案是这么一个式子：$$\frac{1}{1-c} \sum_{k=N}^{2N-1} \binom{k-1}{N-1} (A’^N B’^{k-N} + A’^{k-N}B’^{N})$$D: dfs一遍，每次回溯时给这个点标上当时最小的标号即可。 E：很 tricky 的一道题，除以 $d^k$ 之后变成：$$(\frac xd) \cdot (\frac xd+1) \cdot (\frac xd+2) \cdots \cdot (\frac xd+n-1)$$然后注意到模数是 $10^6+3$ ，因此 $\frac xd$ 这个分数可以表示为模意义整数，之后就是个前缀积水题了。 2019.06.11补掉了 CF1172D 构造题。 口胡了 BZOJ1046 ，打算有时间开一个最长上升子序列的专题 Blog。 目前已有的题目： Comet OJ #0 E Problem setter: tangjz，牛逼题。 HDU 6824 上次省赛训练时碰到的题目，和 Comet OJ 的那道题很相似。 Codeforces 1097E Hello 2019 的题目，早就该补了，但是一直咕咕咕。 2019.06.20Codeforces Global Round 3 (vp) 期末考试结束，码力恢复计划 1。CF Global Round 的题目质量真的是没得说，一等一的好！这是一个构造题专场，本应是我比较擅长的领域，可是果然是好久没敲代码了啊，感觉多出了不少锅呢。 场上完成： CF1148A 签到 CF1148B two pointers，但是有点 tricky，我 WA 了 4 发。。。 CF1148C 非常显然的构造 CF1148D 排序输出即可 赛后补题： CF1148E好题。题意是有 n 个一样的石子，给出初始位置集合 $my$ 和期望的末尾位置集合 $goal$，问你能不能只使用将两个石子靠近这么一种操作让石子达到期望的末尾位置，要求操作次数不超过 $5\cdot n$ ，并且要输出方案。（不必最小化操作数）。 这个题目感觉还是很有启发性的，感觉这个模型仿佛在竞赛中时常见到，可是好像以前也没有仔细考虑过。实际上这个题目的结论也是很优雅的。 如果考虑 $\delta_i = goal_i - my_i$ 这个序列，实际上问题就等价于一个要求输出方案的加权括号匹配问题，直接 two pointers 贪心即可，如果无法匹配则输出 NO。 CF1148F好题。题意是有 $n$ 个物体，每个物体都有 val 和 mask 两种属性，val 可正可负，而初始价值 tot 为所有物品 val 值之和。现在要求你找到一个二进制码 s ，然后对于每一个物体，如果 popcount(mask &amp; s) 是奇数，那么这个物体的 val 值变为其相反数，即 -val 。我们要求你在修改之后得到的新价值 ntot 与初始价值的正负号严格不同，即：$ntot \times tot &lt; 0$ 。这里 mask 的范围是 $[1,2^{63}-1]$ 解法是构造题的另一种常用思路，数学归纳法，不过这道题我是自底向上考虑的。首先，不是一般性，我们假设原始价值之和为正数，我们想方设法使得最终答案为负数。 注意 mask 只有一位时，问题很平凡，所有物体 mask 都为 1，只需要取 $s=1$ 即可。 假设 mask 有 k 位，此时 s 已有取值 $s_0$ ，我们决策是否使 $s_0$ 的第 $k+1$ 位设为 1 。我们先假设 $s_0$ 不变，把 mask 在 $[2^k,2^{k+1}-1]$ 范围的 val 按照 $s_0$ 的方式修改，统计一下它们的和。如果这个和小于 0 ，那么皆大欢喜，不用设 1。否则我们就将这一位设为 1 ，可以发现这个 1 只会影响到 $[2^k,2^{k+1}-1]$ 中的数，恰好使和变为其相反数而不产生任何其他影响。这两种方式都保证了 mask 有 $k+1$ 位时的价值为负数。 模拟上述过程，总复杂度是 $\mathcal O(n \log \max a_i + n \log n)$ 。 2019.06.22Codeforces Round 569 比赛编号 1179,码力恢复计划 2。这一场居然能够轻松签掉 3 道题，第一次打进前 100，可惜是 vp。感觉还行啊。 CF1179A 直接模拟至队列头第一个数为最大数即可，剩下的答案有周期性。复杂度 $O(n+q)$ CF1179B 蛮简单的构造题。左上角和右下角各放一个点，每一次分别让这两个点沿 S 型前进即可。 CF1179C 首先可以证明 pupil 队伍的顺序与最终答案是没有关系的。然后维护一棵权值线段树，考虑每个价值为 $w_i$ 的物品时区间 $[1,w_i]$ 减去 1， 考虑每个钱数为 $b_i$ 的 pupil 时区间 $[1,b_i]$ 加上 1 。这样最右边的小于 0 的位置就是答案。暴力这么做会要求在线段树上二分，有 TLE 风险（不过出题人好像没有卡这种做法）。实际上将权值线段树的权值总数定为 $1048576 = 2^{20}$ ，然后二分时直接使用节点上的值即可。这样的时间复杂度是 $O(n\log \max a_i + q \log \max a_i)$ ，不加任何常数优化即可通过此题。]]></content>
       <categories>
         <category>题解</category>
       </categories>
@@ -203,8 +208,8 @@
       </categories>
       <tags>
         <tag>贪心</tag>
-        <tag>Codeforces</tag>
         <tag>构造</tag>
+        <tag>Codeforces</tag>
         <tag>快速沃尔什变换（FWT）</tag>
       </tags>
   </entry>
@@ -232,8 +237,8 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>思维</tag>
         <tag>dp</tag>
+        <tag>思维</tag>
         <tag>概率</tag>
       </tags>
   </entry>
@@ -246,12 +251,12 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>思维</tag>
-        <tag>dp</tag>
         <tag>欧拉回路</tag>
+        <tag>dp</tag>
         <tag>二分</tag>
         <tag>贪心</tag>
         <tag>概率与期望</tag>
+        <tag>思维</tag>
       </tags>
   </entry>
   <entry>
@@ -309,10 +314,10 @@
         <tag>构造</tag>
         <tag>状压dp</tag>
         <tag>Opentrains</tag>
-        <tag>暴力</tag>
         <tag>背包问题</tag>
         <tag>最短路</tag>
         <tag>bitset</tag>
+        <tag>暴力</tag>
         <tag>折半搜索</tag>
       </tags>
   </entry>
@@ -350,8 +355,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>Codeforces</tag>
         <tag>构造</tag>
+        <tag>Codeforces</tag>
         <tag>后缀树</tag>
         <tag>trie</tag>
         <tag>博弈</tag>
@@ -367,8 +372,8 @@
       <tags>
         <tag>构造</tag>
         <tag>线段树</tag>
-        <tag>类欧几里得</tag>
         <tag>思维题</tag>
+        <tag>类欧几里得</tag>
         <tag>Opentrains</tag>
         <tag>交互题</tag>
         <tag>树dp</tag>

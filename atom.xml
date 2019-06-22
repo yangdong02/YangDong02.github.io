@@ -1618,9 +1618,9 @@
     
       <category term="Opentrains" scheme="http://yoursite.com/tags/Opentrains/"/>
     
-      <category term="结论" scheme="http://yoursite.com/tags/%E7%BB%93%E8%AE%BA/"/>
-    
       <category term="最小圆覆盖" scheme="http://yoursite.com/tags/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96/"/>
+    
+      <category term="结论" scheme="http://yoursite.com/tags/%E7%BB%93%E8%AE%BA/"/>
     
       <category term="背包" scheme="http://yoursite.com/tags/%E8%83%8C%E5%8C%85/"/>
     
@@ -1819,9 +1819,9 @@
       <category term="比赛" scheme="http://yoursite.com/categories/%E6%AF%94%E8%B5%9B/"/>
     
     
-      <category term="贪心" scheme="http://yoursite.com/tags/%E8%B4%AA%E5%BF%83/"/>
-    
       <category term="构造" scheme="http://yoursite.com/tags/%E6%9E%84%E9%80%A0/"/>
+    
+      <category term="贪心" scheme="http://yoursite.com/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
     

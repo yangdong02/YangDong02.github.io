@@ -167,8 +167,8 @@
       <tags>
         <tag>状压dp</tag>
         <tag>Opentrains</tag>
-        <tag>结论</tag>
         <tag>最小圆覆盖</tag>
+        <tag>结论</tag>
         <tag>背包</tag>
         <tag>线段树优化建图</tag>
       </tags>
@@ -207,8 +207,8 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
         <tag>构造</tag>
+        <tag>贪心</tag>
         <tag>Codeforces</tag>
         <tag>快速沃尔什变换（FWT）</tag>
       </tags>
@@ -237,8 +237,8 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>dp</tag>
         <tag>思维</tag>
+        <tag>dp</tag>
         <tag>概率</tag>
       </tags>
   </entry>
@@ -251,12 +251,12 @@
       </categories>
       <tags>
         <tag>AtCoder</tag>
-        <tag>欧拉回路</tag>
+        <tag>思维</tag>
         <tag>dp</tag>
+        <tag>欧拉回路</tag>
         <tag>二分</tag>
         <tag>贪心</tag>
         <tag>概率与期望</tag>
-        <tag>思维</tag>
       </tags>
   </entry>
   <entry>
@@ -267,8 +267,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>二次剩余</tag>
         <tag>数论</tag>
+        <tag>二次剩余</tag>
         <tag>n次剩余</tag>
         <tag>数论之旅系列</tag>
       </tags>
@@ -296,8 +296,8 @@
         <category>数学</category>
       </categories>
       <tags>
-        <tag>p-adic</tag>
         <tag>数论</tag>
+        <tag>p-adic</tag>
         <tag>牛顿迭代法</tag>
         <tag>数学分析</tag>
       </tags>
@@ -310,14 +310,14 @@
         <category>比赛</category>
       </categories>
       <tags>
-        <tag>二分</tag>
         <tag>构造</tag>
+        <tag>二分</tag>
         <tag>状压dp</tag>
         <tag>Opentrains</tag>
+        <tag>暴力</tag>
         <tag>背包问题</tag>
         <tag>最短路</tag>
         <tag>bitset</tag>
-        <tag>暴力</tag>
         <tag>折半搜索</tag>
       </tags>
   </entry>
@@ -341,8 +341,8 @@
       </categories>
       <tags>
         <tag>Opentrains</tag>
-        <tag>暴力</tag>
         <tag>二次剩余</tag>
+        <tag>暴力</tag>
         <tag>概率算法</tag>
         <tag>非完美算法</tag>
       </tags>
@@ -372,8 +372,8 @@
       <tags>
         <tag>构造</tag>
         <tag>线段树</tag>
-        <tag>思维题</tag>
         <tag>类欧几里得</tag>
+        <tag>思维题</tag>
         <tag>Opentrains</tag>
         <tag>交互题</tag>
         <tag>树dp</tag>

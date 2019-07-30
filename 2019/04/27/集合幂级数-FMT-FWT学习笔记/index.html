@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。 [TODO] 把练习第一题搞清楚[TODO] 把第三道论">
+  <meta name="description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
 <meta name="keywords" content="高维前缀和（FMT）,快速沃尔什变换系列（FMT，FWT等）,集合幂级数,子集卷积">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集合幂级数、FMT、FWT学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/04/27/集合幂级数-FMT-FWT学习笔记/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
-<meta property="og:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。 [TODO] 把练习第一题搞清楚[TODO] 把第三道论">
+<meta property="og:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-31T16:45:59.560Z">
+<meta property="og:updated_time" content="2019-07-30T14:08:46.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集合幂级数、FMT、FWT学习笔记">
-<meta name="twitter:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。 [TODO] 把练习第一题搞清楚[TODO] 把第三道论">
+<meta name="twitter:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
 
 
 
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-01 00:45:59" itemprop="dateModified" datetime="2019-06-01T00:45:59+08:00">2019-06-01</time>
+                <time title="修改时间：2019-07-30 22:08:46" itemprop="dateModified" datetime="2019-07-30T22:08:46+08:00">2019-07-30</time>
               
             
           </span>
@@ -504,8 +504,8 @@
 
       
         <p>受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括<strong>集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换</strong>等，以及附带进行的一些练习。</p>
-<p>[TODO] 把练习第一题搞清楚<br>[TODO] 把第三道论文题学会</p>
 <a id="more"></a>
+<p>[TODO] 把练习第一题搞清楚<br>[TODO] 把第三道论文题学会</p>
 <h1 id="引言及定义"><a href="#引言及定义" class="headerlink" title="引言及定义"></a>引言及定义</h1><p>类似数列的生成函数，对于集合，我们引入集合幂级数来解决一些有关集合的动态规划问题。</p>
 <blockquote>
 <p>定义：设  $F$ 是一个域，则称函数 $f:2^U\to F$ 是 F 上的一个形式幂级数，记 $f_S=f(S)$ 为集合幂级数第 $S$ 项的系数。</p>
@@ -709,7 +709,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

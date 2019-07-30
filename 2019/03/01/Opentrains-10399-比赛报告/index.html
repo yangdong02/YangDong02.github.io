@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of PeterhofOverview   Status A B C D E F G H I J     Contest 02:21 —— 02:12 —— 04:42 —— —— WA -1 00:57 01:28   Upsolve OK  OK AC OK AC?  Yes OK O">
+  <meta name="description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof">
 <meta name="keywords" content="Opentrains,暴力,二次剩余,概率算法,非完美算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Opentrains 10399 比赛报告">
 <meta property="og:url" content="http://yoursite.com/2019/03/01/Opentrains-10399-比赛报告/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
-<meta property="og:description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of PeterhofOverview   Status A B C D E F G H I J     Contest 02:21 —— 02:12 —— 04:42 —— —— WA -1 00:57 01:28   Upsolve OK  OK AC OK AC?  Yes OK O">
+<meta property="og:description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-07T16:19:56.967Z">
+<meta property="og:updated_time" content="2019-07-30T14:09:46.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Opentrains 10399 比赛报告">
-<meta name="twitter:description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of PeterhofOverview   Status A B C D E F G H I J     Contest 02:21 —— 02:12 —— 04:42 —— —— WA -1 00:57 01:28   Upsolve OK  OK AC OK AC?  Yes OK O">
+<meta name="twitter:description" content="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof">
 
 
 
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-08 00:19:56" itemprop="dateModified" datetime="2019-03-08T00:19:56+08:00">2019-03-08</time>
+                <time title="修改时间：2019-07-30 22:09:46" itemprop="dateModified" datetime="2019-07-30T22:09:46+08:00">2019-07-30</time>
               
             
           </span>
@@ -503,7 +503,8 @@
       
 
       
-        <h1 id="XVIII-Open-Cup-named-after-E-V-Pankratiev-Grand-Prix-of-Peterhof"><a href="#XVIII-Open-Cup-named-after-E-V-Pankratiev-Grand-Prix-of-Peterhof" class="headerlink" title="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof"></a>XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><table>
+        <h1 id="XVIII-Open-Cup-named-after-E-V-Pankratiev-Grand-Prix-of-Peterhof"><a href="#XVIII-Open-Cup-named-after-E-V-Pankratiev-Grand-Prix-of-Peterhof" class="headerlink" title="XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof"></a>XVIII Open Cup named after E.V. Pankratiev. Grand Prix of Peterhof</h1><a id="more"></a>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">Status</th>
@@ -583,10 +584,9 @@
 </li>
 <li><p>Upsolved 6 out of 10</p>
 </li>
-<li><p>Rank 91 out of 162 ( 击败$43.83 \%​$ )</p>
+<li><p>Rank 91 out of 162 ( 击败$43.83 \%$ )</p>
 </li>
 <li><p>做出了有趣的 $J$ 题，运用了二次剩余，欧拉判别法的知识</p>
-<a id="more"></a>
 </li>
 </ul>
 <p>这次我踩过的坑点可是有很多了，实在是不应该。。。</p>
@@ -618,10 +618,10 @@
 <h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h4><p>挑多个素数，对每个素数 $p$，检查  $n\bmod p$ 是否是二次剩余。</p>
 <p>具体怎么检查一个数是不是二次剩余呢？可以使用欧拉判别法：</p>
 <blockquote>
-<p>若 $n^{\frac{p-1}{2}}\equiv 1 \pmod p$，则 $n$ 是模 $p​$ 的二次剩余；</p>
-<p>若 $n^{\frac{p-1}{2}}\equiv -1 \pmod p$，则 $n$ 是模 $p​$ 的二次非剩余；</p>
+<p>若 $n^{\frac{p-1}{2}}\equiv 1 \pmod p$，则 $n$ 是模 $p$ 的二次剩余；</p>
+<p>若 $n^{\frac{p-1}{2}}\equiv -1 \pmod p$，则 $n$ 是模 $p$ 的二次非剩余；</p>
 </blockquote>
-<p>可以证明，$n^{\frac{p-1}{2}} \pmod p​$ 不存在其他情况。</p>
+<p>可以证明，$n^{\frac{p-1}{2}} \pmod p$ 不存在其他情况。</p>
 <p>实际上，这就是勒让德符号$\left(\frac{n}{p}\right)$的定义。勒让德符号专门用来解决二次剩余问题，是完全积性函数，还有不少有用的性质。详细参见二潘的《初等数论》吧</p>
 <p>第二种方法<del>显然</del>正确的概率很大。可以这么分析概率：$\pmod p$ 的二次剩余共有 $\frac{p+1}{2}$个，如果假设二次剩余分布相对均匀的话，每次检查成功的概率可以认为大约是 $\frac 12$。因此取47个素数，失败概率已经小到 $\frac 1{2^{47}} \approx 10^{-15}$，完全可以忽略。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, n) for(int i = 1, i##_end_ = (n); i &lt;= i##_end_; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ll p[<span class="number">47</span>] = &#123;<span class="number">1226959</span>,  <span class="number">1635947</span>,  <span class="number">2181271</span>,  <span class="number">2908361</span>,  <span class="number">3877817</span>,  </span><br><span class="line">    <span class="number">5170427</span>, <span class="number">6893911</span>, <span class="number">9191891</span>, <span class="number">12255871</span>, <span class="number">16341163</span>, <span class="number">21788233</span>, <span class="number">29050993</span>, </span><br><span class="line">    <span class="number">38734667</span>, <span class="number">51646229</span>, <span class="number">68861641</span>,  <span class="number">91815541</span>, <span class="number">122420729</span>, <span class="number">163227661</span>,</span><br><span class="line">    <span class="number">217636919</span>, <span class="number">290182597</span>, <span class="number">386910137</span>, <span class="number">515880193</span>, <span class="number">687840301</span>, <span class="number">917120411</span>, </span><br><span class="line">    <span class="number">1000000007</span>, <span class="number">1000000009</span>, <span class="number">1222827239</span>, <span class="number">1610612741</span>, <span class="number">3221225473</span>, </span><br><span class="line">    <span class="number">4294967291</span>, <span class="number">61</span>, <span class="number">83</span>, <span class="number">113</span>, <span class="number">151</span>,  <span class="number">211</span>, <span class="number">281</span>, <span class="number">379</span>,<span class="number">509</span>, <span class="number">683</span>,  <span class="number">911</span> ,</span><br><span class="line">    <span class="number">1217</span>, <span class="number">1627</span>, <span class="number">2179</span>, <span class="number">2909</span>, <span class="number">3881</span>, <span class="number">6907</span>, <span class="number">9209</span> </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1002000</span>], n;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">1002000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mo</span><span class="params">(ll mod)</span> </span>&#123;</span><br><span class="line">    ll ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        ret = (<span class="number">10L</span>L * ret + a[i]) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> mod)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(; y; y &gt;&gt;= <span class="number">1</span>, x = <span class="number">1L</span>L * x * x % mod)</span><br><span class="line">        <span class="keyword">if</span>(y &amp; <span class="number">1</span>) ret = <span class="number">1L</span>L * ret * x % mod;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s); n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) a[i] = s[i] - <span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> c = <span class="number">0</span>; c &lt; <span class="number">47</span>; ++c) &#123;</span><br><span class="line">        <span class="keyword">int</span> r = mo(p[c]);</span><br><span class="line">        <span class="keyword">int</span> q = qpow(r, (p[c]<span class="number">-1</span>)/<span class="number">2</span>, p[c]);</span><br><span class="line">        <span class="keyword">if</span>(q == p[c]<span class="number">-1</span>) &#123; <span class="built_in">puts</span>(<span class="string">"No"</span>); <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -774,7 +774,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

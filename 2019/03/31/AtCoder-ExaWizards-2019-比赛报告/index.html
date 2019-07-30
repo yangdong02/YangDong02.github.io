@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Overview   Status A B C D E F     Contest 00:01 00:03 (0) 01:15 —— ——   Upsolve OK OK AC OK AC    Attempt + + * + *    AC count 3132 3081 469 227 134 14   Tag 入门 入门 思维 DP 概率 ?   Coding Easy- Easy- Eas">
+  <meta name="description" content="AtCoder ExaWizards 2019">
 <meta name="keywords" content="AtCoder,思维,dp,概率">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AtCoder ExaWizards 2019 比赛报告">
 <meta property="og:url" content="http://yoursite.com/2019/03/31/AtCoder-ExaWizards-2019-比赛报告/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
-<meta property="og:description" content="Overview   Status A B C D E F     Contest 00:01 00:03 (0) 01:15 —— ——   Upsolve OK OK AC OK AC    Attempt + + * + *    AC count 3132 3081 469 227 134 14   Tag 入门 入门 思维 DP 概率 ?   Coding Easy- Easy- Eas">
+<meta property="og:description" content="AtCoder ExaWizards 2019">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T08:48:26.440Z">
+<meta property="og:updated_time" content="2019-07-30T14:13:20.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder ExaWizards 2019 比赛报告">
-<meta name="twitter:description" content="Overview   Status A B C D E F     Contest 00:01 00:03 (0) 01:15 —— ——   Upsolve OK OK AC OK AC    Attempt + + * + *    AC count 3132 3081 469 227 134 14   Tag 入门 入门 思维 DP 概率 ?   Coding Easy- Easy- Eas">
+<meta name="twitter:description" content="AtCoder ExaWizards 2019">
 
 
 
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-06 16:48:26" itemprop="dateModified" datetime="2019-05-06T16:48:26+08:00">2019-05-06</time>
+                <time title="修改时间：2019-07-30 22:13:20" itemprop="dateModified" datetime="2019-07-30T22:13:20+08:00">2019-07-30</time>
               
             
           </span>
@@ -503,7 +503,9 @@
       
 
       
-        <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><table>
+        <p>AtCoder ExaWizards 2019 </p>
+<a id="more"></a>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><table>
 <thead>
 <tr>
 <th style="text-align:left">Status</th>
@@ -600,7 +602,6 @@
 <li>E题是挺简单的一道概率题，场上没看，有点可惜了。</li>
 </ul>
 <p>[TODO: Solve Problem F]</p>
-<a id="more"></a>
 <h1 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials"></a>Tutorials</h1><h2 id="Prob-C-思维"><a href="#Prob-C-思维" class="headerlink" title="Prob C. 思维"></a>Prob C. 思维</h2><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>一个核心的观察就是，无论怎么喊口令，人之间的相对顺序是不改变的。因此只需要维护最左边和最右边未出界的人的编号就可以了，换句话说，逆着时间序，并且反着处理口令，设最左边出界处有一个人，就是看这个人最远能到哪；最右边有个人，看他最左能到哪。然后减一下就好了。</p>
 <p>时间复杂度 $O(n+q)$</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, n) for(int i = 1; i &lt;= n; ++i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">202000</span>;</span><br><span class="line"><span class="keyword">int</span> n, q, lb, rb;</span><br><span class="line"><span class="keyword">char</span> s[maxn], t[maxn], d[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d\n%s\n"</span>, &amp;n, &amp;q, s + <span class="number">1</span>);</span><br><span class="line">    lb = <span class="number">0</span>, rb = n + <span class="number">1</span>; <span class="comment">// (lb, rb) available</span></span><br><span class="line">    rep(i, q) <span class="built_in">scanf</span>(<span class="string">"%c %c\n"</span>, &amp;t[i], &amp;d[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = q; i ; --i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[lb+<span class="number">1</span>]==t[i] &amp;&amp; d[i]==<span class="string">'L'</span>) lb++;</span><br><span class="line">        <span class="keyword">if</span>(s[rb<span class="number">-1</span>]==t[i] &amp;&amp; d[i]==<span class="string">'R'</span>) rb--;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(s[lb]==t[i] &amp;&amp; d[i]==<span class="string">'R'</span>) lb--;</span><br><span class="line">        <span class="keyword">if</span>(s[rb]==t[i] &amp;&amp; d[i]==<span class="string">'L'</span>) rb++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, rb - lb - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -738,7 +739,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

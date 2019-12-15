@@ -97,22 +97,22 @@
 
 
   <meta name="description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
-<meta name="keywords" content="二次剩余,数论,n次剩余,数论之旅系列">
+<meta name="keywords" content="数论,二次剩余,n次剩余,数论之旅系列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论之旅1：同余方程">
-<meta property="og:url" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/index.html">
+<meta property="og:url" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
 <meta property="og:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/gauss.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c2.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/c3.png">
+<meta property="og:image" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/gauss.png">
+<meta property="og:image" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/c1.jpg">
+<meta property="og:image" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/c2.png">
+<meta property="og:image" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/c3.png">
 <meta property="og:updated_time" content="2019-05-06T10:11:53.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论之旅1：同余方程">
 <meta name="twitter:description" content="最近我一直在刷潘承洞、潘承彪的《初等数论》，感觉还是学到了不少东西呢。从现在我就来做一个数论之旅系列专题笔记吧，顺便也记录一下我的学习历程。 这一次笔记对应的是《初等数论》第四章同余方程 4.5 到 4.9 的内容，主要介绍二次剩余理论，包括欧拉判别法，勒让德符号，二次互反律，雅克比符号等，以及高次同余方程简介，给出了 $n$ 次剩余的判别公式。 在开始之前约定一下我的记号吧。未经说明的任何字母都">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/19/数论之旅之同余方程/gauss.png">
+<meta name="twitter:image" content="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/gauss.png">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/19/数论之旅之同余方程/">
+  <link rel="canonical" href="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/">
 
 
 
@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/数论之旅之同余方程/">
+    <link itemprop="mainEntityOfPage" href="http://yang2002.github.io/2019/03/19/数论之旅之同余方程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangDavid">
@@ -637,9 +637,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二次剩余/" rel="tag"><i class="fa fa-tag"></i> 二次剩余</a>
-          
             <a href="/tags/数论/" rel="tag"><i class="fa fa-tag"></i> 数论</a>
+          
+            <a href="/tags/二次剩余/" rel="tag"><i class="fa fa-tag"></i> 二次剩余</a>
           
             <a href="/tags/n次剩余/" rel="tag"><i class="fa fa-tag"></i> n次剩余</a>
           
@@ -656,8 +656,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/Atcoder-Grand-Contest-031-比赛总结/" rel="next" title="AtCoder Grand Contest 031 比赛总结">
-                <i class="fa fa-chevron-left"></i> AtCoder Grand Contest 031 比赛总结
+              <a href="/2019/03/10/p进数-p-adic-与Hensel引理/" rel="next" title="p进数 (p-adic) 、牛顿迭代与Hensel引理">
+                <i class="fa fa-chevron-left"></i> p进数 (p-adic) 、牛顿迭代与Hensel引理
               </a>
             
           </div>
@@ -666,8 +666,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/26/AtCoder-Grand-Contest-032-比赛总结/" rel="prev" title="AtCoder Grand Contest 032 比赛总结">
-                AtCoder Grand Contest 032 比赛总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/21/一个有趣的期望问题/" rel="prev" title="一个有趣的期望问题">
+                一个有趣的期望问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -742,7 +742,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -765,9 +765,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -814,147 +812,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">87</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

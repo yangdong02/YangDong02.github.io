@@ -97,14 +97,14 @@
 
 
   <meta name="description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
-<meta name="keywords" content="高维前缀和（FMT）,快速沃尔什变换系列（FMT，FWT等）,集合幂级数,子集卷积">
+<meta name="keywords" content="快速沃尔什变换系列（FMT，FWT等）,集合幂级数,子集卷积,高维前缀和（FMT）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集合幂级数、FMT、FWT学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/04/27/集合幂级数-FMT-FWT学习笔记/index.html">
+<meta property="og:url" content="http://yang2002.github.io/2019/04/27/集合幂级数-FMT-FWT学习笔记/index.html">
 <meta property="og:site_name" content="山月半轮的博客">
 <meta property="og:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T14:08:46.112Z">
+<meta property="og:updated_time" content="2019-12-15T14:10:17.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集合幂级数、FMT、FWT学习笔记">
 <meta name="twitter:description" content="受这几天看到的不少高维前缀和题目的影响，我决定系统地学习一下集合幂级数的一套理论了。内容主要来自2015年吕凯风（VFleaKing）国家集训队论文《集合幂级数的性质与应用及其快速算法》（pdf版本会放在附录里），包括集合并卷积、集合对称差卷积、子集卷积、快速莫比乌斯变换、快速莫比乌斯反演、快速沃尔什变换及逆变换等，以及附带进行的一些练习。">
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/27/集合幂级数-FMT-FWT学习笔记/">
+  <link rel="canonical" href="http://yang2002.github.io/2019/04/27/集合幂级数-FMT-FWT学习笔记/">
 
 
 
@@ -375,7 +375,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/27/集合幂级数-FMT-FWT学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yang2002.github.io/2019/04/27/集合幂级数-FMT-FWT学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangDavid">
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 22:08:46" itemprop="dateModified" datetime="2019-07-30T22:08:46+08:00">2019-07-30</time>
+                <time title="修改时间：2019-12-15 22:10:17" itemprop="dateModified" datetime="2019-12-15T22:10:17+08:00">2019-12-15</time>
               
             
           </span>
@@ -462,12 +462,12 @@
           
 		  
 		  
+		  
+		  
             <span class="post-meta-divider">|</span>
-		    <i class="fa fa-check-circle"></i>
-            博文状态：<font color="green"><b>已完成</b></font>
+		    <i class="fa fa-wrench"></i>
+            博文状态：更新中
           
-		  
-		  
 		  
           
             
@@ -604,13 +604,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/高维前缀和（FMT）/" rel="tag"><i class="fa fa-tag"></i> 高维前缀和（FMT）</a>
-          
             <a href="/tags/快速沃尔什变换系列（FMT，FWT等）/" rel="tag"><i class="fa fa-tag"></i> 快速沃尔什变换系列（FMT，FWT等）</a>
           
             <a href="/tags/集合幂级数/" rel="tag"><i class="fa fa-tag"></i> 集合幂级数</a>
           
             <a href="/tags/子集卷积/" rel="tag"><i class="fa fa-tag"></i> 子集卷积</a>
+          
+            <a href="/tags/高维前缀和（FMT）/" rel="tag"><i class="fa fa-tag"></i> 高维前缀和（FMT）</a>
           
         </div>
       
@@ -623,8 +623,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/24/Opentrains-1505-训练报告/" rel="next" title="Opentrains 1505 训练报告">
-                <i class="fa fa-chevron-left"></i> Opentrains 1505 训练报告
+              <a href="/2019/04/21/最小圆覆盖学习笔记/" rel="next" title="最小圆（球）覆盖学习笔记">
+                <i class="fa fa-chevron-left"></i> 最小圆（球）覆盖学习笔记
               </a>
             
           </div>
@@ -633,8 +633,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/10/Comet-OJ-Contest-3-比赛报告/" rel="prev" title="Comet OJ Contest #3 比赛报告">
-                Comet OJ Contest #3 比赛报告 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/02/2019年ACM-ICPC陕西省赛游记/" rel="prev" title="2019年ACM-ICPC陕西省赛游记">
+                2019年ACM-ICPC陕西省赛游记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -709,7 +709,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -732,9 +732,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -781,147 +779,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">87</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangdong2002.github.io/"/>
-  <updated>2020-08-16T17:04:29.960Z</updated>
+  <updated>2021-02-05T08:04:55.730Z</updated>
   <id>http://yangdong2002.github.io/</id>
   
   <author>
@@ -15,6 +15,142 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MOOC 推荐</title>
+    <link href="http://yangdong2002.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/"/>
+    <id>http://yangdong2002.github.io/2021/02/04/MOOC-推荐/</id>
+    <published>2021-02-04T02:08:25.000Z</published>
+    <updated>2021-02-05T08:04:55.730Z</updated>
+    
+    <content type="html"><![CDATA[<p>智慧大学上课也就图一乐，真正学知识还是要看国外四大名校课程。</p><a id="more"></a><p>看过及正在看的：</p><table><thead><tr><th>MOOC</th><th>资源</th></tr></thead><tbody><tr><td><a href="http://csapp.cs.cmu.edu/3e/labs.html" target="_blank" rel="noopener">CMU 15-213 Introduction to Computer Systems</a></td><td>CSAPP，2015 版<a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22" target="_blank" rel="noopener">视频</a>+lab</td></tr><tr><td><a href="https://pdos.csail.mit.edu/6.828/2020/schedule.html" target="_blank" rel="noopener">MIT 6.S081 Operating System Engineering</a> 2020 Fall</td><td><strong>全套</strong> <em>最新</em> 视频、lab，国内有自学群</td></tr><tr><td><a href="https://cs144.github.io/" target="_blank" rel="noopener">Stanford CS144 Introduction to Computer Networking</a> 2020 Fall</td><td>B 站 2016 版视频 + 2020 版 lab</td></tr><tr><td><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html" target="_blank" rel="noopener">NTU Machine Learning</a> 2020 Spring</td><td><strong>全套</strong> <em>最新</em> 视频、lab、kaggle 竞赛</td></tr></tbody></table><p>打算看的：</p><table><thead><tr><th>MOOC</th><th>资源</th></tr></thead><tbody><tr><td><a href="http://web.stanford.edu/class/cs143/" target="_blank" rel="noopener">Stanford CS143 Compilers</a></td><td>B 站视频 + 远古 lab</td></tr><tr><td>Great ideas in theoretical computer science</td><td>Youtube</td></tr><tr><td><a href="https://www.diderot.one/courses/28" target="_blank" rel="noopener">CMU 15751 TCS Toolkit</a> Spring 2019</td><td><strong>全套</strong>资源</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;智慧大学上课也就图一乐，真正学知识还是要看国外四大名校课程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何成为期末复习混子</title>
+    <link href="http://yangdong2002.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/"/>
+    <id>http://yangdong2002.github.io/2021/02/04/如何成为期末复习混子/</id>
+    <published>2021-02-04T02:07:59.000Z</published>
+    <updated>2021-02-05T08:03:01.371Z</updated>
+    
+    <content type="html"><![CDATA[<p>既然在西安智慧大学，能力提升和考试高分是不相关的，考前抱佛脚就成为标准配置了。这里浅谈如何高效抱佛脚，用最小精力混过无聊的考试。</p><a id="more"></a><ul><li>理性对待，不要神化难度与复习过程，也不要神化高分的作用。<strong>切勿浪费大量时间在期末考试上而减少对大脑升级活动的投入！</strong>平时只需要把作业题搞懂就行</li><li>期末考试不是什么高大上的东西，而只是对快速掌握简单知识能力的考察。</li><li>交大几乎所有科目都是很 trivial 的，且和提升能力是正交的。重要的课如果学校教得很差的话，最好学期内自己看国外视频做 lab 然后对着本校考纲微调。如果仅成为了本校考试的做题家，即使拿到高分也相当于没有学！</li><li>期末复习可以混，只要是沿着“通向期末高分的最短路”前进，就没问题。如果除了混高分，还想卷赢其他人，那么还需要注意不要有短板课（例如马原）。</li><li>如果是概念密集型课，课本太厚读不动的话，中国大学 MOOC 上可能会有类似的念经课转为应付期末而生，2倍速看念经课可以最短时间读完课本，快速断线重连。</li><li>复习最后一定要落实到做题上。</li></ul><p>eg1. OS 考试：暑假刷完了 CMU 15213 和 CSAPP、学期内学了大部分 MIT6.S081，然而应付考试实质上用处有限！考前 2 天听了某大学念经课、刷夜刷了考研题一本书和部分往年题，成为文科计算机大师，最终 99，最高分。</p><p>eg2. 计网考试：学期内刷了大部分 Stanford CS144，写了个 TCP，然而几乎和考试正交！这门课特点就是广而浅，就是考察做题过程中 one-shot learning 的能力！考前 4 天读了 800 页课件与 700 页课本，随便整了个 MOOC 做，还做了各种虚假的往年题，但没太做够题。考试时改错 4 分客观思博题，还好老师平时分抬了一手，最终 96，居然还是最高分。</p><p>eg3. 马原考试：考前 5 天开始每天抽 3h 背书，考前两天发现资料有点假，于是结合老师课件背书。做了些买的各种选择题感觉质量参差不齐。最后仔细做了武汉大学马原 MOOC 题感觉还可以。然后考试时选择题后面的几乎是武大 MOOC 的原题大战，太简单了！然后就赢了啊，最终 98，大概只用了 30h 就混到了全年级最高。</p><p>eg4. 数理方程：之前听说虽然上课不知道在讲啥，但是考试简单，于是考前 1.3 天才开始复习。0.6 天复习完基本原理，0.7 天做了/看了约 8 套往年题，结果期末考试居然几乎全是选择题，自然就 100 了。</p><p>eg5. 大学物理：虽说最后压轴文科题恰巧背过，但量子物理思博选择错了一个，某个光栅大题也思博了没写 0 级…最后就烂了。96，被 8% 的人吊打。</p><p>eg6. 概率论：发现课本太 trivial 了，考得也简单，于是只复习了 1.5 天。早就写完了，然后检查时思博改错了一个判断，最终 99，被 3% 的人吊打。</p><p>eg7. 电路：第一门复习的课，但当时不知道考试可以混效率很低。而临考前却热身不够没太做往年题，于是考试时就烂了，差点算不完，甚至有题大脑僵化了不会做。最终 97，被 17% 的人吊打。</p><p>eg8. 算法：傻逼课！！！考试周之前考的，大意了，没有对着垃圾课本微调。老师也是傻逼，净出文科题。ICPC 区域赛冠军拿不到算法课的 4.3？于是算法课就成为考得最差的文科课了，被 8% 的人吊打。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;既然在西安智慧大学，能力提升和考试高分是不相关的，考前抱佛脚就成为标准配置了。这里浅谈如何高效抱佛脚，用最小精力混过无聊的考试。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ICPC 2020</title>
+    <link href="http://yangdong2002.github.io/2020/11/25/ICPC2020/"/>
+    <id>http://yangdong2002.github.io/2020/11/25/ICPC2020/</id>
+    <published>2020-11-25T12:19:44.000Z</published>
+    <updated>2021-01-25T15:23:28.966Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次正式赛最后两分钟绝杀，第一次战胜强敌，第一次拿到区域赛冠军，第一次拿到 World Finals 门票… </p><p>ICPC 冠军，原来真的是可以做到的！基本上没有更高的国内 ICPC 成就了， ICPC 生涯，至此圆满！？</p><p>这之后，又将会何去何从？</p><p><em>向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀</em>。</p><a id="more"></a><h2 id="Achievements"><a href="#Achievements" class="headerlink" title="Achievements"></a>Achievements</h2><p>2020.10.18 CCPC Qinhuangdao <strong>Runner up</strong></p><p>2020.10.25 CCPC Weihai <strong>4th Place</strong></p><p>2020.11.22 ICPC Xiaomi Invitational Contest 14th Place</p><p>2020.12.13 ICPC Shanghai Regional Contest <strong>Winner</strong></p><p>2020.12.20 ICPC Nanjing Regional Contest 20th Place</p><p><img src="shanghai.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一次正式赛最后两分钟绝杀，第一次战胜强敌，第一次拿到区域赛冠军，第一次拿到 World Finals 门票… &lt;/p&gt;
+&lt;p&gt;ICPC 冠军，原来真的是可以做到的！基本上没有更高的国内 ICPC 成就了， ICPC 生涯，至此圆满！？&lt;/p&gt;
+&lt;p&gt;这之后，又将会何去何从？&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀&lt;/em&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+      <category term="ICPC" scheme="http://yangdong2002.github.io/tags/ICPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stanform CS144 Introduction to Computer Networking</title>
+    <link href="http://yangdong2002.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/"/>
+    <id>http://yangdong2002.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/</id>
+    <published>2020-09-19T17:30:31.000Z</published>
+    <updated>2020-09-19T17:30:32.069Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 6.S081 Operating Systems Engineering</title>
+    <link href="http://yangdong2002.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/"/>
+    <id>http://yangdong2002.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/</id>
+    <published>2020-09-19T16:27:43.000Z</published>
+    <updated>2020-10-07T10:48:11.879Z</updated>
+    
+    <content type="html"><![CDATA[<p>既然选择了文化课 Hard 模式，就从这一门 MIT 操作系统神课开始吧！</p><p>顺带一提，由于疫情，这门课 2020 Fall 的版本是完全开源的，课程视频、lab 作业都将是公开的，2020 Fall 打算刷这门课的同学可以和 MIT 学生同步学习。</p><p><a href="https://pdos.csail.mit.edu/6.828/2020/schedule.html" target="_blank" rel="noopener">课程链接</a>  <a href="https://github.com/YangDong2002/MIT6.828" target="_blank" rel="noopener">我的github仓库</a></p><a id="more"></a><h1 id="Progress"><a href="#Progress" class="headerlink" title="Progress"></a>Progress</h1><p>2020.9.21 Lab util (100/100), 5h</p><p>2020.9.21 Lab syscall (35/35), 2h</p><p>2020.10.4 Lab pgtbl (66/66), 14h</p><p>2020.10.4 Lab traps (85/85), 2h</p><p>2020.10.5 Lab lazy (90/90), 5h</p><h1 id="Labs"><a href="#Labs" class="headerlink" title="Labs"></a>Labs</h1><h2 id="Lab-util"><a href="#Lab-util" class="headerlink" title="Lab util"></a>Lab util</h2><p>第一个实验，目的是为了让大家熟悉 UNIX system call 的语义。</p><ul><li>prime 实验，居然还可以利用管道实现并发！对于 pipe 的理解加深了很多。</li><li>xargs 实验，原来 UNIX 还有这么好用的工具…</li></ul><h2 id="Lab-syscall"><a href="#Lab-syscall" class="headerlink" title="Lab syscall"></a>Lab syscall</h2><p>这个实验比较简单…但这其实是暴风雨前的黎明:) 本质是通过实验强制让我理解了 xv6 对应代码的原理。</p><ul><li>xv6 的 <code>kalloc</code> 每次分配一页，直接用了个空闲链表维护；</li><li>认识了 <code>copyin</code>，<code>copyout</code> 函数，嘿嘿，为下个实验做铺垫…</li></ul><h2 id="Lab-pgtbl"><a href="#Lab-pgtbl" class="headerlink" title="Lab pgtbl"></a>Lab pgtbl</h2><p>目前最牛逼的实验… 没有之一。我花了相当长的时间，也踩了无数个坑。后面有节课讲解 lab，一位 MIT 小哥给教授说因为一个不起眼的问题（xv6 中 kernel 模式无法访问标有 PTE_U 的 PTE）少睡了 4 小时… 我只想说，俺也一样！做完后回过头看可能没那么难，但是完成这个实验需要对页表机制有着充分的理解，并且要充分读懂 xv6 的代码。我到后来还出了同步问题，有概率通过所有样例也有概率 panic… 还好最后找到原因了。完成这个 lab </p><p>2020.10.4 Lab traps (85/85), 2h</p><p>2020.10.5 Lab lazy (90/90), 5h</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;既然选择了文化课 Hard 模式，就从这一门 MIT 操作系统神课开始吧！&lt;/p&gt;
+&lt;p&gt;顺带一提，由于疫情，这门课 2020 Fall 的版本是完全开源的，课程视频、lab 作业都将是公开的，2020 Fall 打算刷这门课的同学可以和 MIT 学生同步学习。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pdos.csail.mit.edu/6.828/2020/schedule.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;课程链接&lt;/a&gt;  &lt;a href=&quot;https://github.com/YangDong2002/MIT6.828&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;我的github仓库&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="公开课" scheme="http://yangdong2002.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
+    
+    
+      <category term="操作系统" scheme="http://yangdong2002.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节跳动夏令营 Byte Camp 2020 游记</title>
+    <link href="http://yangdong2002.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/"/>
+    <id>http://yangdong2002.github.io/2020/09/09/字节跳动夏令营-Byte-Camp-2020-游记/</id>
+    <published>2020-09-09T15:57:34.000Z</published>
+    <updated>2020-09-09T17:01:06.975Z</updated>
+    
+    <content type="html"><![CDATA[<p>只要敢于尝试新的事物，生活就会变得五彩斑斓。</p><p>和优秀的人在一起，我们无法事先知道自己处于竞争的哪一层。因而在这片黑暗森林中前进时，永远要小心翼翼，切忌骄傲自满。既然无法使时间停滞，就应该提前做好充分准备。</p><a id="more"></a><p>字节跳动夏令营于 8.30 - 9.5 在上海举行了。这是我第一次参加非 ICPC 相关的计算机夏令营，正如题记所写的那样，也是感触多多呢。同时营后我们也继续在上海待了几天来旅游，这真的是一段快乐而难忘的时光呢！</p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>7.13 看到字节跳动夏令营的宣传，抱着大学生活不应该仅限于 ICPC、未来可能学 AI 相关方向以及可以来免费旅游这三方面的想法，我报名了夏令营笔试。7.15 做了些填空选择，以及 4 道简单编程题就直接通过了，获得了项目选题的“最高优先级”。由于对选题也没什么想法，就选了个“推荐模型的蒸馏算法”一题，因为它的介绍十分清晰。</p><p>8.17 返校了，我开始准备字节营相关的知识，但是 ICPC 校队集训开始了，以及之后参加了 Petrozavodsk 营，没来得及太仔细看这个项目，只是读了 SOTA 论文。</p><p>8.28 Ptz 营结束之后，我才意识到了时间的紧迫，立即开始准备论文复现。我当时太天真，以为按论文思路写出代码就可以完成复现，可是好不容易把代码调通，原论文的超参数却根本不工作。这时才知道原论文代码可能有一些我没有写到的细节操作，以及预处理方式不一样。</p><p>就这样，我们就开始</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;只要敢于尝试新的事物，生活就会变得五彩斑斓。&lt;/p&gt;
+&lt;p&gt;和优秀的人在一起，我们无法事先知道自己处于竞争的哪一层。因而在这片黑暗森林中前进时，永远要小心翼翼，切忌骄傲自满。既然无法使时间停滞，就应该提前做好充分准备。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    
+    
+      <category term="AI" scheme="http://yangdong2002.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Petrozavodsk Camp Summer 2020 游记</title>
+    <link href="http://yangdong2002.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-%E6%B8%B8%E8%AE%B0/"/>
+    <id>http://yangdong2002.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-游记/</id>
+    <published>2020-09-09T15:55:07.000Z</published>
+    <updated>2020-09-09T15:55:07.234Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CMU 15-213 Introduction to Computer Systems</title>

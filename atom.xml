@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangdong2002.github.io/"/>
-  <updated>2021-02-05T08:04:55.730Z</updated>
+  <updated>2021-02-09T16:10:13.546Z</updated>
   <id>http://yangdong2002.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不能再浪费时间了!</title>
+    <link href="http://yangdong2002.github.io/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/"/>
+    <id>http://yangdong2002.github.io/2021/02/09/不能再浪费时间了/</id>
+    <published>2021-02-09T15:52:47.000Z</published>
+    <updated>2021-02-09T16:10:13.546Z</updated>
+    
+    <content type="html"><![CDATA[<p>寒假即将过半，坤神在爆碾 CMU Theoretical Computer Science 课程，陈少在进行大脑升级，而我却在 n 刷《进击的巨人》不能自拔… 我们都有光明的前途？</p><p>我还可以抢救一下，不能再爬了！</p><a id="more"></a><h2 id="2021-2-9"><a href="#2021-2-9" class="headerlink" title="2021.2.9"></a>2021.2.9</h2><p>晚上正在看《巨人》颓废，听到老爸背单词的声音… 我破防了，我有啥理由不背单词！仿佛被从美梦里拉了回来。不能继续爬下去了！于是我立即赶紧停止爬行，刷了 GRE 3000 List 10。</p><p>没错，到了 2 月 9 号，已经回家9天了，而我的寒假日均学习时间还是不到 2 小时！天天作息紊乱，所有任务都没有完成，甚至没有开始！现在终于发现寒假日子不多了，打算开始好好学了…</p><p>Flag: 之后回归正常作息，争取一天学 8h 以上。我也将学习 nocriz，记录每天学习历程以起到监督作用。第一个任务是尽快搞定 GRE，以及完成第一个小任务。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;寒假即将过半，坤神在爆碾 CMU Theoretical Computer Science 课程，陈少在进行大脑升级，而我却在 n 刷《进击的巨人》不能自拔… 我们都有光明的前途？&lt;/p&gt;
+&lt;p&gt;我还可以抢救一下，不能再爬了！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日记" scheme="http://yangdong2002.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>MOOC 推荐</title>
     <link href="http://yangdong2002.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/"/>
     <id>http://yangdong2002.github.io/2021/02/04/MOOC-推荐/</id>
     <published>2021-02-04T02:08:25.000Z</published>
-    <updated>2021-02-05T08:04:55.730Z</updated>
+    <updated>2021-02-09T15:54:34.535Z</updated>
     
     <content type="html"><![CDATA[<p>智慧大学上课也就图一乐，真正学知识还是要看国外四大名校课程。</p><a id="more"></a><p>看过及正在看的：</p><table><thead><tr><th>MOOC</th><th>资源</th></tr></thead><tbody><tr><td><a href="http://csapp.cs.cmu.edu/3e/labs.html" target="_blank" rel="noopener">CMU 15-213 Introduction to Computer Systems</a></td><td>CSAPP，2015 版<a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22" target="_blank" rel="noopener">视频</a>+lab</td></tr><tr><td><a href="https://pdos.csail.mit.edu/6.828/2020/schedule.html" target="_blank" rel="noopener">MIT 6.S081 Operating System Engineering</a> 2020 Fall</td><td><strong>全套</strong> <em>最新</em> 视频、lab，国内有自学群</td></tr><tr><td><a href="https://cs144.github.io/" target="_blank" rel="noopener">Stanford CS144 Introduction to Computer Networking</a> 2020 Fall</td><td>B 站 2016 版视频 + 2020 版 lab</td></tr><tr><td><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html" target="_blank" rel="noopener">NTU Machine Learning</a> 2020 Spring</td><td><strong>全套</strong> <em>最新</em> 视频、lab、kaggle 竞赛</td></tr></tbody></table><p>打算看的：</p><table><thead><tr><th>MOOC</th><th>资源</th></tr></thead><tbody><tr><td><a href="http://web.stanford.edu/class/cs143/" target="_blank" rel="noopener">Stanford CS143 Compilers</a></td><td>B 站视频 + 远古 lab</td></tr><tr><td>Great ideas in theoretical computer science</td><td>Youtube</td></tr><tr><td><a href="https://www.diderot.one/courses/28" target="_blank" rel="noopener">CMU 15751 TCS Toolkit</a> Spring 2019</td><td><strong>全套</strong>资源</td></tr></tbody></table>]]></content>
     
@@ -31,6 +52,8 @@
     
     </summary>
     
+      <category term="公开课" scheme="http://yangdong2002.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
+    
     
   </entry>
   
@@ -39,7 +62,7 @@
     <link href="http://yangdong2002.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/"/>
     <id>http://yangdong2002.github.io/2021/02/04/如何成为期末复习混子/</id>
     <published>2021-02-04T02:07:59.000Z</published>
-    <updated>2021-02-05T08:03:01.371Z</updated>
+    <updated>2021-02-09T15:55:38.566Z</updated>
     
     <content type="html"><![CDATA[<p>既然在西安智慧大学，能力提升和考试高分是不相关的，考前抱佛脚就成为标准配置了。这里浅谈如何高效抱佛脚，用最小精力混过无聊的考试。</p><a id="more"></a><ul><li>理性对待，不要神化难度与复习过程，也不要神化高分的作用。<strong>切勿浪费大量时间在期末考试上而减少对大脑升级活动的投入！</strong>平时只需要把作业题搞懂就行</li><li>期末考试不是什么高大上的东西，而只是对快速掌握简单知识能力的考察。</li><li>交大几乎所有科目都是很 trivial 的，且和提升能力是正交的。重要的课如果学校教得很差的话，最好学期内自己看国外视频做 lab 然后对着本校考纲微调。如果仅成为了本校考试的做题家，即使拿到高分也相当于没有学！</li><li>期末复习可以混，只要是沿着“通向期末高分的最短路”前进，就没问题。如果除了混高分，还想卷赢其他人，那么还需要注意不要有短板课（例如马原）。</li><li>如果是概念密集型课，课本太厚读不动的话，中国大学 MOOC 上可能会有类似的念经课转为应付期末而生，2倍速看念经课可以最短时间读完课本，快速断线重连。</li><li>复习最后一定要落实到做题上。</li></ul><p>eg1. OS 考试：暑假刷完了 CMU 15213 和 CSAPP、学期内学了大部分 MIT6.S081，然而应付考试实质上用处有限！考前 2 天听了某大学念经课、刷夜刷了考研题一本书和部分往年题，成为文科计算机大师，最终 99，最高分。</p><p>eg2. 计网考试：学期内刷了大部分 Stanford CS144，写了个 TCP，然而几乎和考试正交！这门课特点就是广而浅，就是考察做题过程中 one-shot learning 的能力！考前 4 天读了 800 页课件与 700 页课本，随便整了个 MOOC 做，还做了各种虚假的往年题，但没太做够题。考试时改错 4 分客观思博题，还好老师平时分抬了一手，最终 96，居然还是最高分。</p><p>eg3. 马原考试：考前 5 天开始每天抽 3h 背书，考前两天发现资料有点假，于是结合老师课件背书。做了些买的各种选择题感觉质量参差不齐。最后仔细做了武汉大学马原 MOOC 题感觉还可以。然后考试时选择题后面的几乎是武大 MOOC 的原题大战，太简单了！然后就赢了啊，最终 98，大概只用了 30h 就混到了全年级最高。</p><p>eg4. 数理方程：之前听说虽然上课不知道在讲啥，但是考试简单，于是考前 1.3 天才开始复习。0.6 天复习完基本原理，0.7 天做了/看了约 8 套往年题，结果期末考试居然几乎全是选择题，自然就 100 了。</p><p>eg5. 大学物理：虽说最后压轴文科题恰巧背过，但量子物理思博选择错了一个，某个光栅大题也思博了没写 0 级…最后就烂了。96，被 8% 的人吊打。</p><p>eg6. 概率论：发现课本太 trivial 了，考得也简单，于是只复习了 1.5 天。早就写完了，然后检查时思博改错了一个判断，最终 99，被 3% 的人吊打。</p><p>eg7. 电路：第一门复习的课，但当时不知道考试可以混效率很低。而临考前却热身不够没太做往年题，于是考试时就烂了，差点算不完，甚至有题大脑僵化了不会做。最终 97，被 17% 的人吊打。</p><p>eg8. 算法：傻逼课！！！考试周之前考的，大意了，没有对着垃圾课本微调。老师也是傻逼，净出文科题。ICPC 区域赛冠军拿不到算法课的 4.3？于是算法课就成为考得最差的文科课了，被 8% 的人吊打。</p>]]></content>
     
@@ -49,6 +72,10 @@
     
     </summary>
     
+      <category term="文化课" scheme="http://yangdong2002.github.io/categories/%E6%96%87%E5%8C%96%E8%AF%BE/"/>
+    
+    
+      <category term="内卷" scheme="http://yangdong2002.github.io/tags/%E5%86%85%E5%8D%B7/"/>
     
   </entry>
   
@@ -57,16 +84,14 @@
     <link href="http://yangdong2002.github.io/2020/11/25/ICPC2020/"/>
     <id>http://yangdong2002.github.io/2020/11/25/ICPC2020/</id>
     <published>2020-11-25T12:19:44.000Z</published>
-    <updated>2021-01-25T15:23:28.966Z</updated>
+    <updated>2021-02-05T15:03:20.244Z</updated>
     
-    <content type="html"><![CDATA[<p>第一次正式赛最后两分钟绝杀，第一次战胜强敌，第一次拿到区域赛冠军，第一次拿到 World Finals 门票… </p><p>ICPC 冠军，原来真的是可以做到的！基本上没有更高的国内 ICPC 成就了， ICPC 生涯，至此圆满！？</p><p>这之后，又将会何去何从？</p><p><em>向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀</em>。</p><a id="more"></a><h2 id="Achievements"><a href="#Achievements" class="headerlink" title="Achievements"></a>Achievements</h2><p>2020.10.18 CCPC Qinhuangdao <strong>Runner up</strong></p><p>2020.10.25 CCPC Weihai <strong>4th Place</strong></p><p>2020.11.22 ICPC Xiaomi Invitational Contest 14th Place</p><p>2020.12.13 ICPC Shanghai Regional Contest <strong>Winner</strong></p><p>2020.12.20 ICPC Nanjing Regional Contest 20th Place</p><p><img src="shanghai.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p>国内基本上没有更高的 ICPC 成就可以拿了！？</p><p>队友太牛逼了！</p><a id="more"></a><p>我已经成为精神退役选手了。</p><h2 id="生涯（几乎）结束"><a href="#生涯（几乎）结束" class="headerlink" title="生涯（几乎）结束"></a>生涯（几乎）结束</h2><blockquote><p> 向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀。</p></blockquote><p>第一次正式赛最后两分钟绝杀，第一次战胜赛前难以想象的强敌，第一次拿到区域赛冠军，第一次拿到 World Finals 门票… </p><p>ICPC 带给我的最大收获，正如伟大哲学家 nocriz 所说，就是让我认识到世界上很多“牛逼”的事情实际上还是可以做得到的吧。入坑之前的我认为 CF 红名、区域赛冠军、进 WF 都是不可能做到的，但是在队友的强力 carry 下，仍然是做到了。我们所认识的半数以上的牛逼人很可能也只是比我们提前努力了一定时间，他们的成就在我们前进足够的时间之后也是可以企及的。</p><p>再有就是，ICPC 教会了我<strong>什么是 trivial，什么是有意义</strong>。没错，这么显然的问题我直到大一才明白！预科的我，一方面由于没有好的指导，执着于机械地刷同济高数、线代；另一方面还受限于内卷思维，不知道自己将来应该学啥。我当时天天卷期末、卷文化课、卷物理竞赛，做一些 trivial 的事，却不知道大脑升级才是求学期间最重要的，没有抓住真正的升级机会。好在当时刚从初中升上来，足够勤奋，虽然效率低但是硬是用自律和学习时间达到了一定升级效果。现在知乎上无意刷到过什么如何获得高绩点、如何获得四六级高分这种问题，看到各种答主仿佛就看到了预科时的我：卷王、“考试带师”们在群魔乱舞，为自己在简单、trivial 考试上整个学期 996 而自我感动，仿佛自己做了什么了不起的事情一样（然后看起来他们考得还不如我这个混子高）。好在预科二时我接触了 ICPC ，终于知道了什么叫做“困难”、“有意义”、“实力至上”。终于，我开始以“大脑升级”为大学的第一准则，明辨“简单”和“困难”的区别，树立高标准，抵制虚假努力 。</p><p>下学期可能为了奖金还会打下 CCPC Final 和 EC Final，但是也不会再训练了。World Finals 还有一定吸引力，但是如果推迟到 22 年 3 月的话，实在是太遥远了！1 年之后，谁知道我会在干什么呢？</p><p>队友们对于退役，还是挺感伤的，后悔没成为高水平选手就结束了。队友 OI 历程有着难以弥补的遗憾，被少年班政策卡着去不了 NOI，进而无法逃离智慧大学，无法去更好的大学。但对我个人而言，由于之前不懂简单和困难的区别，初中没学过 OI，以及少年班预科一直在学大学简单数学课，我刚刚入坑 OI 就退役了，根本没看到过去往更好大学的希望，也就没有体会过那种痛苦了。我当时也是一种可悲啊！但是，这样的好处就是我几乎只遇到过正反馈，来的轻松，走的也轻松。我知道我再努力训练一年 ICPC 的上限也就是 nocriz 当前的水平，而同时我也发现了可能比 ICPC 更升级的东西，管窥了国外名校学生的学习是什么样的。如果把一年时间放在更升级的学习、科研上面，我获得更好 PhD offer 的概率会大大增加，于是个人也就觉得 ICPC 就是这么回事了，不值得再继续投入时间了。</p><p>ICPC 心愿单上 99% 的成就都已经达到了，我也可以光荣退役了吧（逃）</p><h2 id="赛季成就"><a href="#赛季成就" class="headerlink" title="赛季成就"></a>赛季成就</h2><p>2020.10.18 CCPC Qinhuangdao <strong>Runner up</strong></p><p>2020.10.25 CCPC Weihai <strong>4th Place</strong></p><p>2020.11.22 ICPC Xiaomi Invitational Contest 14th Place</p><p>2020.12.13 ICPC Shanghai Regional Contest <strong>Winner</strong> (To advance to <strong>World Finals 2021</strong>)</p><p>2020.12.20 ICPC Nanjing Regional Contest 20th Place</p><p><img src="shanghai.png" alt></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;第一次正式赛最后两分钟绝杀，第一次战胜强敌，第一次拿到区域赛冠军，第一次拿到 World Finals 门票… &lt;/p&gt;
-&lt;p&gt;ICPC 冠军，原来真的是可以做到的！基本上没有更高的国内 ICPC 成就了， ICPC 生涯，至此圆满！？&lt;/p&gt;
-&lt;p&gt;这之后，又将会何去何从？&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀&lt;/em&gt;。&lt;/p&gt;
+      &lt;p&gt;国内基本上没有更高的 ICPC 成就可以拿了！？&lt;/p&gt;
+&lt;p&gt;队友太牛逼了！&lt;/p&gt;
     
     </summary>
     
@@ -120,14 +145,13 @@
     <link href="http://yangdong2002.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/"/>
     <id>http://yangdong2002.github.io/2020/09/09/字节跳动夏令营-Byte-Camp-2020-游记/</id>
     <published>2020-09-09T15:57:34.000Z</published>
-    <updated>2020-09-09T17:01:06.975Z</updated>
+    <updated>2021-02-05T15:05:49.947Z</updated>
     
-    <content type="html"><![CDATA[<p>只要敢于尝试新的事物，生活就会变得五彩斑斓。</p><p>和优秀的人在一起，我们无法事先知道自己处于竞争的哪一层。因而在这片黑暗森林中前进时，永远要小心翼翼，切忌骄傲自满。既然无法使时间停滞，就应该提前做好充分准备。</p><a id="more"></a><p>字节跳动夏令营于 8.30 - 9.5 在上海举行了。这是我第一次参加非 ICPC 相关的计算机夏令营，正如题记所写的那样，也是感触多多呢。同时营后我们也继续在上海待了几天来旅游，这真的是一段快乐而难忘的时光呢！</p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>7.13 看到字节跳动夏令营的宣传，抱着大学生活不应该仅限于 ICPC、未来可能学 AI 相关方向以及可以来免费旅游这三方面的想法，我报名了夏令营笔试。7.15 做了些填空选择，以及 4 道简单编程题就直接通过了，获得了项目选题的“最高优先级”。由于对选题也没什么想法，就选了个“推荐模型的蒸馏算法”一题，因为它的介绍十分清晰。</p><p>8.17 返校了，我开始准备字节营相关的知识，但是 ICPC 校队集训开始了，以及之后参加了 Petrozavodsk 营，没来得及太仔细看这个项目，只是读了 SOTA 论文。</p><p>8.28 Ptz 营结束之后，我才意识到了时间的紧迫，立即开始准备论文复现。我当时太天真，以为按论文思路写出代码就可以完成复现，可是好不容易把代码调通，原论文的超参数却根本不工作。这时才知道原论文代码可能有一些我没有写到的细节操作，以及预处理方式不一样。</p><p>就这样，我们就开始</p>]]></content>
+    <content type="html"><![CDATA[<p>和优秀的人，做有意义的事</p><a id="more"></a><p>字节跳动夏令营于 8.30 - 9.5 在上海举行了。这是我第一次参加非 ICPC 相关的计算机夏令营，也是感触多多呢。同时营后我们也继续在上海待了几天来旅游，这真的是一段快乐而难忘的时光呢！</p><h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>7.13 看到字节跳动夏令营的宣传，抱着大学生活不应该仅限于 ICPC、未来可能学 AI 相关方向以及可以来免费旅游这三方面的想法，我报名了夏令营笔试。7.15 做了些填空选择，以及 4 道简单编程题就直接通过了，获得了项目选题的“最高优先级”。由于对选题也没什么想法，就选了个“推荐模型的蒸馏算法”一题，因为它的介绍十分清晰。</p><p>8.17 返校了，我开始准备字节营相关的知识，但是 ICPC 校队集训开始了，以及之后参加了 Petrozavodsk 营，没来得及太仔细看这个项目，只是读了 SOTA 论文。</p><p>8.28 Ptz 营结束之后，我才意识到了时间的紧迫，立即开始准备论文复现。我当时太天真，以为按论文思路写出代码就可以完成复现，可是好不容易把代码调通，原论文的超参数却根本不工作。这时才知道原论文代码可能有一些我没有写到的细节操作，以及预处理方式不一样。</p><p>就这样，我们就开始</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;只要敢于尝试新的事物，生活就会变得五彩斑斓。&lt;/p&gt;
-&lt;p&gt;和优秀的人在一起，我们无法事先知道自己处于竞争的哪一层。因而在这片黑暗森林中前进时，永远要小心翼翼，切忌骄傲自满。既然无法使时间停滞，就应该提前做好充分准备。&lt;/p&gt;
+      &lt;p&gt;和优秀的人，做有意义的事&lt;/p&gt;
     
     </summary>
     
@@ -444,28 +468,6 @@
       <category term="牛顿迭代法" scheme="http://yangdong2002.github.io/tags/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95/"/>
     
       <category term="数学分析" scheme="http://yangdong2002.github.io/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的第一篇博客</title>
-    <link href="http://yangdong2002.github.io/2019/02/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yangdong2002.github.io/2019/02/16/我的第一篇博客/</id>
-    <published>2019-02-16T10:01:47.000Z</published>
-    <updated>2019-05-06T10:08:56.155Z</updated>
-    
-    <content type="html"><![CDATA[<p>博客建好了！这个博客将会记录我之后学习过程中遇到的点点滴滴。这一篇博客就用来测试一下博客的$\LaTeX$和代码块的显示是否正常吧。Hello world!</p> <a id="more"></a><h1 id="数学公式："><a href="#数学公式：" class="headerlink" title="数学公式："></a>数学公式：</h1><p>$$e^{i\theta} = \cos{\theta} + i\sin{\theta}$$</p><p>$$\iint\limits_{D}(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) \mathrm{d}x \mathrm{d}y = \oint\limits_{L}P\mathrm{d}x+Q\mathrm{d}y$$</p><p>$$X(k) = \sum\limits_{j=1}^{n}x(j) \cdot \omega_n^{(j-1)(k-1)},       \omega = e^{-\frac{2\pi i}{n}}$$</p><p>空心字母打法： <code>\mathbb{Q}</code> ，如 $\mathbb{N}$</p><p>markdown 打对齐公式，显示标号用 <code>\begin{align}</code> ，不显示用 <code>\begin{aligned}</code> ，千万不要用 <code>\begin{align*}</code> ！因为 hexo 会把星号渲染成斜体符号。</p><h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>放个树状数组模板吧，我认为最简洁优美的数据结构之一</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) ((x) &amp; (-(x)))</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BIT</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> c[<span class="number">200200</span>] = &#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x) ret += c[x], x -= lowbit(x);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(x &lt;= n) c[x] += d, x += lowbit(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sum(y) - sum(x - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;博客建好了！这个博客将会记录我之后学习过程中遇到的点点滴滴。这一篇博客就用来测试一下博客的$\LaTeX$和代码块的显示是否正常吧。Hello world!&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://yangdong2002.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="博客" scheme="http://yangdong2002.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

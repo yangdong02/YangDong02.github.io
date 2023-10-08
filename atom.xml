@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>山月半轮的博客</title>
+  <title>Distant Yesterday</title>
   
   <subtitle>Pause and ponder</subtitle>
   <link href="http://yangdong2002.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://yangdong2002.github.io/</id>
   
   <author>
-    <name>YangDavid</name>
+    <name>Distant Yesterday</name>
     
   </author>
   

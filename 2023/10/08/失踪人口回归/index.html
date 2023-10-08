@@ -1,23 +1,1676 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ page.title }} | {{ title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
 
-{% block content %}
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="才发现距离上次发博客都过了两年半了，发生了太多太多的事了。看到自己之前的想法感觉很有意思，这一路看别人的博客也受了很大启发，只恨自己没多写点，所以为了最小化遗憾，还是随便整理一些日记之类的，尝试记录这两年的一些随想吧！ 长话短说，就是在美国交换时由于各种原因度过了一个痛苦、没有什么结果的大三。我早就知道这样下去自己完蛋了，于是开始了“逃跑”，大四于是随缘找工、实习，因为啥都不知道，目标也一降再降。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="失踪人口回归">
+<meta property="og:url" content="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/index.html">
+<meta property="og:site_name" content="山月半轮的博客">
+<meta property="og:description" content="才发现距离上次发博客都过了两年半了，发生了太多太多的事了。看到自己之前的想法感觉很有意思，这一路看别人的博客也受了很大启发，只恨自己没多写点，所以为了最小化遗憾，还是随便整理一些日记之类的，尝试记录这两年的一些随想吧！ 长话短说，就是在美国交换时由于各种原因度过了一个痛苦、没有什么结果的大三。我早就知道这样下去自己完蛋了，于是开始了“逃跑”，大四于是随缘找工、实习，因为啥都不知道，目标也一降再降。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/HK.jpg">
+<meta property="og:image" content="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/SH.jpg">
+<meta property="article:published_time" content="2023-10-08T14:21:52.000Z">
+<meta property="article:modified_time" content="2023-10-08T17:13:06.559Z">
+<meta property="article:author" content="YangDavid">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/HK.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="山月半轮的博客" type="application/atom+xml"/>
+
+
+
+
+  <link rel="canonical" href="http://yangdong2002.github.io/2023/10/08/失踪人口回归/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>失踪人口回归 | 山月半轮的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">山月半轮的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Pause and ponder</p>
+      
+    
+    
   </div>
 
-{% endblock %}
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-user&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-th&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangDavid"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="山月半轮的博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">失踪人口回归
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+		  
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2023-10-08 22:21:52" itemprop="dateCreated datePublished" datetime="2023-10-08T22:21:52+08:00">2023-10-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2023-10-09 01:13:06" itemprop="dateModified" datetime="2023-10-09T01:13:06+08:00">2023-10-09</time>
+              
+            
+          </span>
+
+          
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fa fa-wrench"></i>
+            博文状态：更新中
+          
+		  
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>才发现距离上次发博客都过了两年半了，发生了太多太多的事了。看到自己之前的想法感觉很有意思，这一路看别人的博客也受了很大启发，只恨自己没多写点，所以为了最小化遗憾，还是随便整理一些日记之类的，尝试记录这两年的一些随想吧！</p>
+<p>长话短说，就是在美国交换时由于各种原因度过了一个痛苦、没有什么结果的大三。我早就知道这样下去自己完蛋了，于是开始了“逃跑”，大四于是随缘找工、实习，因为啥都不知道，目标也一降再降。但没想到最终打开了新世界，运气很好，大四上暗自定下的两个目标都达到了，收到了超出预期的offer，意想不到地最终来到了香港工作。</p>
+<blockquote>
+<p>（摘抄）总的看来我似乎总是失败，忧愁，退而求其次，逃跑。——逃跑。把生活强加于我的，不满意的，统统甩掉。还有不错的运气。无赖汉的勇敢。</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="一些博客"><a href="#一些博客" class="headerlink" title="一些博客"></a>一些博客</h1><p>先把干货放前面，我逐渐开始维护一个几乎每月都会重新读一遍的博客列表，感觉读这些博客温故知新，经常有新的感受。</p>
+<p><a target="_blank" rel="noopener" href="https://byvoid.com/zhs/blog/oversea-internship-interviews/">BYVoid 海外实习面试记</a></p>
+<p><a target="_blank" rel="noopener" href="https://byvoid.com/zhs/blog/recent-one-year/">BYVoid 这一年来</a></p>
+<p><a target="_blank" rel="noopener" href="https://stormraiser.me/2020/04/01/%e5%b1%b1%e7%a9%b7%e6%b0%b4%e5%b0%bd/">StormRaiser 山穷水尽</a></p>
+<p><a target="_blank" rel="noopener" href="https://conanhujinming.github.io/post/thoughts_of_hunting_jobs/">Jinming Hu 硕士毕业半年的茫茫社招路</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wads23456/article/details/100786118">【转载】转计算机大牛-崔添翼</a></p>
+<p><a target="_blank" rel="noopener" href="https://cong-ding.medium.com/%E5%AF%A6%E7%BF%92%E9%9D%A2%E8%A9%A6%E8%A8%98-ea8901269a23">Cong Ding 实习面试记</a></p>
+<p><a target="_blank" rel="noopener" href="https://trinkle23897.github.io/posts/job-application">n+e’s blog 找工回忆录</a></p>
+<h1 id="大四上"><a href="#大四上" class="headerlink" title="大四上"></a>大四上</h1><h2 id="2022-09-13：无路可走"><a href="#2022-09-13：无路可走" class="headerlink" title="2022-09-13：无路可走"></a>2022-09-13：无路可走</h2><p>感觉还是要去申请学校啊，如果直接去找工，这种就业情况，还这么晚才开始找，还想达到某个薪资阈值，自己真的能复现之前ddd的路吗？</p>
+<p>但申学校的话，申MS要今年攒攒钱。申PhD，推荐信必定要无限弱了。我真的适合搞研究吗，之前搞的方向让我极痛苦还卷，没啥可能申。现在连打算搞啥方向都不知道，没有有关申请方向的研究推大概也去不了好学校。</p>
+<h2 id="2022-10-24-挂第一个面试"><a href="#2022-10-24-挂第一个面试" class="headerlink" title="2022-10-24: 挂第一个面试"></a>2022-10-24: 挂第一个面试</h2><p>浅浅复盘一下失败原因：看了某论坛很多篇面经，某几个题反复考，以为是原题大战，把所有题的并集学会之后就飘了，以为稳了。结果真实考题全是C++八股，和面经的题分布完全不一样。所以不能迷信面经啊。</p>
+<h2 id="2022-10-28-反思"><a href="#2022-10-28-反思" class="headerlink" title="2022-10-28: 反思"></a>2022-10-28: 反思</h2><p>好想暂停亿分钟</p>
+<p>本周焦虑来源：挂本以为简单的重要面试（4天没回复，估计是无了）、被未来的各种可能及它们的ddl淹没</p>
+<p>升血压助攻：被封小区无法出院子、由于学校不放出国而放弃两年前WF总决赛机会</p>
+<p>发现除了和朋友打冷战热斗之外，实习搬砖甚至很快乐，因为只用说啥做啥，目标明确，而且似乎我比较善于搬砖。（注：2022.10我开始了一家小startup的软件工程师实习，也是我的第一个码农实习）</p>
+<p>感觉大概率tier0矿场的未来无了，但其实最开始我就知道这条路虽好，但可能性不大，我不配。</p>
+<p>可能这都是因为自己啥都想要，且不想降低自己的上限。希望自己不要把大二原有的好牌打烂，不要到最后山穷水尽，啥都没了…</p>
+<h2 id="2022-11-05：WF之痛"><a href="#2022-11-05：WF之痛" class="headerlink" title="2022-11-05：WF之痛"></a>2022-11-05：WF之痛</h2><p>受covid影响，WF大陆队伍现状：</p>
+<p>北京大学 教练带队参赛<br>4个大学 仅学生参赛<br>16个大学 无法参赛</p>
+<p>作为因学校拒绝，无法参赛的，只能羡慕可以参赛队所在学校对此比赛的重视和开明的政策。</p>
+<p>安慰自己：北大队稳了啊，感觉真去了也根本打不过哈哈哈。教练一起去，正是为了发表获奖感言和帮队员搬奖杯（</p>
+<h2 id="2022-11-24"><a href="#2022-11-24" class="headerlink" title="2022-11-24"></a>2022-11-24</h2><p>据称某厂开出了第一年365万港币的offer。我大为震撼！</p>
+<h2 id="2022-12-07"><a href="#2022-12-07" class="headerlink" title="2022-12-07"></a>2022-12-07</h2><p>2019-2021: 我要申顶校PhD<br>2022年初：我想申普通校PhD<br>7月：我想活着<br>8月：我想申研究型硕士<br>9月：我想申研究型或工程型硕士，但缺钱<br>10月：我想直接找海外工<br>11月：我想申硕士或找国内工<br>12月：应该算是找到国内工了</p>
+<p>和自己和解了。目前的选择应该也不差（注：此时收到了唯一一个上海的offer，打算躺平了）</p>
+<h2 id="2022-12-12"><a href="#2022-12-12" class="headerlink" title="2022-12-12"></a>2022-12-12</h2><p>趁着放开，趁着周末，我抓住找几个朋友的蹭吃蹭喝蹭住海景房的机会，第一时间来到了祖国最南端——三亚，来了场说走就走的旅游！</p>
+<p>真的是放开了啊，没了许多繁琐流程，更能将精力放在旅游本身。三亚的街上人真的好少，各种游玩体验相当不错，可能因为大家还没反应过来可以旅游，我们是第一批吃螃蟹的人吧。（但东北人来过冬的真的好多，海南不愧是东北“第四省”）</p>
+<p>在三亚湾休闲地捞了捞贝壳，在海棠湾体验了波刺激的涨潮。在水族馆看到了漂亮的水母、beluga (in real life)和头上有犄角的鱼！真希望能多待几天，可惜还要实习，暂时还不能完全躺平。真羡慕他们可以远程办公，全国到处旅游。</p>
+<p>通过各种聊天也得知了朋友的许多秘密和动向。总的来说就是家家都有难念的经+大家都有光明前途🤣几个搞到不少钱的朋友的神秘故事还在延续，又有着新的烦恼。</p>
+<p>感觉自己最近最大的收获可能还是意识到了友情、人脉、沟通的重要性。尽管自己社恐本质决定了我更喜欢在独处时恢复能量，但事实证明本科期间我唯一一件做得远超平均水平的事是靠朋友的，最近的许多机会乃至发展大方向也是通过朋友介绍的！</p>
+<p>如果不出意外的话，完全躺平后直到毕业前的重心应该就放在旅游、培养一些业余爱好、找朋友玩上吧，让自己开心一点。总之就是抓紧上班前接近于gap半年的时间，高强度摸鱼吧</p>
+<p>希望自己也能拥有一些神秘故事啊。能在这行干几年呢？（现在实习老板五年前在VC行业就职体验问题写回答说“五年后答，看看还在不在这一行”，然后五年后果然转行了😂）几年后看看能不能继续stay simple and sometimes naive，像现在这样写出前途未知但无忧无虑、充满信心的文字</p>
+<h2 id="2023-01-03-秋招总结？"><a href="#2023-01-03-秋招总结？" class="headerlink" title="2023-01-03: 秋招总结？"></a>2023-01-03: 秋招总结？</h2><p>陆本cs，大三荒废了。大一大二原计划申PhD，但到了申请季，目标一降再降，不小概率要申找工MEng了，又不想爆金币。暑假学了下知名crypto课CS251，于是想出国读书的同时找crypto厂远程打工补贴学费，也找了个crypto实习开始干，目标明确。</p>
+<p>但10月惊闻曾有陆本cs牛人直接去华尔街quant厂港/新办公室！身边没相关实习但有硬核经历的朋友已经进了quant全职终面。这也是我第一次正式了解quant行业，看到地里华尔街厂的应届生薪资，只能用“抽象”形容。朋友声称前两轮只问了简单概率和编程，于是抱着开彩票的心态，我也跟风，投了几家swe和quant岗。做完oa，我非常高兴地接到了三个面试，于是疯狂刷绿皮书、一亩三分地面经，度过了一段充实时光。但没想到拿到面试已是唯一高光时刻，虽然有两场面得还行，最终却全止步于一轮游。看来自己还是差得太远了。</p>
+<p>还是简历太差，菜是原罪。面试题答得好与不好，都不影响被拒的结局。复盘下来，虽然自己擅长做概率和算法题，但缺少硬核经历，陆本更没法和美本比，所以达不到quant的bar；而swe岗，我没trading厂C++实习，是硬伤。如果之前的时间没有荒废，搞个trading厂实习，至少能提高期望面进的轮数吧…</p>
+<p>11月，知道自己几斤几两后，重心还是回到了留学申请上。但还是赶着秋招末尾投了几家国内量化。没想到一个厂量化岗进度飞快，特别顺利地通过了。顿时感觉心里紧绷几个月的弦松下来了，也不知道是不是被之前几次拒绝耗尽了精力，自己主观地把工作而非留学作为更倾向于的出路了。</p>
+<p>曾经自认为是一个保守而有计划的人，习惯于长期坚持的付出，会进行系统的调研来做选择，喜欢确定性。但最近我则是几周变一个想法，秋招更是缺乏系统准备和计划，开始太晚，各种决策也十分主观，比较“神秘”。幸好最终没有山穷水尽。如果重来，我一定暑假就开投，且至少把已知的靠谱工作和行业都投下。</p>
+<p>但是，最近我的体会是，正如byvoid博客所说，世界竟如此宽广！一位巨神去了香港Jane Street，搞crypto创业的朋友远程办公，自由旅游。还听说藤校有本科生退学去trading厂全职。所以不一定要走前人铺好的路！</p>
+<p>希望我未来不会山穷水尽，无路可走吧。</p>
+<blockquote>
+<p>写下以上文字时的我，还不知道这并不是我秋招的真结局。</p>
+</blockquote>
+<h1 id="寒假"><a href="#寒假" class="headerlink" title="寒假"></a>寒假</h1><h2 id="2023-02-02-～-2023-02-10-香港-上海之旅"><a href="#2023-02-02-～-2023-02-10-香港-上海之旅" class="headerlink" title="2023-02-02 ～ 2023-02-10 香港-上海之旅"></a>2023-02-02 ～ 2023-02-10 香港-上海之旅</h2><blockquote>
+<p>注：截止10月8日，事实证明和ddd的这一趟香港-上海之行成为了各种意义上年度收益最大的旅行。</p>
+</blockquote>
+<h3 id="2023-02-06"><a href="#2023-02-06" class="headerlink" title="2023-02-06"></a>2023-02-06</h3><p>怎么搞钱啊？</p>
+<p>润港。</p>
+<h3 id="2023-02-07"><a href="#2023-02-07" class="headerlink" title="2023-02-07"></a>2023-02-07</h3><p>彻底失败。</p>
+<p><img src="HK.jpg" alt="HK"></p>
+<p><img src="SH.jpg" alt="HK2"></p>
+<h3 id="2023-02-09"><a href="#2023-02-09" class="headerlink" title="2023-02-09"></a>2023-02-09</h3><p>昨天玩得好开心，也学到很多</p>
+<h2 id="2023-02-24"><a href="#2023-02-24" class="headerlink" title="2023-02-24"></a>2023-02-24</h2><p>赢了。</p>
+<h1 id="大四下"><a href="#大四下" class="headerlink" title="大四下"></a>大四下</h1><p>到了大四下，好像更喜欢水群、聊天了，因此最认真记录的东西居然似乎是梦。当时我详细地记录了每天做梦梦见了啥。不过也只在2023-02-20 ～ 2023-06-08进行了记录，之后要么不做梦，要么根本记不起梦见了啥，很奇怪。感觉这可能也是我最惬意、最没有压力、最觉得自己生活在一个完美模拟世界的阶段吧！平时想去哪儿就去哪儿，天天无忧无虑地玩，和朋友聊天。即使有看似重要的选择，也都可以轻松应对，要么是早已有十足信心，要么是错了自己也不在乎，反正nothing is at stake！生活就像玩一个不可能有坏结局的游戏一样。</p>
+<p>这种感觉持续直到毕设论文deadline临近、毕业真的到来、离飞香港越来越近为止。</p>
+<h2 id="2023-03：苏州之旅"><a href="#2023-03：苏州之旅" class="headerlink" title="2023-03：苏州之旅"></a>2023-03：苏州之旅</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 苏州旅游心愿单</li>
+<li><input checked="" disabled="" type="checkbox"> 进苏中&amp;园区校</li>
+<li><input checked="" disabled="" type="checkbox"> 在读证明和成绩单打印扫描</li>
+<li><input checked="" disabled="" type="checkbox"> 联系XXX</li>
+<li><input checked="" disabled="" type="checkbox"> 和XXX说XX时间写错了</li>
+<li><input checked="" disabled="" type="checkbox"> 工作注意事项</li>
+<li><input checked="" disabled="" type="checkbox"> 买XXX</li>
+</ul>
+<p>去苏大玩</p>
+<h2 id="2023-04-24：兰州之旅"><a href="#2023-04-24：兰州之旅" class="headerlink" title="2023-04-24：兰州之旅"></a>2023-04-24：兰州之旅</h2><p>火车上热情的本地人推荐的：</p>
+<ul>
+<li>三炮台</li>
+<li>马老六</li>
+<li>中山桥 兰山</li>
+<li>牛肉面 推荐二细 6am-3pm一般是早餐 基本都一样好，晚上可以吃炒拉条</li>
+</ul>
+<h2 id="2023-04-06"><a href="#2023-04-06" class="headerlink" title="2023-04-06"></a>2023-04-06</h2><p>From cyy：</p>
+<ul>
+<li>人生失去了意义</li>
+<li>你的人生是什么构成的？</li>
+</ul>
+<p>balance the substance of your past life</p>
+<p>回过神来，又是豪饮！</p>
+<h2 id="2023-04-30：文字游戏"><a href="#2023-04-30：文字游戏" class="headerlink" title="2023-04-30：文字游戏"></a>2023-04-30：文字游戏</h2><p>摘录：</p>
+<p>文字游戏的话我的个人喜好排名看这个<a target="_blank" rel="noopener" href="https://vndb.org/uXXXXX">https://vndb.org/uXXXXX</a></p>
+<p>非文字游戏的话仅有一款：星际拓荒</p>
+<p>我觉得你要是对科幻悬疑感兴趣，可以直接开玩：remember11</p>
+<p>当然白色相簿2更好</p>
+<h2 id="2023-05-10-北京之旅"><a href="#2023-05-10-北京之旅" class="headerlink" title="2023-05-10 北京之旅"></a>2023-05-10 北京之旅</h2><p>北京</p>
+<p>美签 5/10 上午8:15❌cancelled</p>
+<p>网友<br>5.11 午饭 参观清华 晚饭✅<br>5.9晚饭 三元桥✅</p>
+<p>朋友<br>5.12 午饭+央美✅<br>5.10 晚饭 + msra✅<br>5.13 晚饭</p>
+<p>吃<br>驴打滚✅<br>豌豆黄✅❤️<br>新疆菜，娜帕里勇❤️<br>那家小馆❤️<br>五道口枣糕❤️</p>
+<p>住<br>day1 三元桥（贵&amp;小）<br>day2&amp;3大红门（远，只为蹭报销）<br>day4 望京，北京商隐公寓❤️</p>
+<p>还去了：雍和宫周围<br>未去：798艺术区，北大，牛街，常见景点</p>
+<h2 id="2023-05-15-Monkey-Business"><a href="#2023-05-15-Monkey-Business" class="headerlink" title="2023-05-15: Monkey Business"></a>2023-05-15: Monkey Business</h2><p>摘抄</p>
+<p>Our first full-year compensation after signing on full-time at DLJ following business school was about eight times what the average college graduate earns at his first job, and we could expect that compensation to double every two years. We traveled the country by private jet, stayed in the best hotels, and ate in the best restaurants. Eventually, though, we realized that the compensation levels and the perks weren’t in place because being an associate in investment banking was a great job. They were in place because the job sucked. The one immutable truism that exists for bankers is that any problem can be solved by throwing enough money and time at it. The implication? The banker’s greatest enemies are those people whose souls are not for sale, and those who realize that time is a nonrenewable commodity.</p>
+<p>The higher a monkey climbs, the more you see of his ass. —General Joseph Stilwell</p>
+<p>Finally, there are the analysts. Monkeys. Tons and tons of little monkeys. Not humans, just monkeys crawling all over each other and pulling lice out of each other’s fur. Those are the analysts.</p>
+<p>You didn’t tell a monkey to make a merger model for you and then expect that there wouldn’t be any mistakes. You had to check the monkey’s work, because monkeys were always liable to leave a few banana peels lying behind.</p>
+<h2 id="2023-05-16"><a href="#2023-05-16" class="headerlink" title="2023-05-16"></a>2023-05-16</h2><p>六年下交，怀念终身</p>
+<p>第一阶段：沉淀<br>第二阶段：那次失眠让我放弃中考<br>第三阶段：我们是c2！<br>第四阶段：剧场效应，全班养蛊<br>第五阶段：小卷绩点，分流成功<br>第六阶段：算法竞赛，绷不住了<br>第七阶段：科研失败，博士梦碎<br>第八阶段：痛定思痛，转行量化<br>第九阶段：外资全拒，再度被锤<br>第十阶段：艰难润港，生死未卜</p>
+<h2 id="2023-06-03"><a href="#2023-06-03" class="headerlink" title="2023-06-03"></a>2023-06-03</h2><h3 id="摘抄：计算机本科找高薪工作速通路线"><a href="#摘抄：计算机本科找高薪工作速通路线" class="headerlink" title="摘抄：计算机本科找高薪工作速通路线"></a>摘抄：计算机本科找高薪工作速通路线</h3><p>最速通：转学美本，除了需要本金、H1B中签率低、难润等问题外彻底成功</p>
+<p>不转学美本，一种方向是量化厂（对冲基金hedge fund/自营交易prop shop）的quant researcher/developer，理想路线：拿个OI/ACM ICPC/数竞/物竞/etc的还行的奖，搞个LinkedIn认识各种前辈来各种network，大一日常处理文化课，做国外lab，享受生活，暑期去实习；大二日常随缘实习/享受生活，暑期实习去谷歌step（女生）或大厂或内资比较顶的量化厂；大三日常随缘实习/享受生活，暑期找到上海或HK或SG顶尖外资fund量化实习，大四拿实习转正或秋招面进HK/SG顶尖外资fund，拿五十万刀的global pay走上人生巅峰</p>
+<h3 id="摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异"><a href="#摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异" class="headerlink" title="摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异"></a>摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异</h3><p>我让ChatGPT写一篇散文，结果我发现他写的挺有意思！我就发上来了</p>
+<p>以下是一些我个人的观察和体会，主要来自我在本科期间的经历。请注意，我所描述的只是一种现象，并不具有普遍适用性。这篇文章旨在描述一种情况，而我并不知道在这种情况下的正确答案是什么，需要读者自行思考。</p>
+<p>在我读计算机本科期间的主要观察是，有一些人在一开始就限制了自己的发展空间，将本科视为一个投篮活动。例如，他们迷恋追求高绩点，或者一开始就确定自己要走某条特定的道路。这种模式存在一个问题，那就是他们很少对自己的人生进行深思熟虑，很多时候只是盲目追随他人的目标，根本不知道自己是否真正喜欢所设定的目标，也没有意识到其他可供选择的机会成本。</p>
+<p>以攻读PhD，博士学位为例。有许多人甚至不知道自己是否对学术感兴趣就申请了博士学位，结果发现自己并不喜欢自己所研究的领域。其中更令人担忧的是攻读博士学位和从事学术研究所需的时间成本。一般来说，攻读博士学位需要大约6年的时间，而某些领域要想获得教职可能还需要进行一些博士后研究，总体上需要花费不少于10年的时间。如果在不清楚自己的兴趣所在的情况下去尝试从事学术研究，结果可能就是将20到30岁的宝贵时光全部用于一件自己完全不感兴趣的事情上。仔细想想，这是多么可怕的情况。人生如此短暂，考虑到人的生理特点，这10年可能已经占据了人生总产出的四分之一以上。如果需要付出极高的努力去做某件事，那么这可能是唯一的机会。</p>
+<p>在我与一些来自排名靠前的国外大学的本科生交流中，我发现他们的氛围与某些本科生完全不同。他们的同学往往在寻找工作机会。当然，并不是因为他们无法申请博士学位，恰恰相反，优秀的本科生拥有非常好的学术和科研资源，可以凭借导师的推荐信进入顶尖学府，而无需拼命发表论文。有些顶级学府的博士生甚至在前三年都没有怎么发表论文，但他们的学术研究最终非常成功。那么为什么美国本科生并不特别喜欢攻读博士学位呢？曾经有一位来自美国的同学问我为什么我们都想申请博士学位，而他的同学们却在寻找工作。我回答说，我对学术方向比较感兴趣，需要攻读博士学位以进行深入研究。当时我觉得我说得很真诚，但后来我发现这只是一种自我欺骗的结果，实际上我只是受到周围学长从事学术研究的影响，而忽视了我自己对写代码等类似安全领域内容的兴趣。</p>
+<p>当我回过神来时，本科已经结束了。当然，我没有申请博士学位。但我可以想象有些人可能就这样申请了博士学位，而他们直到最后才发觉自己并不喜欢学术研究。为什么某些计算机本科生如此热衷于攻读博士学位呢？总的来说，主要是因为就业环境相对较差。有趣的是，知乎上有一个问题：“如何看待2014年国际物理奥林匹克竞赛（IPHO）金牌得主胥晓宇加入对冲基金Citadel？”这个问题是在2019年提出的，当时有些人似乎很惊讶为什么有可能从事学术研究的人不去攻读博士学位。实际上，原因很简单，因为胥晓宇本科就读于普林斯顿大学，所以他可以选择不从事学术研究。如果他本科是在国内读的，那么他很可能就必须从事学术研究了。近年来，情况似乎发生了一定的反转，一些国内非常出色的本科生也开始寻找工作或创业。</p>
+<p>当然，本文的重点并不是讨论是否应该攻读博士学位。在很多情况下，攻读博士学位仍然是最佳选择。本文主要想表达的是，在某些计算机本科生中，并不仅仅是因为某些事情的难度更大，而是因为他们根本没有许多本来可能存在的选择，或者因为思想的限制给他们一种没有其他选择的错觉。事实上，本科阶段在很大程度上应该给人们一个机会去尝试各种内容，并决定自己想要从事的领域，然后在该领域上努力奋斗。但在思想的限制下，有些人可能从头到尾都没有真正尝试过自己的兴趣所在，因此本科的意义也就荡然无存了。</p>
+<h2 id="2023-06-11"><a href="#2023-06-11" class="headerlink" title="2023-06-11"></a>2023-06-11</h2><p>摘抄：朋友的文章</p>
+<blockquote>
+<p>最近越来越感觉自己无力，能做的很有限。我知道这个时代流行写个人史，可实际上太多东西无法估计，不归我们掌控。她贫穷负债累累真的是她活该吗，你锦衣玉食被爱围绕真的是理所应当的吗。我实在想不通为什么“控制一个月十五万”是一件很难的事，父母npy供着养着哄着、“上班只是为了社交”是一件值得骄傲的事，为什么要在别人节衣缩食的帖子下附上自己好吃好喝的照片，为什么在别人年纪轻轻就结婚生子的新闻下评论说自己这个年纪十点后还不能出门。我曾经有一段时间特别漂浮，觉得自己运气很好，总是被眷顾，地球简直像围着我转似的，现在只剩惭愧、害怕和感激。我是觉得人应该活得卑微一点、诚恳一点的，尽管我们的诚恳可能仍旧虚伪，我们的卑微也并没有那么的不堪。可除了谦虚地承受命运以外，我也想不到什么更好的办法了。</p>
+</blockquote>
+<p>摘抄：鲁迅《娜拉走后怎样》</p>
+<p><a target="_blank" rel="noopener" href="https://www.marxists.org/chinese/reference-books/luxun/01/018.htm">https://www.marxists.org/chinese/reference-books/luxun/01/018.htm</a></p>
+<p>人生最苦痛的是梦醒了无路可以走。做梦的人是幸福的；倘没有看出可走的路，最要紧的是不要去惊醒他。</p>
+<p>但是，万不可做将来的梦。阿尔志跋绥夫⑤曾经借了他所做的小说，质问过梦想将来的黄金世界的理想家，因为要造那世界，先唤起许多人们来受苦。他说，“你们将黄金世界预约给他们的子孙了，可是有什么给他们自己呢？”有是有的，就是将来的希望。但代价也太大了，为了这希望，要使人练敏了感觉来更深切地感到自己的苦痛，叫起灵魂来目睹他自己的腐烂的尸骸。惟有说诳和做梦，这些时候便见得伟大。所以我想，假使寻不出路，我们所要的就是梦；但不要将来的梦，只要目前的梦。</p>
+<p>　　然而娜拉既然醒了，是很不容易回到梦境的，因此只得走；可是走了以后，有时却也免不掉堕落或回来。否则，就得问：她除了觉醒的心以外，还带了什么去？倘只有一条像诸君一样的紫红的绒绳的围巾，那可是无论宽到二尺或三尺，也完全是不中用。她还须更富有，提包里有准备，直白地说，就是要有钱。</p>
+<p>　　梦是好的；否则，钱是要紧的。</p>
+<p>在经济方面得到自由，就不是傀儡了么？也还是傀儡。无非被人所牵的事可以减少，而自己能牵的傀儡可以增多罢了</p>
+<h2 id="2023-06-30"><a href="#2023-06-30" class="headerlink" title="2023-06-30"></a>2023-06-30</h2><p>这个月各种事马不停蹄，没有喘息的时间，有种不真实感，院里毕业典礼也没任何共鸣，只觉得虚伪做作。</p>
+<p>上了个假学<br>毕了个假业<br>聚了些假餐<br>打了个假工</p>
+<p>一切都太快了。很多朋友恐怕再也见不到了吧。感觉自己错得很多，缺乏独立思考能力，很容易彻底失败，做错误选择和无用功，因此非常需要wzk ddd的建议。但之后，线下见面也就年底和他们在埃及打比赛了吧。</p>
+<p>缺独立思考能力。缺自理能力。缺钱。缺技术水平。缺斗志。啥都缺。</p>
+<p>甚至玩都没玩，难以想象就这样4天后就要去香港全职工作了。</p>
+<h2 id="2023-06-30-1"><a href="#2023-06-30-1" class="headerlink" title="2023-06-30"></a>2023-06-30</h2><p>我的世界线变动点：</p>
+<p>1 上不上少年班 — 上</p>
+<p>结果：-&gt; 认识cyy等人 -&gt; 入门OI/ACM -&gt; 选CS专业<br>平行世界线：郑外/郑一中数竞班 -&gt; MO，冲CMO。但保送被取消，可能遇到高考风险。<br>关键度：高<br>后悔程度：???</p>
+<p>2 伯克利一年<br>结果：寄了<br>平行世界线：???<br>关键度：???</p>
+<p>3 毕业选择，工作/读MS/MEng/PhD — 工作<br>结果：去HK<br>平行世界线：???<br>关键度：???</p>
+<p>4 在XXX时是否好好干 — 没好好干<br>结果：寄了<br>平行世界线：???<br>关键度：???</p>
+<h2 id="2023-07-06"><a href="#2023-07-06" class="headerlink" title="2023-07-06"></a>2023-07-06</h2><p>摘抄：为什么接受彻底失败</p>
+<p>（原题：很多人的心态被进步史观毁掉了）</p>
+<p>原作者：Potato Digger<br>原文链接 <a target="_blank" rel="noopener" href="http://xhslink.com/sTToWr">http://xhslink.com/sTToWr</a></p>
+<p>成功学本质是线性的进步史观，marxim的成功学:奴隶-封建-资本-和谐，heygirl的成功学:少数人的自由-多数人的自由-所有人的自由，猴的成功学:⻘年上岸- 中年上市-老年上树。共同点:相信历史/生活有规律可循，默认社会结构的强制性</p>
+<p>这种脑子的好处是，有方向感，死路还是活路，至少不会迷路。坏处是优越感，清人去缅北，发现后者还是部落时代，就歧视了;英人去宁波，发现后者还是封建时 代，就歧视链了;这和一些名校猴面对大专的优越感是同一种优越感。奴役/PUA都 源于优越感，因为我比你高级(源于社会结构决定论，所以我做的不是坏事，而是当正义爹</p>
+<p>反过来也作用于自身。因为假设生活是进步的，所以永远在路上，永远转折点、分水岭、关键事件。小李上岸失败，被迫处于“-”阶段，自暴自弃天天⻨当劳，很多人 的心理被进步史观/成功学毁掉了</p>
+<p>多元史观则主张，历史/生活不存在进步也没有目的，社会结构决定论被行动主体决 定论取代，所以别天天给自己加戏了!岸是你自己想象出来的，没上岸不是你的 错，没尽力才是你的错</p>
+<p>中心、节点和阶段滚了，时间碎了一地，38岁依旧⻘春期，也可以儿童期，主要看心情；追求“成功”不如追求少失败，论文写出来被404是小失败，论文写出来没被 404是中失败，你连论文都写不出来，当然是大失败；考入名校是小失败，卖身名校 是中失败，以名校为荣是大失败</p>
+<p>多元史观又名失败学，胜在好心态。如果知道自己迟早失败，就会平和很多。如果总认为自己会成功，一没成功，你就崩溃了</p>
+<p>一个用人的眼光看世界，放松但不放弃;一个用历史的眼光看世界，时不时感到无 力是因为人成了历史前进的燃料</p>
+<p>进步史观:吃得苦中苦，方为人上人(大理性<br>多元史观:吃得苦中苦，方能少吃苦(小动物</p>
+<h2 id="2023-07-31"><a href="#2023-07-31" class="headerlink" title="2023-07-31"></a>2023-07-31</h2><p>摘抄：Redemption</p>
+<p>这是一个开始，也是一个结束。</p>
+<p>从 NOI2011 到现在，几乎十年过去了。那一年，在我六年的 OI 生涯的最后一战，由于一个小小的疏忽我终于没有获得金牌，此后就是阴云笼罩的日子。这一切的事情，我在之前那一篇 blog 里都讲过了。</p>
+<p>如今，我想这沉重的一页终于到了该翻过去的时候。</p>
+<p>这么多年，无数的痛苦、困惑和自我怀疑，拒绝享受生活，在物理上和精神上自我封闭，一切的一切，根本在于我从没做过一件让自己满意的、在我看来对得起我所肩负的期望事。</p>
+<p>这样一个目标，自然不是仅凭发一篇顶会就算达成了。然而我与我的理想之间，终于不再是有和无的区别，而只有程度的差距。</p>
+<p>锁链已经破除，再也没有消极面对生活的理由。从此以后应该加倍努力工作，努力生活，勇于追求自己所爱的事物。就把之前的十年当作一场大梦，如今终于到了苏醒的时候。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/" rel="next" title="不能再浪费时间了!">
+                <i class="fa fa-chevron-left"></i> 不能再浪费时间了!
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YangDavid</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://codeforces.com/profile/Ephemeral." title="Codeforces &amp;rarr; https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;Ephemeral." rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-code&quot;&gt;&lt;&#x2F;i&gt;Codeforces</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/YangDong2002" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;YangDong2002" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://atcoder.jp/users/YangDavid" title="AtCoder &amp;rarr; https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;YangDavid" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-adn&quot;&gt;&lt;&#x2F;i&gt;AtCoder</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=51990" title="洛谷 &amp;rarr; https:&#x2F;&#x2F;www.luogu.org&#x2F;space&#x2F;show?uid&#x3D;51990" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-leaf&quot;&gt;&lt;&#x2F;i&gt;洛谷</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://lydsy.com/JudgeOnline/userinfo.php?user=YangDong2002" title="BZOJ &amp;rarr; https:&#x2F;&#x2F;lydsy.com&#x2F;JudgeOnline&#x2F;userinfo.php?user&#x3D;YangDong2002" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-globe&quot;&gt;&lt;&#x2F;i&gt;BZOJ</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://cn.vjudge.net/user/Yangdong" title="vjudge &amp;rarr; https:&#x2F;&#x2F;cn.vjudge.net&#x2F;user&#x2F;Yangdong" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-power-off&quot;&gt;&lt;&#x2F;i&gt;vjudge</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bytew.net/" title="http:&#x2F;&#x2F;bytew.net&#x2F;" rel="noopener" target="_blank">nocriz</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hdmmblz.github.io/" title="https:&#x2F;&#x2F;hdmmblz.github.io&#x2F;" rel="noopener" target="_blank">HDMMBLZ</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://thelajiest.github.io/" title="https:&#x2F;&#x2F;thelajiest.github.io&#x2F;" rel="noopener" target="_blank">KON_automaton</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/m0_37809890" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_37809890" rel="noopener" target="_blank">LittleFall</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sheauhawjang.github.io/" title="https:&#x2F;&#x2F;sheauhawjang.github.io&#x2F;" rel="noopener" target="_blank">Sheauhaw</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">一些博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A7%E5%9B%9B%E4%B8%8A"><span class="nav-number">2.</span> <span class="nav-text">大四上</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-09-13%EF%BC%9A%E6%97%A0%E8%B7%AF%E5%8F%AF%E8%B5%B0"><span class="nav-number">2.1.</span> <span class="nav-text">2022-09-13：无路可走</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-10-24-%E6%8C%82%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%9D%A2%E8%AF%95"><span class="nav-number">2.2.</span> <span class="nav-text">2022-10-24: 挂第一个面试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-10-28-%E5%8F%8D%E6%80%9D"><span class="nav-number">2.3.</span> <span class="nav-text">2022-10-28: 反思</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-11-05%EF%BC%9AWF%E4%B9%8B%E7%97%9B"><span class="nav-number">2.4.</span> <span class="nav-text">2022-11-05：WF之痛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-11-24"><span class="nav-number">2.5.</span> <span class="nav-text">2022-11-24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-12-07"><span class="nav-number">2.6.</span> <span class="nav-text">2022-12-07</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2022-12-12"><span class="nav-number">2.7.</span> <span class="nav-text">2022-12-12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-01-03-%E7%A7%8B%E6%8B%9B%E6%80%BB%E7%BB%93%EF%BC%9F"><span class="nav-number">2.8.</span> <span class="nav-text">2023-01-03: 秋招总结？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%92%E5%81%87"><span class="nav-number">3.</span> <span class="nav-text">寒假</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-02-02-%EF%BD%9E-2023-02-10-%E9%A6%99%E6%B8%AF-%E4%B8%8A%E6%B5%B7%E4%B9%8B%E6%97%85"><span class="nav-number">3.1.</span> <span class="nav-text">2023-02-02 ～ 2023-02-10 香港-上海之旅</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2023-02-06"><span class="nav-number">3.1.1.</span> <span class="nav-text">2023-02-06</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2023-02-07"><span class="nav-number">3.1.2.</span> <span class="nav-text">2023-02-07</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2023-02-09"><span class="nav-number">3.1.3.</span> <span class="nav-text">2023-02-09</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-02-24"><span class="nav-number">3.2.</span> <span class="nav-text">2023-02-24</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A7%E5%9B%9B%E4%B8%8B"><span class="nav-number">4.</span> <span class="nav-text">大四下</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-03%EF%BC%9A%E8%8B%8F%E5%B7%9E%E4%B9%8B%E6%97%85"><span class="nav-number">4.1.</span> <span class="nav-text">2023-03：苏州之旅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-04-24%EF%BC%9A%E5%85%B0%E5%B7%9E%E4%B9%8B%E6%97%85"><span class="nav-number">4.2.</span> <span class="nav-text">2023-04-24：兰州之旅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-04-06"><span class="nav-number">4.3.</span> <span class="nav-text">2023-04-06</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-04-30%EF%BC%9A%E6%96%87%E5%AD%97%E6%B8%B8%E6%88%8F"><span class="nav-number">4.4.</span> <span class="nav-text">2023-04-30：文字游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-05-10-%E5%8C%97%E4%BA%AC%E4%B9%8B%E6%97%85"><span class="nav-number">4.5.</span> <span class="nav-text">2023-05-10 北京之旅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-05-15-Monkey-Business"><span class="nav-number">4.6.</span> <span class="nav-text">2023-05-15: Monkey Business</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-05-16"><span class="nav-number">4.7.</span> <span class="nav-text">2023-05-16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-06-03"><span class="nav-number">4.8.</span> <span class="nav-text">2023-06-03</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E6%8A%84%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E7%A7%91%E6%89%BE%E9%AB%98%E8%96%AA%E5%B7%A5%E4%BD%9C%E9%80%9F%E9%80%9A%E8%B7%AF%E7%BA%BF"><span class="nav-number">4.8.1.</span> <span class="nav-text">摘抄：计算机本科找高薪工作速通路线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E6%8A%84%EF%BC%9AChatGPT%EF%BC%9A%E6%8F%AD%E7%A4%BA%E6%9F%90%E4%BA%9B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E7%A7%91%E5%92%8C%E9%A1%B6%E5%B0%96%E6%9C%AC%E7%A7%91%E4%B9%8B%E9%97%B4%E7%9A%84%E6%98%BE%E8%91%97%E5%B7%AE%E5%BC%82"><span class="nav-number">4.8.2.</span> <span class="nav-text">摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-06-11"><span class="nav-number">4.9.</span> <span class="nav-text">2023-06-11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-06-30"><span class="nav-number">4.10.</span> <span class="nav-text">2023-06-30</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-06-30-1"><span class="nav-number">4.11.</span> <span class="nav-text">2023-06-30</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-07-06"><span class="nav-number">4.12.</span> <span class="nav-text">2023-07-06</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-07-31"><span class="nav-number">4.13.</span> <span class="nav-text">2023-07-31</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YangDavid</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.4.2</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css"/>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'e0e339695a1d1c07b011',
+    clientSecret: '67dee24f0d0add7a9b8d597e6acca375df7dc06e',
+    repo: 'yangdong2002.github.io',
+    owner: 'YangDong2002',
+    admin: ['YangDong2002'],
+    id: md5(location.pathname),
+    distractionFreeMode: ''
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+</body>
+</html>

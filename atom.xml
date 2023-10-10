@@ -3,11 +3,11 @@
   <title>Distant Yesterday</title>
   
   <subtitle>Pause and ponder</subtitle>
-  <link href="http://yangdong2002.github.io/atom.xml" rel="self"/>
+  <link href="http://yangdong02.github.io/atom.xml" rel="self"/>
   
-  <link href="http://yangdong2002.github.io/"/>
+  <link href="http://yangdong02.github.io/"/>
   <updated>2023-10-10T08:41:52.681Z</updated>
-  <id>http://yangdong2002.github.io/</id>
+  <id>http://yangdong02.github.io/</id>
   
   <author>
     <name>Distant Yesterday</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>失踪人口回归</title>
-    <link href="http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/"/>
-    <id>http://yangdong2002.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/</id>
+    <link href="http://yangdong02.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/"/>
+    <id>http://yangdong02.github.io/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/</id>
     <published>2023-10-08T14:21:52.000Z</published>
     <updated>2023-10-10T08:41:52.681Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>不能再浪费时间了!</title>
-    <link href="http://yangdong2002.github.io/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/"/>
-    <id>http://yangdong2002.github.io/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/</id>
+    <link href="http://yangdong02.github.io/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/"/>
+    <id>http://yangdong02.github.io/2021/02/09/%E4%B8%8D%E8%83%BD%E5%86%8D%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4%E4%BA%86/</id>
     <published>2021-02-09T15:52:47.000Z</published>
     <updated>2021-02-13T16:03:36.769Z</updated>
     
@@ -52,15 +52,15 @@
     
     
     
-    <category term="日记" scheme="http://yangdong2002.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    <category term="日记" scheme="http://yangdong02.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
     
     
   </entry>
   
   <entry>
     <title>MOOC 推荐</title>
-    <link href="http://yangdong2002.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/"/>
-    <id>http://yangdong2002.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/</id>
+    <link href="http://yangdong02.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/"/>
+    <id>http://yangdong02.github.io/2021/02/04/MOOC-%E6%8E%A8%E8%8D%90/</id>
     <published>2021-02-04T02:08:25.000Z</published>
     <updated>2021-07-03T15:04:04.896Z</updated>
     
@@ -71,15 +71,15 @@
     
     
     
-    <category term="公开课" scheme="http://yangdong2002.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
+    <category term="公开课" scheme="http://yangdong02.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
     
     
   </entry>
   
   <entry>
     <title>如何成为期末复习混子</title>
-    <link href="http://yangdong2002.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/"/>
-    <id>http://yangdong2002.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/</id>
+    <link href="http://yangdong02.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/"/>
+    <id>http://yangdong02.github.io/2021/02/04/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%B7%B7%E5%AD%90/</id>
     <published>2021-02-04T02:07:59.000Z</published>
     <updated>2021-02-09T15:55:38.566Z</updated>
     
@@ -90,17 +90,17 @@
     
     
     
-    <category term="文化课" scheme="http://yangdong2002.github.io/categories/%E6%96%87%E5%8C%96%E8%AF%BE/"/>
+    <category term="文化课" scheme="http://yangdong02.github.io/categories/%E6%96%87%E5%8C%96%E8%AF%BE/"/>
     
     
-    <category term="内卷" scheme="http://yangdong2002.github.io/tags/%E5%86%85%E5%8D%B7/"/>
+    <category term="内卷" scheme="http://yangdong02.github.io/tags/%E5%86%85%E5%8D%B7/"/>
     
   </entry>
   
   <entry>
     <title>ICPC 2020</title>
-    <link href="http://yangdong2002.github.io/2020/11/25/ICPC2020/"/>
-    <id>http://yangdong2002.github.io/2020/11/25/ICPC2020/</id>
+    <link href="http://yangdong02.github.io/2020/11/25/ICPC2020/"/>
+    <id>http://yangdong02.github.io/2020/11/25/ICPC2020/</id>
     <published>2020-11-25T12:19:44.000Z</published>
     <updated>2021-02-05T15:03:20.244Z</updated>
     
@@ -112,17 +112,17 @@
     
     
     
-    <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    <category term="游记" scheme="http://yangdong02.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
-    <category term="ICPC" scheme="http://yangdong2002.github.io/tags/ICPC/"/>
+    <category term="ICPC" scheme="http://yangdong02.github.io/tags/ICPC/"/>
     
   </entry>
   
   <entry>
     <title>Stanform CS144 Introduction to Computer Networking</title>
-    <link href="http://yangdong2002.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/"/>
-    <id>http://yangdong2002.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/</id>
+    <link href="http://yangdong02.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/"/>
+    <id>http://yangdong02.github.io/2020/09/20/Stanform-CS144-Introduction-to-Computer-Networking/</id>
     <published>2020-09-19T17:30:31.000Z</published>
     <updated>2020-09-19T17:30:32.069Z</updated>
     
@@ -134,8 +134,8 @@
   
   <entry>
     <title>MIT 6.S081 Operating Systems Engineering</title>
-    <link href="http://yangdong2002.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/"/>
-    <id>http://yangdong2002.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/</id>
+    <link href="http://yangdong02.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/"/>
+    <id>http://yangdong02.github.io/2020/09/20/MIT-6-828-Operating-Systems-Engineering/</id>
     <published>2020-09-19T16:27:43.000Z</published>
     <updated>2020-10-07T10:48:11.879Z</updated>
     
@@ -148,17 +148,17 @@
     
     
     
-    <category term="公开课" scheme="http://yangdong2002.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
+    <category term="公开课" scheme="http://yangdong02.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
     
     
-    <category term="操作系统" scheme="http://yangdong2002.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="http://yangdong02.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>字节跳动夏令营 Byte Camp 2020 游记</title>
-    <link href="http://yangdong2002.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2020/09/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%A4%8F%E4%BB%A4%E8%90%A5-Byte-Camp-2020-%E6%B8%B8%E8%AE%B0/</id>
     <published>2020-09-09T15:57:34.000Z</published>
     <updated>2021-02-05T15:05:49.947Z</updated>
     
@@ -169,17 +169,17 @@
     
     
     
-    <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    <category term="游记" scheme="http://yangdong02.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
-    <category term="AI" scheme="http://yangdong2002.github.io/tags/AI/"/>
+    <category term="AI" scheme="http://yangdong02.github.io/tags/AI/"/>
     
   </entry>
   
   <entry>
     <title>Petrozavodsk Camp Summer 2020 游记</title>
-    <link href="http://yangdong2002.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-%E6%B8%B8%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-%E6%B8%B8%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-%E6%B8%B8%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2020/09/09/Petrozavodsk-Camp-Summer-2020-%E6%B8%B8%E8%AE%B0/</id>
     <published>2020-09-09T15:55:07.000Z</published>
     <updated>2020-09-09T15:55:07.234Z</updated>
     
@@ -191,8 +191,8 @@
   
   <entry>
     <title>CMU 15-213 Introduction to Computer Systems</title>
-    <link href="http://yangdong2002.github.io/2020/08/15/CMU-15-213-Introduction-to-Computer-Systems/"/>
-    <id>http://yangdong2002.github.io/2020/08/15/CMU-15-213-Introduction-to-Computer-Systems/</id>
+    <link href="http://yangdong02.github.io/2020/08/15/CMU-15-213-Introduction-to-Computer-Systems/"/>
+    <id>http://yangdong02.github.io/2020/08/15/CMU-15-213-Introduction-to-Computer-Systems/</id>
     <published>2020-08-15T07:55:44.000Z</published>
     <updated>2020-08-16T17:04:29.960Z</updated>
     
@@ -204,17 +204,17 @@
     
     
     
-    <category term="公开课" scheme="http://yangdong2002.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
+    <category term="公开课" scheme="http://yangdong02.github.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
     
     
-    <category term="计算机系统" scheme="http://yangdong2002.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
+    <category term="计算机系统" scheme="http://yangdong02.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>Link Cut Tree 学习笔记</title>
-    <link href="http://yangdong2002.github.io/2020/03/26/Link-Cut-Tree-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2020/03/26/Link-Cut-Tree-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2020/03/26/Link-Cut-Tree-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2020/03/26/Link-Cut-Tree-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-03-25T16:46:56.000Z</published>
     <updated>2020-03-25T17:50:58.902Z</updated>
     
@@ -226,15 +226,15 @@
     
     
     
-    <category term="算法" scheme="http://yangdong2002.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://yangdong02.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
   
   <entry>
     <title>对偶线性规划学习笔记</title>
-    <link href="http://yangdong2002.github.io/2020/02/20/%E5%AF%B9%E5%81%B6%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2020/02/20/%E5%AF%B9%E5%81%B6%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2020/02/20/%E5%AF%B9%E5%81%B6%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2020/02/20/%E5%AF%B9%E5%81%B6%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-02-20T15:56:55.000Z</published>
     <updated>2020-03-25T16:57:30.333Z</updated>
     
@@ -246,17 +246,17 @@
     
     
     
-    <category term="算法" scheme="http://yangdong2002.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://yangdong02.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="线性规划" scheme="http://yangdong2002.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/"/>
+    <category term="线性规划" scheme="http://yangdong02.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
   <entry>
     <title>ICPC2019 回忆录</title>
-    <link href="http://yangdong2002.github.io/2019/12/15/ICPC2019-%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-    <id>http://yangdong2002.github.io/2019/12/15/ICPC2019-%E5%9B%9E%E5%BF%86%E5%BD%95/</id>
+    <link href="http://yangdong02.github.io/2019/12/15/ICPC2019-%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
+    <id>http://yangdong02.github.io/2019/12/15/ICPC2019-%E5%9B%9E%E5%BF%86%E5%BD%95/</id>
     <published>2019-12-15T13:20:28.000Z</published>
     <updated>2019-12-15T16:41:42.359Z</updated>
     
@@ -269,17 +269,17 @@
     
     
     
-    <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    <category term="游记" scheme="http://yangdong02.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
-    <category term="ICPC" scheme="http://yangdong2002.github.io/tags/ICPC/"/>
+    <category term="ICPC" scheme="http://yangdong02.github.io/tags/ICPC/"/>
     
   </entry>
   
   <entry>
     <title>高斯二项式系数小结</title>
-    <link href="http://yangdong2002.github.io/2019/09/03/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E5%B0%8F%E7%BB%93/"/>
-    <id>http://yangdong2002.github.io/2019/09/03/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E5%B0%8F%E7%BB%93/</id>
+    <link href="http://yangdong02.github.io/2019/09/03/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yangdong02.github.io/2019/09/03/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0%E5%B0%8F%E7%BB%93/</id>
     <published>2019-09-03T02:51:12.000Z</published>
     <updated>2019-12-15T14:14:31.230Z</updated>
     
@@ -290,17 +290,17 @@
     
     
     
-    <category term="数学" scheme="http://yangdong2002.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="http://yangdong02.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-    <category term="高斯二项式系数" scheme="http://yangdong2002.github.io/tags/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0/"/>
+    <category term="高斯二项式系数" scheme="http://yangdong02.github.io/tags/%E9%AB%98%E6%96%AF%E4%BA%8C%E9%A1%B9%E5%BC%8F%E7%B3%BB%E6%95%B0/"/>
     
   </entry>
   
   <entry>
     <title>整数拆分知识集锦</title>
-    <link href="http://yangdong2002.github.io/2019/07/11/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86%E7%9F%A5%E8%AF%86%E9%9B%86%E9%94%A6/"/>
-    <id>http://yangdong2002.github.io/2019/07/11/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86%E7%9F%A5%E8%AF%86%E9%9B%86%E9%94%A6/</id>
+    <link href="http://yangdong02.github.io/2019/07/11/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86%E7%9F%A5%E8%AF%86%E9%9B%86%E9%94%A6/"/>
+    <id>http://yangdong02.github.io/2019/07/11/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86%E7%9F%A5%E8%AF%86%E9%9B%86%E9%94%A6/</id>
     <published>2019-07-11T07:38:09.000Z</published>
     <updated>2019-12-15T14:13:41.404Z</updated>
     
@@ -312,15 +312,15 @@
     
     
     
-    <category term="算法" scheme="http://yangdong2002.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://yangdong02.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
   
   <entry>
     <title>2019年ACM-ICPC陕西省赛游记</title>
-    <link href="http://yangdong2002.github.io/2019/06/02/2019%E5%B9%B4ACM-ICPC%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B%E6%B8%B8%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2019/06/02/2019%E5%B9%B4ACM-ICPC%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B%E6%B8%B8%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2019/06/02/2019%E5%B9%B4ACM-ICPC%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B%E6%B8%B8%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2019/06/02/2019%E5%B9%B4ACM-ICPC%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B%E6%B8%B8%E8%AE%B0/</id>
     <published>2019-06-02T13:15:01.000Z</published>
     <updated>2019-06-07T11:42:44.781Z</updated>
     
@@ -331,17 +331,17 @@
     
     
     
-    <category term="游记" scheme="http://yangdong2002.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
+    <category term="游记" scheme="http://yangdong02.github.io/categories/%E6%B8%B8%E8%AE%B0/"/>
     
     
-    <category term="ICPC" scheme="http://yangdong2002.github.io/tags/ICPC/"/>
+    <category term="ICPC" scheme="http://yangdong02.github.io/tags/ICPC/"/>
     
   </entry>
   
   <entry>
     <title>集合幂级数、FMT、FWT学习笔记</title>
-    <link href="http://yangdong2002.github.io/2019/04/27/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0-FMT-FWT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2019/04/27/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0-FMT-FWT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2019/04/27/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0-FMT-FWT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2019/04/27/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0-FMT-FWT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2019-04-27T06:37:00.000Z</published>
     <updated>2021-04-20T15:28:44.036Z</updated>
     
@@ -353,23 +353,23 @@
     
     
     
-    <category term="算法" scheme="http://yangdong2002.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://yangdong02.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="快速沃尔什变换系列（FMT，FWT等）" scheme="http://yangdong2002.github.io/tags/%E5%BF%AB%E9%80%9F%E6%B2%83%E5%B0%94%E4%BB%80%E5%8F%98%E6%8D%A2%E7%B3%BB%E5%88%97%EF%BC%88FMT%EF%BC%8CFWT%E7%AD%89%EF%BC%89/"/>
+    <category term="快速沃尔什变换系列（FMT，FWT等）" scheme="http://yangdong02.github.io/tags/%E5%BF%AB%E9%80%9F%E6%B2%83%E5%B0%94%E4%BB%80%E5%8F%98%E6%8D%A2%E7%B3%BB%E5%88%97%EF%BC%88FMT%EF%BC%8CFWT%E7%AD%89%EF%BC%89/"/>
     
-    <category term="集合幂级数" scheme="http://yangdong2002.github.io/tags/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0/"/>
+    <category term="集合幂级数" scheme="http://yangdong02.github.io/tags/%E9%9B%86%E5%90%88%E5%B9%82%E7%BA%A7%E6%95%B0/"/>
     
-    <category term="子集卷积" scheme="http://yangdong2002.github.io/tags/%E5%AD%90%E9%9B%86%E5%8D%B7%E7%A7%AF/"/>
+    <category term="子集卷积" scheme="http://yangdong02.github.io/tags/%E5%AD%90%E9%9B%86%E5%8D%B7%E7%A7%AF/"/>
     
-    <category term="高维前缀和（FMT）" scheme="http://yangdong2002.github.io/tags/%E9%AB%98%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%88FMT%EF%BC%89/"/>
+    <category term="高维前缀和（FMT）" scheme="http://yangdong02.github.io/tags/%E9%AB%98%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%88FMT%EF%BC%89/"/>
     
   </entry>
   
   <entry>
     <title>最小圆（球）覆盖学习笔记</title>
-    <link href="http://yangdong2002.github.io/2019/04/21/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yangdong2002.github.io/2019/04/21/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://yangdong02.github.io/2019/04/21/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yangdong02.github.io/2019/04/21/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2019-04-21T15:15:14.000Z</published>
     <updated>2019-12-15T14:08:10.327Z</updated>
     
@@ -382,19 +382,19 @@
     
     
     
-    <category term="算法" scheme="http://yangdong2002.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://yangdong02.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="最小圆覆盖" scheme="http://yangdong2002.github.io/tags/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96/"/>
+    <category term="最小圆覆盖" scheme="http://yangdong02.github.io/tags/%E6%9C%80%E5%B0%8F%E5%9C%86%E8%A6%86%E7%9B%96/"/>
     
-    <category term="模拟退火" scheme="http://yangdong2002.github.io/tags/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/"/>
+    <category term="模拟退火" scheme="http://yangdong02.github.io/tags/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/"/>
     
   </entry>
   
   <entry>
     <title>一个有趣的期望问题</title>
-    <link href="http://yangdong2002.github.io/2019/04/21/%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84%E6%9C%9F%E6%9C%9B%E9%97%AE%E9%A2%98/"/>
-    <id>http://yangdong2002.github.io/2019/04/21/%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84%E6%9C%9F%E6%9C%9B%E9%97%AE%E9%A2%98/</id>
+    <link href="http://yangdong02.github.io/2019/04/21/%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84%E6%9C%9F%E6%9C%9B%E9%97%AE%E9%A2%98/"/>
+    <id>http://yangdong02.github.io/2019/04/21/%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84%E6%9C%9F%E6%9C%9B%E9%97%AE%E9%A2%98/</id>
     <published>2019-04-21T05:48:19.000Z</published>
     <updated>2019-12-15T14:09:09.733Z</updated>
     
@@ -406,17 +406,17 @@
     
     
     
-    <category term="题解" scheme="http://yangdong2002.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
+    <category term="题解" scheme="http://yangdong02.github.io/categories/%E9%A2%98%E8%A7%A3/"/>
     
     
-    <category term="概率与期望" scheme="http://yangdong2002.github.io/tags/%E6%A6%82%E7%8E%87%E4%B8%8E%E6%9C%9F%E6%9C%9B/"/>
+    <category term="概率与期望" scheme="http://yangdong02.github.io/tags/%E6%A6%82%E7%8E%87%E4%B8%8E%E6%9C%9F%E6%9C%9B/"/>
     
   </entry>
   
   <entry>
     <title>数论之旅1：同余方程</title>
-    <link href="http://yangdong2002.github.io/2019/03/19/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E4%B9%8B%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B/"/>
-    <id>http://yangdong2002.github.io/2019/03/19/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E4%B9%8B%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B/</id>
+    <link href="http://yangdong02.github.io/2019/03/19/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E4%B9%8B%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B/"/>
+    <id>http://yangdong02.github.io/2019/03/19/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E4%B9%8B%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B/</id>
     <published>2019-03-19T11:13:14.000Z</published>
     <updated>2020-04-20T13:22:19.534Z</updated>
     
@@ -429,16 +429,16 @@
     
     
     
-    <category term="数学" scheme="http://yangdong2002.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="http://yangdong02.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-    <category term="数论" scheme="http://yangdong2002.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
+    <category term="数论" scheme="http://yangdong02.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
     
-    <category term="二次剩余" scheme="http://yangdong2002.github.io/tags/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/"/>
+    <category term="二次剩余" scheme="http://yangdong02.github.io/tags/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/"/>
     
-    <category term="n次剩余" scheme="http://yangdong2002.github.io/tags/n%E6%AC%A1%E5%89%A9%E4%BD%99/"/>
+    <category term="n次剩余" scheme="http://yangdong02.github.io/tags/n%E6%AC%A1%E5%89%A9%E4%BD%99/"/>
     
-    <category term="数论之旅系列" scheme="http://yangdong2002.github.io/tags/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E7%B3%BB%E5%88%97/"/>
+    <category term="数论之旅系列" scheme="http://yangdong02.github.io/tags/%E6%95%B0%E8%AE%BA%E4%B9%8B%E6%97%85%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   

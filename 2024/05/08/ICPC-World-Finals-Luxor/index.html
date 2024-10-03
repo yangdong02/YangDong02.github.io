@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="算法竞赛终点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICPC World Finals Luxor">
+<meta property="og:url" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/index.html">
+<meta property="og:site_name" content="Distant Yesterday">
+<meta property="og:description" content="算法竞赛终点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/d31d5df2d966a53e2f992c28d9d6600c-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-1-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-2-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-3-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-4-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-5-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-6-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-7-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-8-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-9-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-10-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-11-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-12-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-14-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-15-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-16-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-17-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/image-18-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0671-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0695-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_1038-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0711-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0712-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0854-large.jpeg">
+<meta property="og:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/IMG_0727-large.jpeg">
+<meta property="article:published_time" content="2024-05-08T14:08:59.000Z">
+<meta property="article:modified_time" content="2024-10-03T17:19:13.963Z">
+<meta property="article:author" content="Distant Yesterday">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/d31d5df2d966a53e2f992c28d9d6600c-large.jpeg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Distant Yesterday" type="application/atom+xml"/>
+
+
+
+
+  <link rel="canonical" href="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>ICPC World Finals Luxor | Distant Yesterday</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Distant Yesterday</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Pause and ponder</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-user&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-tags&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-th&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangdong02.github.io/2024/05/08/ICPC-World-Finals-Luxor/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Distant Yesterday"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Distant Yesterday"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ICPC World Finals Luxor
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+		  
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2024-05-08 22:08:59" itemprop="dateCreated datePublished" datetime="2024-05-08T22:08:59+08:00">2024-05-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2024-10-04 01:19:13" itemprop="dateModified" datetime="2024-10-04T01:19:13+08:00">2024-10-04</time>
+              
+            
+          </span>
+
+          
+		  
+		  
+		  
+		  
+            <span class="post-meta-divider">|</span>
+		    <i class="fa fa-wrench"></i>
+            博文状态：更新中
+          
+		  
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>算法竞赛终点。</p>
+<span id="more"></span>
+
+<p><img src="d31d5df2d966a53e2f992c28d9d6600c-large.jpeg" alt="Alt text"></p>
+<h1 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h1><p>2024-03-19 发现必须开始训练算法竞赛了，距比赛只剩下25天了。打开了最近一场CF 934热身，看一圈发现题都还挺会做，只是需要留出充分长的时间口胡和写代码。于是启动了<a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/98806">Um_nik无监督训练法</a>，直到D1、E1。D2的容斥trick忘了，读题解补习了一下。</p>
+<p>2024-03-23 拿了NAC’23的题个人训练，结果发现题太水了，过于不仿真，放弃了。之后一定得做WF真题。算了下账感觉必须之后天天都做真题了。训量化模型要用8年历史数据了，训高考要五年高考三年模拟，in sample的数据没训完不太行。</p>
+<p>2024-03-24 三人三地三机组队训练。打了EC Final 2024，爬了。I题就是简单边双+树上DP但我过于老年，直接放弃写了。。提高自己水平，任重道远啊。。感觉队友好像也失去了信心。但是我觉得从现在开始训，还来得及。我目前也是队里最闲的，打比赛好像能让我更有一种知道自己在干什么的感觉。虽然自己最弱，但要加训，争取不当瓶颈！</p>
+<p>2024-03-27 终于把EC Final I补了，算法竞赛真是时间杀手。。写的巨麻烦，不知道是自己擅长把简单题写复杂还是啥。至此剩下除了A题2AC，别的题都0AC了，感觉可能不补也罢了。已经神智不清了。这两天循环训（模型/身体/算法竞赛），真实帕鲁训练家。选择了复活节和清明节各休一天假专心训练。。之后都只练WF题。</p>
+<p>2024-03-31 本来约好了时间，特意早起，但队友也不来训练了。感觉也在意料之中。也没法强求队友训练。自己太菜，好好提升自己吧！按照自己要单挑的标准去训练。倒着开题打了下这天的CF。前几天在做WF 20 Moscow的题，发现题都不是很好做，容易假，也不是很好写。以及甚至还会考裸板子题，比如半平面交。</p>
+<p>2024-04-05 这几天，才发现WF20的签到是多简单。。以及发现WF20的一个只有1AC的线性代数题无比简单，和N维正多面体那个差不多，搞出一个矩阵的零空间的正交基，再操作下就完事了。然而码力还是比之前大幅下降了，写了两个小时才过。。</p>
+<p>2024-04-06 写了一天题写吐了。。今天做了icpc2019的题，做了两年题的总体感觉是这比赛即使简单题也会有点实现难度，对我这种忘了怎么写代码的不算非常友好。。困难题思路可能也没很难？昨天2020的一个1ac的题就是个简单线性代数，我几分钟就想出来了（不过写了两小时）。以及需要板子，比如这场就有广义后缀自动机模版题。。今天五小时过了五个题，过的题都挺无脑的，却写了挺久，基本每题从开始到写完都恰好一小时，好在所有题都一发过了。看评测记录，别的队都在训练。。唉自己现在还很菜，感觉寄了。有七个签到题，剩下两个签到口胡了也不难。把这七个题做了就能rk13及以上了，这是在WF现场理应要达到的标准——签完所有到。</p>
+<p>发现没打过ACM的人、早就退役的人，都已经把往年WF题做了，写了题解。自己却来不及做完所有WF题。罪过啊。</p>
+<p>2024-04-07 看到了WF题出现过的路牌</p>
+<p><img src="image-1-large.jpeg" alt="Alt text"></p>
+<p>2024-04-08 感觉wf本质就是写一些没那么难想但不好实现的题。深刻感觉wf就是比写代码速度，要把签到题都过了。这场的银牌以上题，两个大模拟，一个几何，一个牛逼思维题。</p>
+<p>2024-04-11 这几天发现时间更不够用了。。得跳过自己写，口胡完直接读题解了。今天练划船还把腰伤到了。。全错。</p>
+<p>2024-04-12 起飞前最后一天。下班后我立即（顶着腰伤）到公司对面的文具佬商店购买了文具，蹭公司打印机，打印了板子、签证、各种文档，完成了这些后勤工作。才发现队友票买错了、买晚了、不想去了，要在报道日深夜、第二天才到。。</p>
+<p>目标：做完签到题就是成功。做完签到题就拿牌了。不一定，还有可能是rk13。</p>
+<p>2024-04-13 和ddd到广州包三餐的洗浴中心汇合，一起出发。听ddd讲了昨天的刺激新故事，和WF赛场策略的经验。看ddd打了桌球。喝到了无比好喝的鱼片汤。</p>
+<p><img src="image-large.jpeg" alt="Alt text"></p>
+<h1 id="埃及之行"><a href="#埃及之行" class="headerlink" title="埃及之行"></a>埃及之行</h1><p>2024-04-13 飞开罗的飞机上，口胡了一些往年题，和ddd确认了做法和坑点（当然更多的时候是间歇睡觉）。发现之前还考我准备quant面试时做的结论题，还没啥人ac，大为震撼。</p>
+<p>2024-04-14 飞卢克索的飞机上，感觉都是ICPC选手，和坐左边的说英语选手交谈了下才知道这居然是47届MIT的选手。我说你们要赢了，他说46届邓老师队才要赢，给我指了anton坐在我左边的左边。我无尽orz。正好天亮了，看到飞机窗外，有种非常抽象的感觉，才意识到自己居然来到了非洲。尼罗河旁边是城市，而远处就是撒哈拉沙漠。</p>
+<p><img src="image-2-large.jpeg" alt="Alt text"></p>
+<p><img src="image-3-large.jpeg" alt="Alt text"></p>
+<p>从Luxor机场出来，上了大巴车。志愿者对于我和ddd没带行李箱感到非常惊讶。大巴车上我查了才知道原来埃及用的是真-阿拉伯数字。学习了下数字的映射，以备辨识车牌号（虽然最后也没用到）</p>
+<p><img src="image-4-large.jpeg" alt="Alt text"></p>
+<p><img src="image-5-large.jpeg" alt="Alt text"></p>
+<p><img src="image-6-large.jpeg" alt="Alt text"></p>
+<p>到了Jollie Ville酒店，酒店位于尼罗河中一个岛的中间。结果checkin排了无数人，把护照收走后开始了无尽等待。还是华为赞助商的好心人带我们去他们房间休息了一会儿，在餐厅吃了午饭（主办方没有包午饭）。</p>
+<p><img src="image-7-large.jpeg" alt="Alt text"></p>
+<p>最终，到达酒店的六小时后，我们终于拿到了房卡。我们住在下图这样一个房子里面。埃及的天气是真不错，可惜虫子实在是太多了，穿短裤在室外，有要直接被蚊虫吃掉的节奏。</p>
+<p><img src="image-8-large.jpeg" alt="Alt text"></p>
+<p>team registration。但是只有我和ddd到了，队友都要更晚才到，于是我们两个人去注册了，和主办方解释了情况，于是领了6个人的物资，照了两个人的相，蹒跚着回到了住处。san值暴跌。</p>
+<p>晚饭后在餐厅正对的码头上照的相：</p>
+<p><img src="image-9-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-15-Excursion"><a href="#2024-04-15-Excursion" class="headerlink" title="2024-04-15 Excursion"></a>2024-04-15 Excursion</h2><p>坐船去卡纳克神庙</p>
+<p><img src="image-10-large.jpeg" alt="Alt text"></p>
+<p>卡纳克神庙</p>
+<p><img src="image-11-large.jpeg" alt="Alt text"></p>
+<p><img src="image-12-large.jpeg" alt="Alt text"></p>
+<p>Ancient Dog XD</p>
+<p><img src="image-14-large.jpeg" alt="Alt text"></p>
+<p><img src="image-15-large.jpeg" alt="Alt text"></p>
+<p><img src="image-16-large.jpeg" alt="Alt text"></p>
+<p><img src="image-17-large.jpeg" alt="Alt text"></p>
+<p><img src="image-18-large.jpeg" alt="Alt text"></p>
+<p>晚上开幕式在卢克索神庙。队友终于都到了，san值恢复了。不过补拍照片要到华为挑战赛之后了，于是开幕式照片只有我和ddd。</p>
+<p><img src="IMG_0671-large.jpeg" alt="Alt text"></p>
+<p><img src="IMG_0695-large.jpeg" alt="Alt text"></p>
+<p>回去后各自加训往年题目。</p>
+<h2 id="2024-04-16-Huawei-Challenge"><a href="#2024-04-16-Huawei-Challenge" class="headerlink" title="2024-04-16 Huawei Challenge"></a>2024-04-16 Huawei Challenge</h2><p>wzknb！搞到了rk20，上了领奖台。不过华为挑战赛就能看出47届比46届强了，前20里只有死个46届的。唉唉，拿牌困难啊。</p>
+<p><img src="IMG_1038-large.jpeg" alt="Alt text"></p>
+<p>比赛区域：</p>
+<p><img src="IMG_0711-large.jpeg" alt="Alt text"></p>
+<p><img src="IMG_0712-large.jpeg" alt="Alt text"></p>
+<p>在chill zone补拍了团队照片。我还领了主办方免费发的电话卡（结果因此把香港卡还给丢了，还好回香港后10HKD成功补办了）</p>
+<p><img src="IMG_0854-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-17-Dress-Rehearsal"><a href="#2024-04-17-Dress-Rehearsal" class="headerlink" title="2024-04-17 Dress Rehearsal"></a>2024-04-17 Dress Rehearsal</h2><p>热身赛的题全是往年题，结果6个题除了其中一个是葡萄牙那一年的大模拟压轴之外，所有题我们队都没见过！最后我们做了4个签到，在热身赛的榜里也爬了。另一个没做出来的是一个非常非常有意思的赌博题：</p>
+<blockquote>
+<p>赌场里玩游戏可以花1元，p的概率得到2元，1-p概率得到0元。最后离开赌场时如果亏钱，亏的部分会有x比例的rebate，问最优策略能期望赚多少钱。</p>
+</blockquote>
+<p>我们找到了正确的递推思路，不过热身赛没来得及推完整式子。回去看发现那一年WF，那题也只有一两个通过。我推导出给定止盈止损，式子可以O(1)算的式子后就能ac了。后来感觉这也是一种random walk，问了下GPT，知道了可以构造$(p/(1-p))^X$类似这种Martingale，然后就变成quant绿皮书drunk man那个题了，可以秒出答案，甚至算出期望会赌几次。又是quant面试用到的知识！我意满离。</p>
+<p>这里杀虫方式非常神秘：直接傍晚喷杀虫喷雾。不仅杀了虫，还差点杀了去吃晚饭的我（）</p>
+<p><img src="IMG_0727-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-28-World-Finals-Luxor"><a href="#2024-04-28-World-Finals-Luxor" class="headerlink" title="2024-04-28 World Finals Luxor"></a>2024-04-28 World Finals Luxor</h2><p>差40分罚时没拿牌。但悟了挺多道理。</p>
+<h1 id="Regrets"><a href="#Regrets" class="headerlink" title="Regrets"></a>Regrets</h1><ol>
+<li><p>算法竞赛，无比残酷。赛前就预感得拿rank13（WF规则下）了，但离多过一个题只差一点点、因为前期失误输罚时，真的只是rk13时，就觉得离拿牌这么近无比可惜。果然只有赢了或发挥出高出自己平均水平3标准差的队，才能满意。</p>
+</li>
+<li><p>在毕业后时间资源极其有限的情况下训wf的正确方式：认识到wf题与区域赛题distribution的不同，重视简化代码复杂度的能力。拿往年题狂训，看题，做题，看题解，看最短代码。重点是学习最短代码是如何简化实现难度的</p>
+</li>
+<li><p>还是和队友在一起的时候好啊，无比欢乐</p>
+<!-- 4. 世界上的sb很多的。大部份人都ngmi。能力达不到，只得接受次优解，还在找理由，装作是勇敢的选择。也不要在乎爬了的人的选择了，认识到某个人爬了， --></li>
+</ol>
+<p>这次也是和本科、和算法竞赛彻底道别了。去wf，从现实世界抽离了出来，很有种找回了之前魔怔的感觉。（虽然马上又要回去，各奔东西了）</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/01/01/%E6%88%91%E7%9A%842023%E2%80%94%E2%80%94%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" rel="next" title="我的2023——新的开始">
+                <i class="fa fa-chevron-left"></i> 我的2023——新的开始
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2024/10/02/ICPC-World-Finals-%E7%9A%84%E9%9A%90%E8%97%8F%E7%BB%93%E5%B1%80/" rel="prev" title="ICPC World Finals 的隐藏结局">
+                ICPC World Finals 的隐藏结局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Distant Yesterday</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://codeforces.com/profile/DistantYesterday" title="Codeforces &amp;rarr; https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;DistantYesterday" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-code&quot;&gt;&lt;&#x2F;i&gt;Codeforces</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/YangDong02" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;YangDong02" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-github&quot;&gt;&lt;&#x2F;i&gt;GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://atcoder.jp/users/YangDavid" title="AtCoder &amp;rarr; https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;YangDavid" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-adn&quot;&gt;&lt;&#x2F;i&gt;AtCoder</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=51990" title="洛谷 &amp;rarr; https:&#x2F;&#x2F;www.luogu.org&#x2F;space&#x2F;show?uid&#x3D;51990" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-leaf&quot;&gt;&lt;&#x2F;i&gt;洛谷</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://lydsy.com/JudgeOnline/userinfo.php?user=YangDong2002" title="BZOJ &amp;rarr; https:&#x2F;&#x2F;lydsy.com&#x2F;JudgeOnline&#x2F;userinfo.php?user&#x3D;YangDong2002" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-globe&quot;&gt;&lt;&#x2F;i&gt;BZOJ</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://cn.vjudge.net/user/Yangdong" title="vjudge &amp;rarr; https:&#x2F;&#x2F;cn.vjudge.net&#x2F;user&#x2F;Yangdong" rel="noopener" target="_blank">&lt;i class&#x3D;&quot;fa fa-fw fa-power-off&quot;&gt;&lt;&#x2F;i&gt;vjudge</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bytew.net/" title="http:&#x2F;&#x2F;bytew.net&#x2F;" rel="noopener" target="_blank">nocriz</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hdmmblz.github.io/" title="https:&#x2F;&#x2F;hdmmblz.github.io&#x2F;" rel="noopener" target="_blank">HDMMBLZ</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://thelajiest.github.io/" title="https:&#x2F;&#x2F;thelajiest.github.io&#x2F;" rel="noopener" target="_blank">KON_automaton</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/m0_37809890" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_37809890" rel="noopener" target="_blank">LittleFall</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sheauhawjang.github.io/" title="https:&#x2F;&#x2F;sheauhawjang.github.io&#x2F;" rel="noopener" target="_blank">Sheauhaw</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">赛前准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%83%E5%8F%8A%E4%B9%8B%E8%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">埃及之行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2024-04-15-Excursion"><span class="nav-number">2.1.</span> <span class="nav-text">2024-04-15 Excursion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2024-04-16-Huawei-Challenge"><span class="nav-number">2.2.</span> <span class="nav-text">2024-04-16 Huawei Challenge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2024-04-17-Dress-Rehearsal"><span class="nav-number">2.3.</span> <span class="nav-text">2024-04-17 Dress Rehearsal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2024-04-28-World-Finals-Luxor"><span class="nav-number">2.4.</span> <span class="nav-text">2024-04-28 World Finals Luxor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Regrets"><span class="nav-number">3.</span> <span class="nav-text">Regrets</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Distant Yesterday</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.4.2</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css"/>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'e0e339695a1d1c07b011',
+    clientSecret: '67dee24f0d0add7a9b8d597e6acca375df7dc06e',
+    repo: 'yangdong02.github.io',
+    owner: 'YangDong02',
+    admin: ['YangDong02'],
+    id: md5(location.pathname),
+    distractionFreeMode: ''
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+</body>
+</html>

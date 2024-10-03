@@ -97,6 +97,178 @@
       </categories>
   </entry>
   <entry>
+    <title>ICPC World Finals 的隐藏结局</title>
+    <url>/2024/10/02/ICPC-World-Finals-%E7%9A%84%E9%9A%90%E8%97%8F%E7%BB%93%E5%B1%80/</url>
+    <content><![CDATA[<p>47届WF，我们队（渡渡鸟幼儿园）来不及调试K题，最后距拿牌差40分钟罚时遗憾离场。从埃及回来之后，我一直后劲很大。虽然一直是抱着老年诈尸选手弃疗的心态去的；虽然场上发挥已经很满意了，失误已经出乎意料地少了；虽然说“菜就多练”，输了的队永远能找到无数个借口，可是最后离拿牌只差一点点，我还是会幻想着赛前多训几场、队友早来两天、赛时状态再更好一点点，是否结局就会不同。</p>
+<p>没想到，这回我们真的是撞大运了。由于疑似触发了铜牌增发规则和主办方的怜悯之心，主办方为我们解锁了隐藏结局——在48届WF现场阿斯塔纳为我们补发了铜牌。</p>
+<span id="more"></span>
+
+<h1 id="47th-World-Finals-Luxor"><a href="#47th-World-Finals-Luxor" class="headerlink" title="47th World Finals Luxor"></a>47th World Finals Luxor</h1><p>（本来作为输了的队，这部分训练经验只打算总结一下写给未来的自己了。但既然给补发牌了，还是大言不惭地给发出来了。如果这次资源极度有限条件下的极限训练经历能对别人有帮助的话就再好不过了）</p>
+<blockquote>
+<p>学到的道理TLDR：训WF需要fit正确的distribution——训往年WF题，加训屎题，读别人最短代码的实现，学习如何简化代码，重点提高代码能力。以及卡在中后期需要多步观察的题时，让队友也来一起观察讨论。</p>
+</blockquote>
+<p>由于我们这次是大四打的区域赛，受疫情推迟，真正比WF已经是毕业后了。而我们队一人美博一人美硕一人打工，赛前三人三地各忙各的，训练时间极其稀少，甚至加上中美时区不同，连把人凑到一起训练都困难。赛前一个月好不容易凑齐人VP了下EC Final，但退役太久没训练，不出意外地爬了。提高自己水平，任重道远啊。。感觉队友好像也失去了信心，更没人愿意训练了。（甚至下一次正式组队训练已经是WF热身赛了）</p>
+<p>我作为只需要每天固定时间上班的打工人，没有找工、学术压力，竟然是最闲的。请教了上交 tbr，我了解到WF题的分布与区域赛很不同，需要加训屎题（即思维难度相对没那么高，而代码实现复杂的题）。而队里我并不是主力写代码的选手，更是成为了最弱。但我要加训，争取不当瓶颈！算了下账发现之后天天都做真题都做不完了，训高考都要五年高考三年模拟，in sample的数据没训完肯定不行。于是我开始全力做WF往年题来个人训练。</p>
+<p>做了点题后，我发现这比赛签到和中期题大部分看一会儿就能有一定观察；观察足够久，思维不卡壳，基本都能彻底会，而把所有签到和中期题都AC了就有牌（或rank13）了。但想会了和代码AC之间有着巨大的gap，即使简单题有时也会有点实现难度。2019五个最签到除去一个板题外，我刚训时每题都均匀地花了高达一小时。而非签到题似乎思维能力还在，想久一会儿还是能一步一步找到各步骤的观察，不过由我来实现就会要更久了。2020仅1ac的题是简单线性代数，我很快口胡出做法了，可是不擅长写代码，实现出来竟花了两小时。于是这一个月我周内晚上和周末狂训写代码。后面几天发现时间更不够用了。。只得跳过自己写的步骤，口胡完稍微多口胡一会儿实现方式，直接读题解了。。</p>
+<!-- > 目标：AC完签到题就是成功。做完签到题就拿牌了。不一定，还有可能是rk13。 -->
+
+<p>转眼间就要出发去比赛了，可是我往年题都还没做完，非常underfit。如果就凭我这代码能力，感觉比赛要完蛋了，我心里想。飞开罗的飞机上我继续口胡没做的往年题，和ddd（onsite coach）确认了做法和坑点，并请教了他们当时的策略和问题。发现远古时期还考我准备quant面试时做的结论题，还没啥人ac，大为震撼。飞卢克索的飞机上，感觉都是ICPC选手，和坐左边的说英语选手交谈了下才知道这居然是47届MIT的选手。我说你们要赢了，他说46届邓老师队才要赢，给我指了anton坐在我左边的左边。我无尽orz。正好天亮了，看到飞机窗外，有种非常抽象的感觉，才意识到自己居然来到了非洲。尼罗河旁边是城市，而城市远处就是一望无际的撒哈拉沙漠。</p>
+<p>到了埃及，第一天队友还没来，我与ddd两个人扛了六份比赛物资，锻炼了身体。第二天队友陆续来了，于是终于开始了紧张地加训。除了excursion和ICPC Challenge还是去了之外，到正赛前的所有其他时间基本都用来训练了。由于目的是为了每个人水平的复健，考虑到时间严重不足，我们也没有打模拟赛，而是一起讨论一些新题，以及互相讲一些各自做过的题，以及实现一部分题。和队友训练，我发现队友还是无比强大的！队友也很会训练，训练效率一天顶自己好多天了！看着往年的榜，目标只是拿牌的话，好像只需要把签到题都做了，然后再尽量做一点非签到题？有一种很魔怔的我们也可以的感觉。短短几天，我学到了很多自己训时没有意识到的道理，包括：</p>
+<p>一方面，队友nocriz教了我，训代码能力很有帮助的一个方法是看最短代码，学习降低编程复杂度。有时写之前对题目多做一些观察，能大大简化代码难度。又有时，别人对于算法可能有很简洁的实现思路。而如果题目自己写好久，AC后却都不知道是自己写复杂了，就少学到了很多简化代码的技巧。我们口胡题目后从qoj的最短代码中学到了不少令人瞠目结舌的trick，例如记下dfs序模拟dfs以减小dfs代码复杂度和卡常等等（很古早OI风格的技巧？）。</p>
+<p>另一方面，做非签到题时，队伍中大家的观察能力常常能互补，人人都看一眼很能避免思维卡壳。我们口胡时经常出现这种情形：一个题有若干个观察，我把对我简单的观察找到了，然后就不会了，思维被阻塞；而队友一接手就发现了许多对他显然的观察。反复几轮，可能题就会做了。正如<a href="https://zhuanlan.zhihu.com/p/697429479">邓老师文章</a>（字字珠玑，推荐阅读）所说：</p>
+<blockquote>
+<p>观察是一件非常长尾的事。甲一下注意到的“不妨设”，乙想到宇宙边荒也未必能发现。这并非水平问题，而更取决于风格和直觉。每个人有不同的第一感。</p>
+<p>为了处理这种长尾性，我们的思路是：</p>
+<p>除了签到题，尽量每个人都看，并留下自己一眼可见的观察。</p>
+</blockquote>
+<p>队友们的代码能力是依然强悍的，训练的方法论更是无比务实、切中要害的。短短几天，nocriz已经无比现役，可以表演半小时AC中档题了，让我看到了巨大希望。和队友欢乐做题、吹水，仿佛又回到了大二最现役时的快乐生活，不禁感叹we’re so back。但短短几天的高效训练也只是刚刚进入状态，树立了信心，离fit整个distribution还有不少距离。我多希望能早点这样进入状态，多训练训练啊！可是这就是人生。WF热身赛的题目是往年原题，而我们甚至很多都没见过（另一个角度说，这样着实起到了很好的热身效果。B题那道亏钱离场有rebate的游戏，在当年也是没啥人AC的题，题目和做法都令我印象特别深刻，热身赛结束后场外想明白了，起到了良好的训练效果。感觉也可以收录quant绿皮书经典了）</p>
+<p>就这样，我们走上了正赛赛场。正赛的详细总结见<a href="https://bytew.net/?p=1056">nocriz的博客</a>。刚开场一会儿我特别降智，签到题也不会做，害得nocriz又写代码又想签到题。而到做后面题的时候智商逐渐上线，成功应用了邓老师文章的策略与队友合作切了一些题，并让代码能力变得现役的队友们进行了实现。最后我们除了三分套三分题变量名打错WA了两次，费了不少前期时间，成为了最大遗憾之外，别的题都顺利地全部一发通过了。可惜K最后没来得及调通。在埃及神庙的颁奖晚宴上，知道自己已经没戏了，看着别人在领奖，魔怔的感觉更强烈了。</p>
+<blockquote>
+<p>比赛之前我们训练了一场，每个人又做了若干个题。比赛之后我们各奔东西，继续尝试混混人生。</p>
+</blockquote>
+<p>当时我的总结：</p>
+<blockquote>
+<p>差40分罚时没拿牌。但悟了挺多道理：</p>
+<ol>
+<li>算法竞赛，无比残酷。赛前就预感得拿（WF没牌队伍只按题数排名规则下）rank13了，但离多过一个题只差一点点、因为前期失误输罚时，真的只是rk13时，就觉得离拿牌这么近无比可惜。果然只有赢了或发挥出高出自己平均水平3标准差的队，才能满意。</li>
+<li>在毕业后时间资源极其有限的情况下训wf的正确方式：认识到wf题与区域赛题distribution的不同，fit正确的distribution——重视简化代码复杂度的能力。拿往年题狂训，看题，做题，看题解，看最短代码。重点是学习最短代码是如何简化实现难度的</li>
+<li>还是和队友在一起的时候好啊，无比欢乐</li>
+</ol>
+<p>这次也是和本科、和算法竞赛彻底道别了。去wf，从现实世界抽离了出来，很有种找回了之前魔怔的感觉。（虽然马上又要回去，各奔东西了）</p>
+</blockquote>
+<h1 id="隐藏结局-amp-WF-Astana"><a href="#隐藏结局-amp-WF-Astana" class="headerlink" title="隐藏结局 &amp; WF Astana"></a>隐藏结局 &amp; WF Astana</h1><p>本来以为 ICPC 生涯到此结束了，魔怔了一阵子之后，回来也逐渐回到了日常工作。8月31号，ICPC组委会的人给我们队和教练发了神秘邮件，说“随着阿斯塔纳WF的临近，我们正在结束上个赛季，并正在与选定的队伍、教练和RCD进行一系列视频通话”，和我们约了9月5号晚上聊天。难道是要采访我们，录制纪录片《没赢的队伍到底有多少理由》？我们也没细想就答应了。</p>
+<p>9月5号，外面是刮台风前最后的宁静，我也看到了有史以来最美的晚霞。会议前10分钟，我收到了日历提醒，才突然想起来视频通话的事，赶紧加入了会议。教练也加入了。没想到会议上 Bill Poucher 教授和 CJ Hwang 都陆续进场了，顿时感觉事情不简单了。进了会议他们恭喜我们在 WF 的优秀表现，可是会议究竟是干什么的呢？这时，Bill 说 ICPC 秉承以人为本的理念，打算给我们补发 WF 铜牌，让我们穿上 WF Luxor 的衣服下下周来阿斯塔纳WF上领奖。我直接呆住了，怎么可能来给我们补发牌了？难道WF之后要大放水了？简直 too good to be true 了。当时太震惊了，恍惚之中，会议结束了，我都没想到仔细问问这是为什么。</p>
+<p>可是究竟为什么会轮到给我们补发牌呢？会后我们又仔细研读了规则，发现埃及赛前的规则里（web archive 2024年3月版），居然还真明文写着 “与第12名同题数、罚时相差不超过60的队伍有可能被授予额外的铜牌”的字样。有可能 ICPC 从没想到会有高达四个队满足这条增发规则？结合推特上，Universidad de Buenos Aires - FCEN (rank 13学校)的人好像说联系了 ICPC 组委会讨论了这个规则想争取个铜牌，有可能 ICPC 委员会也顺便发现我们也恰好满足要求，给我们也整了个铜牌？</p>
+<p>在阿斯塔纳WF现场上，Bill 说这届起将取消这个规则，不再会增发铜牌了，而是执行 Honors Program。有可能因为这次被我们钻了空子，直接增发了四个，所以之后要严格了？这么看我们瞬间反转成了运气最好、regret最小的队——成为了增发铜牌的最后一届的铜牌最后一名。并且即使当时K过了，也只是rank 10，离银牌还有不小的罚时距离，并不能变成银牌。</p>
+<p><img src="rule.png" alt="rule.png"></p>
+<p>于是我们获得了以ICPC Guest的身份来阿斯塔纳旅游的机会，只可惜nocriz由于签证问题无法参与。ICPC在热身赛结束后给我们颁发了铜牌。WF Dhaka没去成，但是换了个身份来了阿斯塔纳，也算是打满了两届WF吧！</p>
+<p>我们顺便也在阿斯塔纳转了转，阿斯塔纳很现代很新，各种店都特别大，非常气派，装修很有特色。连各种连锁快餐、健身房都是一整栋楼，很土豪的感觉，可价格也不贵。服务很好，对中国人非常友好，与埃及各种one dollar骗局形成了鲜明对比。Yandex go也很好用。阿斯塔纳的食物也很符合北方人口味，马肉料理、手抓饭、大锅羊肉都很好吃，还吃到了非常中式的土豆牛肉、小油条、炸茄子、羊肉汤、炒拉条。不过标着马奶、骆驼奶的饮料本质是发酵饮品，当地人是当酒喝的，我喝不惯。除了气候上冷了点、风很大和比较干燥之外，简直完美。</p>
+<h1 id="ICPC-总结"><a href="#ICPC-总结" class="headerlink" title="ICPC 总结"></a>ICPC 总结</h1><p>大学的四年：</p>
+<p>2019 - 2020：2019.6有幸被队友挑上，打了陕西省赛，至此组了队。我们从升大一的暑假开始利用一切时间训练，训练赛表现似乎还可以，CCPC 哈尔滨首战就发挥不错，拿了 rank 3。但之后 ICPC 南昌区域赛水平不济、沈阳遇见假题、EC Final 做不出中期题，最终没能出线。于是继续狂训，冲 45th WF。当时还有<a href="https://bytew.net/?p=330">线下ptz营</a>（可惜当时我由于一些原因没去成TAT）、字节营等不错的训练营，还有opentrains可以做往年ptz，做了各种好题。</p>
+<p>2020 - 2021：好像水平还是显著提高了，打两场 CCPC ，都有遗憾，却还是分别拿了 rank 2 和 4。打 ICPC 上海前直接翘了大物期中考试和少年班成人礼来加训，结果第二天直接赢了。WF 由于疫情遥遥无期，而我们队也非常不魔怔于算法竞赛，于是都去申请大三一整年交换 &amp; 尝试搞科研去了，争取申个好学校 CS PhD，算法竞赛就宣告“脱水”了，等到WF要来的时候再训训。</p>
+<p>（一个很乐的小插曲是2021退役后的 CCPC Final，在北京的度假村里线下举办，我们抱着旅游的心态过去玩，把队名改成了“差不多得了”。没想到题是叉姐出的，特别符合我们口味，最后还拿了个校排rank 3混了个奖杯回来。然而队友以为必然会爬，颁奖前就跑了，于是只有我去领杯。颁奖时大屏幕上写着《西安交通大学 差不多得了》非常搞笑）</p>
+<p>2021 - 2022：我们分别去了美国、英国交换一年，没碰算法竞赛。</p>
+<p>2022 - 2023：WF20（45th WF）终于要办了。我们全队都在校，这是一个训练的绝佳时期，可是当时正是国内疫情管控最严格的时候，学校沉迷封校，死活不批！！！（而我们大三出国交换都批了的，回来还做双核酸+隔离了7+7）。不过鉴于我们还在校，我们还是报名了这一年的区域赛，打算再试着搞个WF出线名额。消失一年再打区域赛，有一种“少小离家老大回”的感觉，现役选手已经不认识了。而再打WF，都要毕业后了，可预见地很难抽出时间一起训练，没法打得更好了。好消息是，虽然这一年区域赛没太有压力地在电竞酒店随缘打，虽然出锅不断，却拿了南京rk4、香港rk2，没费太大力气出了线。</p>
+<p>2023 - 2024：正如上文所述，WF22（47th）前我们挤出极少的时间复健了一下，最终获得了rk16。而恰好碰到主办方好心，给我们补发了铜牌。</p>
+<p>疫情带来的各种延期举办似乎让ICPC WF一定程度上变成了比谁更晚退役的游戏。我们队作为一个很不魔怔的队伍，似乎在20年上海站之后就早早地止盈离场了，从此把优化毕业出路作为更高优先级。而之后反复复活，不同阶段打ICPC，都让我对ICPC有新的体会。大一大二最现役时的无比热爱、风华正茂，在之后却变成了差不多得了。而大四重新拾起ICPC时，参加ICPC香港站（尽管我由于一些决策失误，没能去香港线下）带来了一系列连锁反应，彻底改变了我的世界线。工作后再训WF，我短暂地从现实中抽离了出来，重新回归纯粹，找回了打ICPC最开始的魔怔与快乐。</p>
+<p>总结下来，ACMKeHaoWanLe！尤其是各种线下活动，能带来很意想不到的故事和难忘的记忆。我ICPC生涯中最遗憾没线下参加的是20年寒假的ptz营、22年WF Dhaka和23年的香港站。今后我也要提高自己的决策能力，避免更多自己选择带来的遗憾。继续尝试混混人生！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ICPC World Finals Luxor</title>
+    <url>/2024/05/08/ICPC-World-Finals-Luxor/</url>
+    <content><![CDATA[<p>算法竞赛终点。</p>
+<span id="more"></span>
+
+<p><img src="d31d5df2d966a53e2f992c28d9d6600c-large.jpeg" alt="Alt text"></p>
+<h1 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h1><p>2024-03-19 发现必须开始训练算法竞赛了，距比赛只剩下25天了。打开了最近一场CF 934热身，看一圈发现题都还挺会做，只是需要留出充分长的时间口胡和写代码。于是启动了<a href="https://codeforces.com/blog/entry/98806">Um_nik无监督训练法</a>，直到D1、E1。D2的容斥trick忘了，读题解补习了一下。</p>
+<p>2024-03-23 拿了NAC’23的题个人训练，结果发现题太水了，过于不仿真，放弃了。之后一定得做WF真题。算了下账感觉必须之后天天都做真题了。训量化模型要用8年历史数据了，训高考要五年高考三年模拟，in sample的数据没训完不太行。</p>
+<p>2024-03-24 三人三地三机组队训练。打了EC Final 2024，爬了。I题就是简单边双+树上DP但我过于老年，直接放弃写了。。提高自己水平，任重道远啊。。感觉队友好像也失去了信心。但是我觉得从现在开始训，还来得及。我目前也是队里最闲的，打比赛好像能让我更有一种知道自己在干什么的感觉。虽然自己最弱，但要加训，争取不当瓶颈！</p>
+<p>2024-03-27 终于把EC Final I补了，算法竞赛真是时间杀手。。写的巨麻烦，不知道是自己擅长把简单题写复杂还是啥。至此剩下除了A题2AC，别的题都0AC了，感觉可能不补也罢了。已经神智不清了。这两天循环训（模型/身体/算法竞赛），真实帕鲁训练家。选择了复活节和清明节各休一天假专心训练。。之后都只练WF题。</p>
+<p>2024-03-31 本来约好了时间，特意早起，但队友也不来训练了。感觉也在意料之中。也没法强求队友训练。自己太菜，好好提升自己吧！按照自己要单挑的标准去训练。倒着开题打了下这天的CF。前几天在做WF 20 Moscow的题，发现题都不是很好做，容易假，也不是很好写。以及甚至还会考裸板子题，比如半平面交。</p>
+<p>2024-04-05 这几天，才发现WF20的签到是多简单。。以及发现WF20的一个只有1AC的线性代数题无比简单，和N维正多面体那个差不多，搞出一个矩阵的零空间的正交基，再操作下就完事了。然而码力还是比之前大幅下降了，写了两个小时才过。。</p>
+<p>2024-04-06 写了一天题写吐了。。今天做了icpc2019的题，做了两年题的总体感觉是这比赛即使简单题也会有点实现难度，对我这种忘了怎么写代码的不算非常友好。。困难题思路可能也没很难？昨天2020的一个1ac的题就是个简单线性代数，我几分钟就想出来了（不过写了两小时）。以及需要板子，比如这场就有广义后缀自动机模版题。。今天五小时过了五个题，过的题都挺无脑的，却写了挺久，基本每题从开始到写完都恰好一小时，好在所有题都一发过了。看评测记录，别的队都在训练。。唉自己现在还很菜，感觉寄了。有七个签到题，剩下两个签到口胡了也不难。把这七个题做了就能rk13及以上了，这是在WF现场理应要达到的标准——签完所有到。</p>
+<p>发现没打过ACM的人、早就退役的人，都已经把往年WF题做了，写了题解。自己却来不及做完所有WF题。罪过啊。</p>
+<p>2024-04-07 看到了WF题出现过的路牌</p>
+<p><img src="image-1-large.jpeg" alt="Alt text"></p>
+<p>2024-04-08 感觉wf本质就是写一些没那么难想但不好实现的题。深刻感觉wf就是比写代码速度，要把签到题都过了。这场的银牌以上题，两个大模拟，一个几何，一个牛逼思维题。</p>
+<p>2024-04-11 这几天发现时间更不够用了。。得跳过自己写，口胡完直接读题解了。今天练划船还把腰伤到了。。全错。</p>
+<p>2024-04-12 起飞前最后一天。下班后我立即（顶着腰伤）到公司对面的文具佬商店购买了文具，蹭公司打印机，打印了板子、签证、各种文档，完成了这些后勤工作。才发现队友票买错了、买晚了、不想去了，要在报道日深夜、第二天才到。。</p>
+<p>目标：做完签到题就是成功。做完签到题就拿牌了。不一定，还有可能是rk13。</p>
+<p>2024-04-13 和ddd到广州包三餐的洗浴中心汇合，一起出发。听ddd讲了昨天的刺激新故事，和WF赛场策略的经验。看ddd打了桌球。喝到了无比好喝的鱼片汤。</p>
+<p><img src="image-large.jpeg" alt="Alt text"></p>
+<h1 id="埃及之行"><a href="#埃及之行" class="headerlink" title="埃及之行"></a>埃及之行</h1><p>2024-04-13 飞开罗的飞机上，口胡了一些往年题，和ddd确认了做法和坑点（当然更多的时候是间歇睡觉）。发现之前还考我准备quant面试时做的结论题，还没啥人ac，大为震撼。</p>
+<p>2024-04-14 飞卢克索的飞机上，感觉都是ICPC选手，和坐左边的说英语选手交谈了下才知道这居然是47届MIT的选手。我说你们要赢了，他说46届邓老师队才要赢，给我指了anton坐在我左边的左边。我无尽orz。正好天亮了，看到飞机窗外，有种非常抽象的感觉，才意识到自己居然来到了非洲。尼罗河旁边是城市，而远处就是撒哈拉沙漠。</p>
+<p><img src="image-2-large.jpeg" alt="Alt text"></p>
+<p><img src="image-3-large.jpeg" alt="Alt text"></p>
+<p>从Luxor机场出来，上了大巴车。志愿者对于我和ddd没带行李箱感到非常惊讶。大巴车上我查了才知道原来埃及用的是真-阿拉伯数字。学习了下数字的映射，以备辨识车牌号（虽然最后也没用到）</p>
+<p><img src="image-4-large.jpeg" alt="Alt text"></p>
+<p><img src="image-5-large.jpeg" alt="Alt text"></p>
+<p><img src="image-6-large.jpeg" alt="Alt text"></p>
+<p>到了Jollie Ville酒店，酒店位于尼罗河中一个岛的中间。结果checkin排了无数人，把护照收走后开始了无尽等待。还是华为赞助商的好心人带我们去他们房间休息了一会儿，在餐厅吃了午饭（主办方没有包午饭）。</p>
+<p><img src="image-7-large.jpeg" alt="Alt text"></p>
+<p>最终，到达酒店的六小时后，我们终于拿到了房卡。我们住在下图这样一个房子里面。埃及的天气是真不错，可惜虫子实在是太多了，穿短裤在室外，有要直接被蚊虫吃掉的节奏。</p>
+<p><img src="image-8-large.jpeg" alt="Alt text"></p>
+<p>team registration。但是只有我和ddd到了，队友都要更晚才到，于是我们两个人去注册了，和主办方解释了情况，于是领了6个人的物资，照了两个人的相，蹒跚着回到了住处。san值暴跌。</p>
+<p>晚饭后在餐厅正对的码头上照的相：</p>
+<p><img src="image-9-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-15-Excursion"><a href="#2024-04-15-Excursion" class="headerlink" title="2024-04-15 Excursion"></a>2024-04-15 Excursion</h2><p>坐船去卡纳克神庙</p>
+<p><img src="image-10-large.jpeg" alt="Alt text"></p>
+<p>卡纳克神庙</p>
+<p><img src="image-11-large.jpeg" alt="Alt text"></p>
+<p><img src="image-12-large.jpeg" alt="Alt text"></p>
+<p>Ancient Dog XD</p>
+<p><img src="image-14-large.jpeg" alt="Alt text"></p>
+<p><img src="image-15-large.jpeg" alt="Alt text"></p>
+<p><img src="image-16-large.jpeg" alt="Alt text"></p>
+<p><img src="image-17-large.jpeg" alt="Alt text"></p>
+<p><img src="image-18-large.jpeg" alt="Alt text"></p>
+<p>晚上开幕式在卢克索神庙。队友终于都到了，san值恢复了。不过补拍照片要到华为挑战赛之后了，于是开幕式照片只有我和ddd。</p>
+<p><img src="IMG_0671-large.jpeg" alt="Alt text"></p>
+<p><img src="IMG_0695-large.jpeg" alt="Alt text"></p>
+<p>回去后各自加训往年题目。</p>
+<h2 id="2024-04-16-Huawei-Challenge"><a href="#2024-04-16-Huawei-Challenge" class="headerlink" title="2024-04-16 Huawei Challenge"></a>2024-04-16 Huawei Challenge</h2><p>wzknb！搞到了rk20，上了领奖台。不过华为挑战赛就能看出47届比46届强了，前20里只有死个46届的。唉唉，拿牌困难啊。</p>
+<p><img src="IMG_1038-large.jpeg" alt="Alt text"></p>
+<p>比赛区域：</p>
+<p><img src="IMG_0711-large.jpeg" alt="Alt text"></p>
+<p><img src="IMG_0712-large.jpeg" alt="Alt text"></p>
+<p>在chill zone补拍了团队照片。我还领了主办方免费发的电话卡（结果因此把香港卡还给丢了，还好回香港后10HKD成功补办了）</p>
+<p><img src="IMG_0854-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-17-Dress-Rehearsal"><a href="#2024-04-17-Dress-Rehearsal" class="headerlink" title="2024-04-17 Dress Rehearsal"></a>2024-04-17 Dress Rehearsal</h2><p>热身赛的题全是往年题，结果6个题除了其中一个是葡萄牙那一年的大模拟压轴之外，所有题我们队都没见过！最后我们做了4个签到，在热身赛的榜里也爬了。另一个没做出来的是一个非常非常有意思的赌博题：</p>
+<blockquote>
+<p>赌场里玩游戏可以花1元，p的概率得到2元，1-p概率得到0元。最后离开赌场时如果亏钱，亏的部分会有x比例的rebate，问最优策略能期望赚多少钱。</p>
+</blockquote>
+<p>我们找到了正确的递推思路，不过热身赛没来得及推完整式子。回去看发现那一年WF，那题也只有一两个通过。我推导出给定止盈止损，式子可以O(1)算的式子后就能ac了。后来感觉这也是一种random walk，问了下GPT，知道了可以构造$(p/(1-p))^X$类似这种Martingale，然后就变成quant绿皮书drunk man那个题了，可以秒出答案，甚至算出期望会赌几次。又是quant面试用到的知识！我意满离。</p>
+<p>这里杀虫方式非常神秘：直接傍晚喷杀虫喷雾。不仅杀了虫，还差点杀了去吃晚饭的我（）</p>
+<p><img src="IMG_0727-large.jpeg" alt="Alt text"></p>
+<h2 id="2024-04-28-World-Finals-Luxor"><a href="#2024-04-28-World-Finals-Luxor" class="headerlink" title="2024-04-28 World Finals Luxor"></a>2024-04-28 World Finals Luxor</h2><p>差40分罚时没拿牌。但悟了挺多道理。</p>
+<h1 id="Regrets"><a href="#Regrets" class="headerlink" title="Regrets"></a>Regrets</h1><ol>
+<li><p>算法竞赛，无比残酷。赛前就预感得拿rank13（WF规则下）了，但离多过一个题只差一点点、因为前期失误输罚时，真的只是rk13时，就觉得离拿牌这么近无比可惜。果然只有赢了或发挥出高出自己平均水平3标准差的队，才能满意。</p>
+</li>
+<li><p>在毕业后时间资源极其有限的情况下训wf的正确方式：认识到wf题与区域赛题distribution的不同，重视简化代码复杂度的能力。拿往年题狂训，看题，做题，看题解，看最短代码。重点是学习最短代码是如何简化实现难度的</p>
+</li>
+<li><p>还是和队友在一起的时候好啊，无比欢乐</p>
+<!-- 4. 世界上的sb很多的。大部份人都ngmi。能力达不到，只得接受次优解，还在找理由，装作是勇敢的选择。也不要在乎爬了的人的选择了，认识到某个人爬了， --></li>
+</ol>
+<p>这次也是和本科、和算法竞赛彻底道别了。去wf，从现实世界抽离了出来，很有种找回了之前魔怔的感觉。（虽然马上又要回去，各奔东西了）</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我的2023——新的开始</title>
+    <url>/2024/01/01/%E6%88%91%E7%9A%842023%E2%80%94%E2%80%94%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>工作上：更会了一些Rust</p>
+<p>旅游方面</p>
+<p>上半年呆过的地方：</p>
+<ul>
+<li>西安：base</li>
+<li>上海：实习、玩、比EC Final</li>
+<li>深圳：比香港区域赛</li>
+<li>香港：玩+面试</li>
+<li>苏州：玩+回园区校看看</li>
+<li>北京：见朋友</li>
+<li>兰州：玩</li>
+<li>成都：玩+见朋友</li>
+<li>郑州、洛阳</li>
+</ul>
+<p>下半年呆过的地方：</p>
+<ul>
+<li>香港：base</li>
+<li>深圳：周末日常</li>
+<li>广州：见朋友，逛流花湖公园</li>
+<li>潮汕：玩</li>
+<li>厦门：送朋友</li>
+<li>杭州：聚会</li>
+<li>上海：聚会+见朋友+玩</li>
+<li>Kota Kinabalu：玩</li>
+<li>洛阳：家</li>
+</ul>
+<p>美食：</p>
+<p>看到<a href="https://www.zackwu.com/">Zack Wu</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>失踪人口回归</title>
     <url>/2023/10/08/%E5%A4%B1%E8%B8%AA%E4%BA%BA%E5%8F%A3%E5%9B%9E%E5%BD%92/</url>
     <content><![CDATA[<p>才发现距离上次发博客都过了两年半了，这之间发生了太多太多的事了。现在看到自己之前写的想法感觉很有意思，而我看别人的博客也受了很大启发，只恨自己之前没多写点。所以为了最小化遗憾，还是整理和补档一些日记，尝试记录大四这疯狂的一年中的各种随想吧！</p>
@@ -169,7 +341,7 @@
 <p>Dots start to connect…</p>
 </blockquote>
 <h2 id="2023-02-02-～-2023-02-10-香港-上海之旅"><a href="#2023-02-02-～-2023-02-10-香港-上海之旅" class="headerlink" title="2023-02-02 ～ 2023-02-10 香港-上海之旅"></a>2023-02-02 ～ 2023-02-10 香港-上海之旅</h2><blockquote>
-<p>注：截止10月8日，事实证明和ddd的这一趟香港-上海之行成为了各种意义上年度收益最大的旅行。</p>
+<p>注：截止2023年10月8日，事实证明和ddd的这一趟香港-上海之行成为了各种意义上年度收益最大的旅行。</p>
 </blockquote>
 <h3 id="2023-02-06"><a href="#2023-02-06" class="headerlink" title="2023-02-06"></a>2023-02-06</h3><p>怎么搞钱啊？</p>
 <p>润港。</p>
@@ -184,54 +356,16 @@
 <h2 id="2023-02-24-1"><a href="#2023-02-24-1" class="headerlink" title="2023-02-24"></a>2023-02-24</h2><p>赢了。</p>
 <h1 id="大四下"><a href="#大四下" class="headerlink" title="大四下"></a>大四下</h1><p>到了大四下，好像更喜欢水群、聊天了，因此最认真记录的东西居然似乎是梦。当时我详细地记录了每天做梦梦见了啥。不过也只在2023-02-20 ～ 2023-06-08进行了记录，之后要么不做梦，要么根本记不起梦见了啥，很奇怪。感觉这可能也是我最惬意、最没有压力、最觉得自己生活在一个完美模拟世界的阶段吧！平时想去哪儿就去哪儿，天天无忧无虑地玩，和朋友聊天。即使有看似重要的选择，也都可以轻松应对，要么是早已有十足信心，要么是错了自己也不在乎，反正nothing is at stake！生活就像玩一个不可能有坏结局的游戏一样。</p>
 <p>这种感觉持续直到毕设论文deadline临近、毕业真的到来、离飞香港越来越近为止。</p>
-<h2 id="2023-03：苏州之旅"><a href="#2023-03：苏州之旅" class="headerlink" title="2023-03：苏州之旅"></a>2023-03：苏州之旅</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 苏州旅游心愿单</li>
-<li><input checked="" disabled="" type="checkbox"> 进苏中&amp;园区校</li>
-<li><input checked="" disabled="" type="checkbox"> 在读证明和成绩单打印扫描</li>
-<li><input checked="" disabled="" type="checkbox"> 联系XXX</li>
-<li><input checked="" disabled="" type="checkbox"> 和XXX说XX时间写错了</li>
-<li><input checked="" disabled="" type="checkbox"> 工作注意事项</li>
-<li><input checked="" disabled="" type="checkbox"> 买XXX</li>
-<li><input checked="" disabled="" type="checkbox"> 去苏大玩</li>
-</ul>
 <h2 id="2023-03-24-EC-Final"><a href="#2023-03-24-EC-Final" class="headerlink" title="2023-03-24 EC Final"></a>2023-03-24 EC Final</h2><ul>
 <li>Optiver Ready Trader Go，真实让我有了一种回到了训练巅峰时期的渡渡鸟的感觉。结果狂肝的比赛CE了，好痛苦。</li>
 <li>EC Final不出意外的爬了。</li>
 <li>华为挑战赛，我去医务室换药迟到了半小时，漫不经心写了个垃圾算法，结果好像排得很靠前，比ready trader go得的奖金好像都多。</li>
 </ul>
-<h2 id="2023-04-24：兰州之旅"><a href="#2023-04-24：兰州之旅" class="headerlink" title="2023-04-24：兰州之旅"></a>2023-04-24：兰州之旅</h2><p>火车上热情的本地人推荐的：</p>
-<ul>
-<li>三炮台</li>
-<li>马老六</li>
-<li>中山桥 兰山</li>
-<li>牛肉面 推荐二细 6am-3pm一般是早餐 基本都一样好，晚上可以吃炒拉条</li>
-</ul>
-<h2 id="2023-04-06"><a href="#2023-04-06" class="headerlink" title="2023-04-06"></a>2023-04-06</h2><p>From cyy：</p>
-<ul>
-<li>人生失去了意义</li>
-<li>你的人生是什么构成的？</li>
-</ul>
-<p>balance the substance of your past life</p>
-<p>回过神来，又是豪饮！</p>
-<h2 id="2023-04-30：文字游戏"><a href="#2023-04-30：文字游戏" class="headerlink" title="2023-04-30：文字游戏"></a>2023-04-30：文字游戏</h2><p>摘录：</p>
-<p>文字游戏的话我的个人喜好排名看这个<a href="https://vndb.org/uXXXXX">https://vndb.org/uXXXXX</a></p>
-<p>非文字游戏的话仅有一款：星际拓荒</p>
-<p>我觉得你要是对科幻悬疑感兴趣，可以直接开玩：remember11</p>
-<p>当然白色相簿2更好</p>
-<h2 id="2023-05-10-北京之旅"><a href="#2023-05-10-北京之旅" class="headerlink" title="2023-05-10 北京之旅"></a>2023-05-10 北京之旅</h2><p>北京</p>
-<p>美签 5/10 上午8:15❌cancelled</p>
-<p>网友<br>5.11 午饭 参观清华 晚饭✅<br>5.9晚饭 三元桥✅</p>
-<p>朋友<br>5.12 午饭+央美✅<br>5.10 晚饭 + msra✅<br>5.13 晚饭</p>
-<p>吃<br>驴打滚✅<br>豌豆黄✅❤️<br>新疆菜，娜帕里勇❤️<br>那家小馆❤️<br>五道口枣糕❤️</p>
-<p>住<br>day1 三元桥（贵&amp;小）<br>day2&amp;3大红门（远，只为蹭报销）<br>day4 望京，北京商隐公寓❤️</p>
-<p>还去了：雍和宫周围<br>未去：798艺术区，北大，牛街，常见景点</p>
 <h2 id="2023-05-15-Monkey-Business"><a href="#2023-05-15-Monkey-Business" class="headerlink" title="2023-05-15: Monkey Business"></a>2023-05-15: Monkey Business</h2><p>摘抄</p>
 <p>Our first full-year compensation after signing on full-time at DLJ following business school was about eight times what the average college graduate earns at his first job, and we could expect that compensation to double every two years. We traveled the country by private jet, stayed in the best hotels, and ate in the best restaurants. Eventually, though, we realized that the compensation levels and the perks weren’t in place because being an associate in investment banking was a great job. They were in place because the job sucked. The one immutable truism that exists for bankers is that any problem can be solved by throwing enough money and time at it. The implication? The banker’s greatest enemies are those people whose souls are not for sale, and those who realize that time is a nonrenewable commodity.</p>
 <p>The higher a monkey climbs, the more you see of his ass. —General Joseph Stilwell</p>
 <p>Finally, there are the analysts. Monkeys. Tons and tons of little monkeys. Not humans, just monkeys crawling all over each other and pulling lice out of each other’s fur. Those are the analysts.</p>
 <p>You didn’t tell a monkey to make a merger model for you and then expect that there wouldn’t be any mistakes. You had to check the monkey’s work, because monkeys were always liable to leave a few banana peels lying behind.</p>
-<h2 id="2023-05-16"><a href="#2023-05-16" class="headerlink" title="2023-05-16"></a>2023-05-16</h2><p>六年下交，怀念终身</p>
-<p>第一阶段：沉淀<br>第二阶段：那次失眠让我放弃中考<br>第三阶段：我们是c2！<br>第四阶段：剧场效应，全班养蛊<br>第五阶段：小卷绩点，分流成功<br>第六阶段：算法竞赛，绷不住了<br>第七阶段：科研失败，博士梦碎<br>第八阶段：痛定思痛，转行量化<br>第九阶段：外资全拒，再度被锤<br>第十阶段：艰难润港，生死未卜</p>
 <h2 id="2023-06-03"><a href="#2023-06-03" class="headerlink" title="2023-06-03"></a>2023-06-03</h2><h3 id="摘抄：计算机本科找高薪工作速通路线"><a href="#摘抄：计算机本科找高薪工作速通路线" class="headerlink" title="摘抄：计算机本科找高薪工作速通路线"></a>摘抄：计算机本科找高薪工作速通路线</h3><p>最速通：转学美本，除了需要本金、H1B中签率低、难润等问题外彻底成功</p>
 <p>不转学美本，一种方向是量化厂（对冲基金hedge fund/自营交易prop shop）的quant researcher/developer，理想路线：拿个OI/ACM ICPC/数竞/物竞/etc的还行的奖，搞个LinkedIn认识各种前辈来各种network，大一日常处理文化课，做国外lab，享受生活，暑期去实习；大二日常随缘实习/享受生活，暑期实习去谷歌step（女生）或大厂或内资比较顶的量化厂；大三日常随缘实习/享受生活，暑期找到上海或HK或SG顶尖外资fund量化实习，大四拿实习转正或秋招面进HK/SG顶尖外资fund，拿五十万刀的global pay走上人生巅峰</p>
 <h3 id="摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异"><a href="#摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异" class="headerlink" title="摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异"></a>摘抄：ChatGPT：揭示某些计算机本科和顶尖本科之间的显著差异</h3><p>我让ChatGPT写一篇散文，结果我发现他写的挺有意思！我就发上来了</p>
@@ -252,20 +386,6 @@
 <p>　　然而娜拉既然醒了，是很不容易回到梦境的，因此只得走；可是走了以后，有时却也免不掉堕落或回来。否则，就得问：她除了觉醒的心以外，还带了什么去？倘只有一条像诸君一样的紫红的绒绳的围巾，那可是无论宽到二尺或三尺，也完全是不中用。她还须更富有，提包里有准备，直白地说，就是要有钱。</p>
 <p>　　梦是好的；否则，钱是要紧的。</p>
 <p>在经济方面得到自由，就不是傀儡了么？也还是傀儡。无非被人所牵的事可以减少，而自己能牵的傀儡可以增多罢了</p>
-<h2 id="2023-06-19"><a href="#2023-06-19" class="headerlink" title="2023-06-19"></a>2023-06-19</h2><p>I screwed it up. Though this is completely expected based on my every poor “track record”: I don’t deserve any good opportunities, any trust, anything.</p>
-<p>Just as the video meeting ends, my phone rang ominously. It’s mom. I heard no voice, but an almost inauditable sobbing. Welcome to the real world, I told myself, running towards the hospital immediately, leaving my Mac alone. The simulation theory is a lie. All that you touch, you change. It is only when you lose something, will you realize it has always been at stake. I arrived with my max speed, asking anxiously what happened. To my surprise, everything seemed nice and peaceful, and mom asked me why. Then I knew it’s simply a call by mistake.</p>
-<p>I cried in mom’s arms. There are definitely things much much more important that I cannot afford to lose. “Nothing.” I told mom, giving her a smile in tears. I didn’t tell her anything about the meeting, and I felt happy that I live in a parallel world where I don’t lose the more valuable things.</p>
-<h2 id="2023-06-30"><a href="#2023-06-30" class="headerlink" title="2023-06-30"></a>2023-06-30</h2><p>这个月各种事马不停蹄，没有喘息的时间，有种不真实感，院里毕业典礼也没任何共鸣，只觉得虚伪做作。</p>
-<p>上了个假学<br>毕了个假业<br>聚了些假餐<br>打了个假工</p>
-<p>一切都太快了。很多朋友恐怕再也见不到了吧。感觉自己错得很多，缺乏独立思考能力，很容易彻底失败，做错误选择和无用功，因此非常需要wzk ddd的建议。但之后，线下见面也就年底和他们在埃及打比赛了吧。</p>
-<p>缺独立思考能力。缺自理能力。缺钱。缺技术水平。缺斗志。啥都缺。</p>
-<p>甚至玩都没玩，难以想象就这样4天后就要去香港全职工作了。</p>
-<h2 id="2023-06-30-1"><a href="#2023-06-30-1" class="headerlink" title="2023-06-30"></a>2023-06-30</h2><p>我的世界线变动点：</p>
-<p>1 上不上少年班 — 上</p>
-<p>结果：-&gt; 认识cyy等人 -&gt; 入门OI/ACM -&gt; 选CS专业<br>平行世界线：郑外/郑一中数竞班 -&gt; MO，冲CMO。但保送被取消，可能遇到高考风险。<br>关键度：高<br>后悔程度：???</p>
-<p>2 伯克利一年<br>结果：寄了<br>平行世界线：???<br>关键度：???</p>
-<p>3 毕业选择，工作/读MS/MEng/PhD — 工作<br>结果：去HK<br>平行世界线：???<br>关键度：???</p>
-<p>4 在XXX时是否好好干 — 没好好干<br>结果：寄了<br>平行世界线：???<br>关键度：???</p>
 <h2 id="2023-07-06"><a href="#2023-07-06" class="headerlink" title="2023-07-06"></a>2023-07-06</h2><p>摘抄：为什么接受彻底失败</p>
 <p>（原题：很多人的心态被进步史观毁掉了）</p>
 <p>原作者：Potato Digger<br>原文链接 <a href="http://xhslink.com/sTToWr">http://xhslink.com/sTToWr</a></p>
